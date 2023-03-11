@@ -10318,11 +10318,13 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
 
 🎀 foi usado o web driver manager nos projetos
 
-🔲 316 - Selenium - Automatizando tarefas no navegador
+✅ 316 - Selenium - Automatizando tarefas no navegador
 
-[![Selenium](img/selenium.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6_aula_310  "Conteúdo" )
+[![Selenium](img/selenium.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6_aula_316_319  "Conteúdo" )
 
-🔲 317 - Selenium - Selecionando elementos com By, expected_conditions e WebDiverWait
+✅ 317 - Selenium - Selecionando elementos com By, expected_conditions e WebDiverWait
+
+🎀 continuação
 
 🔲 318 - Selenium - Enviando teclas com a classe keys
 

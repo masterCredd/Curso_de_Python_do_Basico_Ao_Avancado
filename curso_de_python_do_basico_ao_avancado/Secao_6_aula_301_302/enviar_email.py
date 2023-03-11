@@ -5,8 +5,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from string import Template
 
-from dotenv import load_dotenv   #type: ignore
-
+from dotenv import load_dotenv  # type: ignore
 
 load_dotenv()
 
