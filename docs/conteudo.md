@@ -10215,7 +10215,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 
 ❎ 310 - http.server - servindo arquivos HTML e CSS via HTTP com um comando Python
 
-[![Alt text](img/alunos-em-aula.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6_aula_310  "Conteúdo" )
+[![teste http](img/alunos-em-aula.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6_aula_310  "Conteúdo" )
 
 🎀  servir um pagina html com python
 
@@ -10316,7 +10316,11 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
 
 ✅ 315 - Escolhendo e baixando o chrome drive para o Selenium e Google Chrome
 
+🎀 foi usado o web driver manager nos projetos
+
 🔲 316 - Selenium - Automatizando tarefas no navegador
+
+[![Selenium](img/selenium.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6_aula_310  "Conteúdo" )
 
 🔲 317 - Selenium - Selecionando elementos com By, expected_conditions e WebDiverWait
 
