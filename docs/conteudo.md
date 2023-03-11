@@ -4,7 +4,7 @@
 
 ___
 
-❎ 1 - Informações e avisos importantes + Boas vindas
+ ❎ 1 - Informações e avisos importantes + Boas vindas
 
 ❎ 2 - Assista antes de prosseguir com as aulas (atualizando 20/12/2022)
 ___
@@ -3497,8 +3497,8 @@ s_1 = set() #vazio
     de iteráveis.
 ->  Não aceitam valores mutáveis;
 ->  Seus valores serão sempre únicos;
-->  não tem índexes;
-->  Não gerantem ordem;
+->  não tem indexes;
+->  Não garantem ordem;
 ->  São iteráveis (for, in , not in)
 '''
 
@@ -4053,7 +4053,7 @@ print('OUTRO')
 print(item)
 ```
 
-❎ 143 - Valores Trythy e Falsy, Tipos Mutáveis e imutáveis
+❎ 143 - Valores Trophy e Falsy, Tipos Mutáveis e imutáveis
 
 ```python
 
@@ -10316,6 +10316,8 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
 
 ✅ 315 - Escolhendo e baixando o chrome drive para o Selenium e Google Chrome
 
+  [![Chromedriver](img/chromedriver.png)](https://chromedriver.chromium.org/home "Chromedriver para usar Selenium" )
+
 🎀 foi usado o web driver manager nos projetos
 
 ✅ 316 - Selenium - Automatizando tarefas no navegador
@@ -10326,9 +10328,13 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
 
 🎀 continuação
 
-🔲 318 - Selenium - Enviando teclas com a classe keys
+✅ 318 - Selenium - Enviando teclas com a classe keys
 
-🔲 319 - Selenium - find_element e find_elements By
+🎀 continuação
+
+✅ 319 - Selenium - find_element e find_elements By
+
+🎀 continuação
 
 🔲 320 - TEORIA: subprocess para executando programas e comandos externos
 

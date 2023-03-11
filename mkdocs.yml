@@ -11,20 +11,23 @@ nav:
 
 repo_url: https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado
 
-repo_name: masterCredd
+repo_name: Curso_de_Python_do_Basico_Ao_Avancado
 
 theme:
-  language: en
+
+  language: pt-BR
   icon:
     repo: fontawesome/brands/github
   name: material
+  logo: img/CURSOS.png
+  favicon: img/CURSOS.png
   features:
     - navigation.footer
     - navigation.sections
     - navigation.instant
     - navigation.top
     - toc.follow
-  
+    
 
 
 
@@ -40,6 +43,7 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+        
 
 
 extra_css:
@@ -57,11 +61,16 @@ plugins:
 
 
 markdown_extensions:
+  - attr_list
+  - codehilite:
+      linenums: true
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - admonition
+  
 
 search:
   exclude: true

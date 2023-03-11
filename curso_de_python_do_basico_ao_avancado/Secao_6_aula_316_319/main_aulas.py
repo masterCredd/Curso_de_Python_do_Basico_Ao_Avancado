@@ -4,7 +4,13 @@ from time import sleep
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
 from webdriver_manager.chrome import ChromeDriverManager
+
 
 
 # Chrome Options
@@ -28,13 +34,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 
 # chrome_options.add_argument('--headless')
-
 def make_chrome_browser(*options: str) -> webdriver.Chrome:
-
-
     chrome_options = webdriver.ChromeOptions()
     chrome_service = Service(ChromeDriverManager().install())
-
     browser = webdriver.Chrome(
                     service=chrome_service,
                     options=chrome_options
@@ -44,11 +46,26 @@ def make_chrome_browser(*options: str) -> webdriver.Chrome:
 
 if __name__ == '__main__':
     #Example
+    TIME_PASS = 10
     # options = '--hedless', 'disable-gpu', '--no-sandbox'
-    options = ('--hedless', 'disable-gpu', '--no-sandbox')
+    options = ('disable-gpu', '--no-sandbox')
     browser = make_chrome_browser(*options)
-    
     # como antes
     browser.get('http://www.google.com.br')
-    
-    sleep(10)
+    # esperar aparece
+    search_input = WebDriverWait(
+            browser, TIME_PASS
+        ).until(EC.presence_of_element_located(
+                                    (By.NAME, 'q')
+                                )
+                )
+    # escrever
+    search_input.send_keys('achou')
+    # tecla
+    search_input.send_keys(Keys.ENTER)
+    # parte results
+    results = browser.find_element(By.ID, 'search')
+    links = results.find_elements(By.TAG_NAME, 'a')
+    links[0].click()
+    # time
+    sleep(TIME_PASS)
