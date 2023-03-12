@@ -4133,10 +4133,7 @@ print(next(interator))
 
 ```python
 
-'''
-->  Generator exprission, Iterables e Iteradors em Python
-----------------------------------------------------------------
-'''
+
 
 import sys
 
@@ -4159,10 +4156,7 @@ print(n)
 
 ```python
 
-'''
-->  Introdução às Generator functions em Python
----------------------------------------------------
-'''
+
 
 generator = (n for n in range(1000000))
 
@@ -4312,8 +4306,6 @@ print('CONTINUAR')
 ```python
 
 '''
--> try, except, else e finally
-----------------------------------
 https://docs.python.org/pt-br/3/library/exceptions.html#built-in-exceptions
 '''
 
@@ -4881,12 +4873,6 @@ print(invertida)
 ❎ 167 - Decoradores com parâmetros
 
 ```python
-
-'''
--> decoradores com parâmetros
-------------------------------
-'''
-
 def fabrica_de_decoradores(a=None, b=None, c=None):
 def fabrica_de_funcoes(func);
   print('Decoradora 1')
@@ -4897,7 +4883,7 @@ def fabrica_de_funcoes(func);
     res = func(*args, **kwargs)
     return res
   return aninhada
-return fubrica_de_funcoes
+return fabrica_de_funcoes
 
 
 @fabrica_de_decoradores(1, 2, 3)
@@ -4917,11 +4903,6 @@ print(dez_vezes_cinco)
 ❎ 168 - Ordem de aplicação dos decoradoras
 
 ```python
-
-'''
--> Ordem dos decoradores
--------------------------
-'''
 
 def parametros_decorador(nome):
 def decorador(func):
@@ -4955,8 +4936,6 @@ print(dez_mais_cinco)
 ```python
 
 '''
-->  Exercício - Unir lista
---------------------------
 ->  Crie uma função zipper (como o zíper de roupas)
 ->  O trabalho dessa função será unir duas listas na ordem.
 ->  Use todos os valores da menor lista.
@@ -10325,7 +10304,7 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
   
   👉  `capture_output` -> captura a saída e erro para uso prosterior
 
-  👉  `text` -> Se True, entradas e saída serão tratadas como text e
+  👉  `text` -> Se True, entradas e saída serão tratadas como text e$$
           atomaticamente codifcadas ou decontificadas para o conjunto
           de caracteres padrão da  plataforma (geralmente UTF-8)
 
@@ -10397,9 +10376,22 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
 
 🎀 continuação
 
-🔲 327 - PyPDF2 para manipular arquivos PDF(instalação)
+✅ 327 - PyPDF2 para manipular arquivos PDF(instalação)
 
-🔲 328 - PyPDF2 para manipular arquivos PDF(PdfReader)
+🎀  PyPDF2 é uma biblioteca de manipulação de arquivos PDF feita em Python puro
+      gratuita e de código aberto. Ela é capaz de ler, manipular, escrever e unir
+      dados de arquivos PDF, assim como adicionar atotações, transformar páginas
+      extrair texto e imagens, manipular metadados, e mais.
+
+🎀  A documentação contém todas as informações necessárias para usar PyPDF2.
+
+🎀  link : <https://pypdf2.readthedocs.io/en/3.0.0/>
+
+  pip install pypdf2 ou poetry add pypdf2
+
+✅ 328 - PyPDF2 para manipular arquivos PDF(PdfReader)
+
+[![PDF editor python](img/pdf_editor.png)](  "PyPDF2")
 
 🔲 329 - PyPDF2 para manipular arquivos PDF(PdfWriter)
 
