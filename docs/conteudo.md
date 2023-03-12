@@ -10348,11 +10348,42 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
     Windows: ping 127.0.0.1
     Linux/Mac: ping 127.0.0.1 -c 4
 
-🔲 321 - subprocess para executando programas e comandos externos
+✅ 321 - subprocess para executando programas e comandos externos
 
-🔲 322 - Jupter NotebooK - Instalação e test  
+```python
 
-🔲 323 - Jupter NotebooK - Exemplos
+    import subprocess
+    import sys
+
+    # sys.platform - linux, linux2, darwin, win32
+
+    cmd = ['ls -lah /']
+    encoding = 'ttf_8'
+    system = sys.platform
+
+    if system == 'win32':
+      cmd = ['ping', '127.0.0.1']
+      encoding = 'cp850'
+
+    proc = subprocess.run(
+      cmd,capture_outoug
+    )
+
+    print()
+
+    # print(proc.args)
+    # print(proc.stderr)
+    print(proc.stdout)            
+    # print(proc.returncode)
+```
+
+✅ 322 - Jupter NotebooK - Instalação e test  
+
+[![notebook](img/jupyter_notebook.png)]( https://jupyter.org/ "Jupyter Notebook" )
+
+✅ 323 - Jupter NotebooK - Exemplos
+
+[![aula exemplo](img/exemplo_aula.png)( "Jupter NotebooK Exemplos")]
 
 🔲 324 - (Parte 1) Threads - Executando processamentos em paralelo
 
