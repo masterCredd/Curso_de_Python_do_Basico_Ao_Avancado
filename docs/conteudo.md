@@ -10391,7 +10391,7 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
 
 ✅ 328 - PyPDF2 para manipular arquivos PDF(PdfReader)
 
-[![PDF editor python](img/pdf_editor.png)](  "PyPDF2")
+[![PDF editor python](img/pdf_editor.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6_aula_328_330  "PyPDF2")
 
 🔲 329 - PyPDF2 para manipular arquivos PDF(PdfWriter)
 
