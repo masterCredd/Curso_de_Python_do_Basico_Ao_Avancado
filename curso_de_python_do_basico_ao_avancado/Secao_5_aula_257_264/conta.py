@@ -3,6 +3,19 @@ import abc
 
 class Conta(abc.ABC):
     def __init__(self, agencia: int, conta: int, saldo: float = 0) -> None:
+        """
+        The __init__ function is the constructor for a class.
+        It is called when an object of that class is created, and it sets up 
+        the attributes of that object.
+        
+        
+        :param self: Represent the instance of the class
+        :param agencia: int: Set the value of the agencia attribute
+        :param conta: int: Set the account number
+        :param saldo: float: Set the initial balance of the account
+        :return: None
+        :doc-author: Trelent
+        """
         self.agencia = agencia
         self.conta = conta
         self.saldo = saldo
@@ -95,6 +108,24 @@ class ContaCorrete(Conta):
         saldo: float = 0,
         limite: float = 0
     ) -> None:
+        """
+        The __init__ function is the constructor for the class. It initializes
+        the attributes of a new instance of ContaCorrente, which are:
+            agencia (int): The bank branch number.
+            conta (int): The account number.
+            saldo (float): The current balance in the account, defaults to 0 
+            if not provided.
+            limite (float): A credit limit for overdrafts on this account, 
+            defaults to 0 if not provided.
+        
+        :param self: Represent the instance of the class
+        :param agencia: int: Define the agency number
+        :param conta: int: Create the conta attribute
+        :param saldo: float: Set the initial balance of the account
+        :param limite: float: Set the limit of the account
+        :return: None
+        :doc-author: Trelent
+        """
         super().__init__(agencia, conta, saldo)
         self.limite = limite
 

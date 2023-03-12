@@ -36,7 +36,13 @@
         "setdefault",
         "stdefault",
         "superfences",
+        "Trelent",
         "usuario",
         "variavel"
-    ]
+    ],
+    "python.testing.pytestArgs": [
+        "curso_de_python_do_basico_ao_avancado"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }

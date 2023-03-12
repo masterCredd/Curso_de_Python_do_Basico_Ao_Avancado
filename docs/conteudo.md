@@ -10393,7 +10393,9 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
 
 🎀 continuação
 
-🔲 326 - (Parte 3) Threads - Executando processamentos em paralelo
+✅ 326 - (Parte 3) Threads - Executando processamentos em paralelo
+
+🎀 continuação
 
 🔲 327 - PyPDF2 para manipular arquivos PDF(instalação)
 

@@ -4,6 +4,17 @@ import conta
 
 class Pessoa:
     def __init__(self, nome: str, idade: int) -> None:
+        """
+        The __init__ function is called when the object is created.
+        It sets up the initial state of the object.
+        
+        :param self: Represent the instance of the class
+        :param nome: str: Set the name of the object
+        :param idade: int: Define the type of data that will be passed to the 
+        function
+        :return: None
+        :doc-author: Trelent
+        """
         self.nome = nome
         self.idade = idade
 
@@ -80,7 +91,20 @@ class Pessoa:
 
 
 class Cliente(Pessoa):
+    
     def __init__(self, nome: str, idade: int) -> None:
+        """
+        The __init__ function is the constructor for the class.
+        It initializes all of the attributes of a Cliente object, including
+        the superclass's attributes. It also sets self.conta to None, since no 
+        cliente has a conta yet.
+        
+        :param self: Represent the instance of the class
+        :param nome: str: Set the name of the client
+        :param idade: int: Set the age of the client
+        :return: None, so the return type is none
+        :doc-author: Trelent
+        """
         super().__init__(nome, idade)
         self.conta: conta.Conta | None = None
 

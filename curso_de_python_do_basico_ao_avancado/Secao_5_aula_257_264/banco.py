@@ -9,13 +9,28 @@ class Banco:
             clientes: list[pessoa.Pessoa] | None = None,
             contas: list[conta.Conta] | None = None
     ) -> None:
+        """
+        The __init__ function is the constructor for the Banco class.
+        It takes three optional arguments: agencias, clientes, and contas.
+        If any of these are not provided, they will be initialized to an empty 
+        list.
+        
+        :param self: Represent the instance of the class
+        :param agencias: list[int] | None: Create a list of agencies
+        :param clientes: list[pessoa.Pessoa] | None: Define the clientes 
+        attribute of banco
+        :param contas: list[conta.Conta] | None: Create a list of conta objects
+        :return: None
+        :doc-author: Trelent
+        """
         self.agencias = agencias or []
         self.clientes = clientes or []
         self.contas = contas or []
 
     def _checa_agencia(self, conta) -> bool:
         """
-        The _checa_agencia function checks if the account's agency is in the bank's list of agencies.
+        The _checa_agencia function checks if the account's agency is in the 
+        bank's list of agencies.
             
         
         :param self: Represent the instance of the class
