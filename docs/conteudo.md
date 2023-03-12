@@ -10387,7 +10387,7 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
 
 ✅ 324 - (Parte 1) Threads - Executando processamentos em paralelo
 
-[![Threads](img\pngwing.png]( "Threads")
+[![Threads](img\pngwing.png](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6_aula_324_326 "Threads")
 
 🔲 325 - (Parte 2) Threads - Executando processamentos em paralelo
 
