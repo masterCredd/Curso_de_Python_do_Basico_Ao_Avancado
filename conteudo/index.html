@@ -4123,47 +4123,37 @@ mesmo significado.</p>
 <a id="__codelineno-122-12" name="__codelineno-122-12" href="#__codelineno-122-12"></a><span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">interator</span><span class="p">))</span>
 </code></pre></div>
 <p>❎ 146 - Generator expression iterables e iterators em Python</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-123-1" name="__codelineno-123-1" href="#__codelineno-123-1"></a><span class="sd">&#39;&#39;&#39;</span>
-<a id="__codelineno-123-2" name="__codelineno-123-2" href="#__codelineno-123-2"></a><span class="sd">-&gt;  Generator exprission, Iterables e Iteradors em Python</span>
-<a id="__codelineno-123-3" name="__codelineno-123-3" href="#__codelineno-123-3"></a><span class="sd">----------------------------------------------------------------</span>
-<a id="__codelineno-123-4" name="__codelineno-123-4" href="#__codelineno-123-4"></a><span class="sd">&#39;&#39;&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-123-1" name="__codelineno-123-1" href="#__codelineno-123-1"></a><span class="kn">import</span> <span class="nn">sys</span>
+<a id="__codelineno-123-2" name="__codelineno-123-2" href="#__codelineno-123-2"></a>
+<a id="__codelineno-123-3" name="__codelineno-123-3" href="#__codelineno-123-3"></a><span class="n">iterable</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Eu&#39;</span><span class="p">,</span> <span class="s1">&#39;Tenho&#39;</span><span class="p">,</span> <span class="s1">&#39;__iter__&#39;</span><span class="p">]</span>
+<a id="__codelineno-123-4" name="__codelineno-123-4" href="#__codelineno-123-4"></a><span class="n">interator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">interable</span><span class="p">)</span> <span class="c1"># tem __iter__ e __next__</span>
 <a id="__codelineno-123-5" name="__codelineno-123-5" href="#__codelineno-123-5"></a>
-<a id="__codelineno-123-6" name="__codelineno-123-6" href="#__codelineno-123-6"></a><span class="kn">import</span> <span class="nn">sys</span>
-<a id="__codelineno-123-7" name="__codelineno-123-7" href="#__codelineno-123-7"></a>
-<a id="__codelineno-123-8" name="__codelineno-123-8" href="#__codelineno-123-8"></a><span class="n">iterable</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Eu&#39;</span><span class="p">,</span> <span class="s1">&#39;Tenho&#39;</span><span class="p">,</span> <span class="s1">&#39;__iter__&#39;</span><span class="p">]</span>
-<a id="__codelineno-123-9" name="__codelineno-123-9" href="#__codelineno-123-9"></a><span class="n">interator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">interable</span><span class="p">)</span> <span class="c1"># tem __iter__ e __next__</span>
-<a id="__codelineno-123-10" name="__codelineno-123-10" href="#__codelineno-123-10"></a>
-<a id="__codelineno-123-11" name="__codelineno-123-11" href="#__codelineno-123-11"></a><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">)]</span>
-<a id="__codelineno-123-12" name="__codelineno-123-12" href="#__codelineno-123-12"></a><span class="n">generator</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">))</span>
+<a id="__codelineno-123-6" name="__codelineno-123-6" href="#__codelineno-123-6"></a><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">)]</span>
+<a id="__codelineno-123-7" name="__codelineno-123-7" href="#__codelineno-123-7"></a><span class="n">generator</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">))</span>
+<a id="__codelineno-123-8" name="__codelineno-123-8" href="#__codelineno-123-8"></a>
+<a id="__codelineno-123-9" name="__codelineno-123-9" href="#__codelineno-123-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="n">lista</span><span class="p">))</span>
+<a id="__codelineno-123-10" name="__codelineno-123-10" href="#__codelineno-123-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="n">generator</span><span class="p">))</span>
+<a id="__codelineno-123-11" name="__codelineno-123-11" href="#__codelineno-123-11"></a>
+<a id="__codelineno-123-12" name="__codelineno-123-12" href="#__codelineno-123-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
 <a id="__codelineno-123-13" name="__codelineno-123-13" href="#__codelineno-123-13"></a>
-<a id="__codelineno-123-14" name="__codelineno-123-14" href="#__codelineno-123-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="n">lista</span><span class="p">))</span>
-<a id="__codelineno-123-15" name="__codelineno-123-15" href="#__codelineno-123-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="n">generator</span><span class="p">))</span>
-<a id="__codelineno-123-16" name="__codelineno-123-16" href="#__codelineno-123-16"></a>
-<a id="__codelineno-123-17" name="__codelineno-123-17" href="#__codelineno-123-17"></a><span class="nb">print</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
-<a id="__codelineno-123-18" name="__codelineno-123-18" href="#__codelineno-123-18"></a>
-<a id="__codelineno-123-19" name="__codelineno-123-19" href="#__codelineno-123-19"></a><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">generator</span><span class="p">:</span>
-<a id="__codelineno-123-20" name="__codelineno-123-20" href="#__codelineno-123-20"></a><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a id="__codelineno-123-14" name="__codelineno-123-14" href="#__codelineno-123-14"></a><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">generator</span><span class="p">:</span>
+<a id="__codelineno-123-15" name="__codelineno-123-15" href="#__codelineno-123-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 </code></pre></div>
 <p>❎ 147 - Introdução às Generator Functions em python</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-124-1" name="__codelineno-124-1" href="#__codelineno-124-1"></a><span class="sd">&#39;&#39;&#39;</span>
-<a id="__codelineno-124-2" name="__codelineno-124-2" href="#__codelineno-124-2"></a><span class="sd">-&gt;  Introdução às Generator functions em Python</span>
-<a id="__codelineno-124-3" name="__codelineno-124-3" href="#__codelineno-124-3"></a><span class="sd">---------------------------------------------------</span>
-<a id="__codelineno-124-4" name="__codelineno-124-4" href="#__codelineno-124-4"></a><span class="sd">&#39;&#39;&#39;</span>
-<a id="__codelineno-124-5" name="__codelineno-124-5" href="#__codelineno-124-5"></a>
-<a id="__codelineno-124-6" name="__codelineno-124-6" href="#__codelineno-124-6"></a><span class="n">generator</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-124-1" name="__codelineno-124-1" href="#__codelineno-124-1"></a><span class="n">generator</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">))</span>
+<a id="__codelineno-124-2" name="__codelineno-124-2" href="#__codelineno-124-2"></a>
+<a id="__codelineno-124-3" name="__codelineno-124-3" href="#__codelineno-124-3"></a><span class="k">def</span> <span class="nf">generator</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">maximum</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-124-4" name="__codelineno-124-4" href="#__codelineno-124-4"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-124-5" name="__codelineno-124-5" href="#__codelineno-124-5"></a>  <span class="k">yield</span> <span class="n">n</span>
+<a id="__codelineno-124-6" name="__codelineno-124-6" href="#__codelineno-124-6"></a>  <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
 <a id="__codelineno-124-7" name="__codelineno-124-7" href="#__codelineno-124-7"></a>
-<a id="__codelineno-124-8" name="__codelineno-124-8" href="#__codelineno-124-8"></a><span class="k">def</span> <span class="nf">generator</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">maximum</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<a id="__codelineno-124-9" name="__codelineno-124-9" href="#__codelineno-124-9"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<a id="__codelineno-124-10" name="__codelineno-124-10" href="#__codelineno-124-10"></a>  <span class="k">yield</span> <span class="n">n</span>
-<a id="__codelineno-124-11" name="__codelineno-124-11" href="#__codelineno-124-11"></a>  <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-124-8" name="__codelineno-124-8" href="#__codelineno-124-8"></a>  <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="n">maximum</span><span class="p">:</span>
+<a id="__codelineno-124-9" name="__codelineno-124-9" href="#__codelineno-124-9"></a>    <span class="k">return</span>
+<a id="__codelineno-124-10" name="__codelineno-124-10" href="#__codelineno-124-10"></a>
+<a id="__codelineno-124-11" name="__codelineno-124-11" href="#__codelineno-124-11"></a><span class="n">gen</span> <span class="o">=</span> <span class="n">generator</span><span class="p">(</span><span class="n">maximum</span><span class="o">=</span><span class="mi">1000000</span><span class="p">)</span>
 <a id="__codelineno-124-12" name="__codelineno-124-12" href="#__codelineno-124-12"></a>
-<a id="__codelineno-124-13" name="__codelineno-124-13" href="#__codelineno-124-13"></a>  <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="n">maximum</span><span class="p">:</span>
-<a id="__codelineno-124-14" name="__codelineno-124-14" href="#__codelineno-124-14"></a>    <span class="k">return</span>
-<a id="__codelineno-124-15" name="__codelineno-124-15" href="#__codelineno-124-15"></a>
-<a id="__codelineno-124-16" name="__codelineno-124-16" href="#__codelineno-124-16"></a><span class="n">gen</span> <span class="o">=</span> <span class="n">generator</span><span class="p">(</span><span class="n">maximum</span><span class="o">=</span><span class="mi">1000000</span><span class="p">)</span>
-<a id="__codelineno-124-17" name="__codelineno-124-17" href="#__codelineno-124-17"></a>
-<a id="__codelineno-124-18" name="__codelineno-124-18" href="#__codelineno-124-18"></a><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">gen</span><span class="p">:</span>
-<a id="__codelineno-124-19" name="__codelineno-124-19" href="#__codelineno-124-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<a id="__codelineno-124-13" name="__codelineno-124-13" href="#__codelineno-124-13"></a><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">gen</span><span class="p">:</span>
+<a id="__codelineno-124-14" name="__codelineno-124-14" href="#__codelineno-124-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 </code></pre></div>
 <p>❎ 148 - yield from em generator Functions</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-125-1" name="__codelineno-125-1" href="#__codelineno-125-1"></a><span class="sd">&#39;&#39;&#39;</span>
@@ -4282,26 +4272,24 @@ mesmo significado.</p>
 </code></pre></div>
 <p>❎ 151 - try, except, else e finally + Bult-in Exceptions</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-128-1" name="__codelineno-128-1" href="#__codelineno-128-1"></a><span class="sd">&#39;&#39;&#39;</span>
-<a id="__codelineno-128-2" name="__codelineno-128-2" href="#__codelineno-128-2"></a><span class="sd">-&gt; try, except, else e finally</span>
-<a id="__codelineno-128-3" name="__codelineno-128-3" href="#__codelineno-128-3"></a><span class="sd">----------------------------------</span>
-<a id="__codelineno-128-4" name="__codelineno-128-4" href="#__codelineno-128-4"></a><span class="sd">https://docs.python.org/pt-br/3/library/exceptions.html#built-in-exceptions</span>
-<a id="__codelineno-128-5" name="__codelineno-128-5" href="#__codelineno-128-5"></a><span class="sd">&#39;&#39;&#39;</span>
-<a id="__codelineno-128-6" name="__codelineno-128-6" href="#__codelineno-128-6"></a>
-<a id="__codelineno-128-7" name="__codelineno-128-7" href="#__codelineno-128-7"></a><span class="k">try</span><span class="p">:</span>
-<a id="__codelineno-128-8" name="__codelineno-128-8" href="#__codelineno-128-8"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ABRIR ARQUIVO&#39;</span><span class="p">)</span>
-<a id="__codelineno-128-9" name="__codelineno-128-9" href="#__codelineno-128-9"></a><span class="mi">8</span><span class="o">/</span><span class="mi">0</span>
-<a id="__codelineno-128-10" name="__codelineno-128-10" href="#__codelineno-128-10"></a><span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<a id="__codelineno-128-11" name="__codelineno-128-11" href="#__codelineno-128-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
-<a id="__codelineno-128-12" name="__codelineno-128-12" href="#__codelineno-128-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-<a id="__codelineno-128-13" name="__codelineno-128-13" href="#__codelineno-128-13"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;DIVIDIU ZERO&#39;</span><span class="p">)</span>
-<a id="__codelineno-128-14" name="__codelineno-128-14" href="#__codelineno-128-14"></a><span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-<a id="__codelineno-128-15" name="__codelineno-128-15" href="#__codelineno-128-15"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;IndexError&#39;</span><span class="p">)</span>
-<a id="__codelineno-128-16" name="__codelineno-128-16" href="#__codelineno-128-16"></a><span class="k">except</span> <span class="p">(</span><span class="ne">NameError</span><span class="p">,</span> <span class="ne">ImportError</span><span class="p">):</span>
-<a id="__codelineno-128-17" name="__codelineno-128-17" href="#__codelineno-128-17"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;NameError, ImportError&#39;</span><span class="p">)</span>
-<a id="__codelineno-128-18" name="__codelineno-128-18" href="#__codelineno-128-18"></a><span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-128-19" name="__codelineno-128-19" href="#__codelineno-128-19"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Não deu erro&#39;</span><span class="p">)</span>
-<a id="__codelineno-128-20" name="__codelineno-128-20" href="#__codelineno-128-20"></a><span class="k">finally</span><span class="p">:</span>
-<a id="__codelineno-128-21" name="__codelineno-128-21" href="#__codelineno-128-21"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;FECHAR ARQUIVO&#39;</span><span class="p">)</span>
+<a id="__codelineno-128-2" name="__codelineno-128-2" href="#__codelineno-128-2"></a><span class="sd">https://docs.python.org/pt-br/3/library/exceptions.html#built-in-exceptions</span>
+<a id="__codelineno-128-3" name="__codelineno-128-3" href="#__codelineno-128-3"></a><span class="sd">&#39;&#39;&#39;</span>
+<a id="__codelineno-128-4" name="__codelineno-128-4" href="#__codelineno-128-4"></a>
+<a id="__codelineno-128-5" name="__codelineno-128-5" href="#__codelineno-128-5"></a><span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-128-6" name="__codelineno-128-6" href="#__codelineno-128-6"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ABRIR ARQUIVO&#39;</span><span class="p">)</span>
+<a id="__codelineno-128-7" name="__codelineno-128-7" href="#__codelineno-128-7"></a><span class="mi">8</span><span class="o">/</span><span class="mi">0</span>
+<a id="__codelineno-128-8" name="__codelineno-128-8" href="#__codelineno-128-8"></a><span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<a id="__codelineno-128-9" name="__codelineno-128-9" href="#__codelineno-128-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<a id="__codelineno-128-10" name="__codelineno-128-10" href="#__codelineno-128-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<a id="__codelineno-128-11" name="__codelineno-128-11" href="#__codelineno-128-11"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;DIVIDIU ZERO&#39;</span><span class="p">)</span>
+<a id="__codelineno-128-12" name="__codelineno-128-12" href="#__codelineno-128-12"></a><span class="k">except</span> <span class="ne">IndexError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+<a id="__codelineno-128-13" name="__codelineno-128-13" href="#__codelineno-128-13"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;IndexError&#39;</span><span class="p">)</span>
+<a id="__codelineno-128-14" name="__codelineno-128-14" href="#__codelineno-128-14"></a><span class="k">except</span> <span class="p">(</span><span class="ne">NameError</span><span class="p">,</span> <span class="ne">ImportError</span><span class="p">):</span>
+<a id="__codelineno-128-15" name="__codelineno-128-15" href="#__codelineno-128-15"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;NameError, ImportError&#39;</span><span class="p">)</span>
+<a id="__codelineno-128-16" name="__codelineno-128-16" href="#__codelineno-128-16"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-128-17" name="__codelineno-128-17" href="#__codelineno-128-17"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Não deu erro&#39;</span><span class="p">)</span>
+<a id="__codelineno-128-18" name="__codelineno-128-18" href="#__codelineno-128-18"></a><span class="k">finally</span><span class="p">:</span>
+<a id="__codelineno-128-19" name="__codelineno-128-19" href="#__codelineno-128-19"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;FECHAR ARQUIVO&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>❎ 152 - raise lançando (erros)</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-129-1" name="__codelineno-129-1" href="#__codelineno-129-1"></a><span class="sd">&#39;&#39;&#39;</span>
@@ -4785,84 +4773,72 @@ mesmo significado.</p>
 <a id="__codelineno-143-37" name="__codelineno-143-37" href="#__codelineno-143-37"></a><span class="nb">print</span><span class="p">(</span><span class="n">invertida</span><span class="p">)</span>
 </code></pre></div>
 <p>❎ 167 - Decoradores com parâmetros</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-144-1" name="__codelineno-144-1" href="#__codelineno-144-1"></a><span class="sd">&#39;&#39;&#39;</span>
-<a id="__codelineno-144-2" name="__codelineno-144-2" href="#__codelineno-144-2"></a><span class="sd">-&gt; decoradores com parâmetros</span>
-<a id="__codelineno-144-3" name="__codelineno-144-3" href="#__codelineno-144-3"></a><span class="sd">------------------------------</span>
-<a id="__codelineno-144-4" name="__codelineno-144-4" href="#__codelineno-144-4"></a><span class="sd">&#39;&#39;&#39;</span>
-<a id="__codelineno-144-5" name="__codelineno-144-5" href="#__codelineno-144-5"></a>
-<a id="__codelineno-144-6" name="__codelineno-144-6" href="#__codelineno-144-6"></a><span class="k">def</span> <span class="nf">fabrica_de_decoradores</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<a id="__codelineno-144-7" name="__codelineno-144-7" href="#__codelineno-144-7"></a><span class="k">def</span> <span class="nf">fabrica_de_funcoes</span><span class="p">(</span><span class="n">func</span><span class="p">);</span>
-<a id="__codelineno-144-8" name="__codelineno-144-8" href="#__codelineno-144-8"></a>  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Decoradora 1&#39;</span><span class="p">)</span>
-<a id="__codelineno-144-9" name="__codelineno-144-9" href="#__codelineno-144-9"></a>
-<a id="__codelineno-144-10" name="__codelineno-144-10" href="#__codelineno-144-10"></a>  <span class="k">def</span> <span class="nf">aninhada</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<a id="__codelineno-144-11" name="__codelineno-144-11" href="#__codelineno-144-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Parâmetro do decorador, &#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
-<a id="__codelineno-144-12" name="__codelineno-144-12" href="#__codelineno-144-12"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Aninhada&#39;</span><span class="p">)</span>
-<a id="__codelineno-144-13" name="__codelineno-144-13" href="#__codelineno-144-13"></a>    <span class="n">res</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<a id="__codelineno-144-14" name="__codelineno-144-14" href="#__codelineno-144-14"></a>    <span class="k">return</span> <span class="n">res</span>
-<a id="__codelineno-144-15" name="__codelineno-144-15" href="#__codelineno-144-15"></a>  <span class="k">return</span> <span class="n">aninhada</span>
-<a id="__codelineno-144-16" name="__codelineno-144-16" href="#__codelineno-144-16"></a><span class="k">return</span> <span class="n">fubrica_de_funcoes</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-144-1" name="__codelineno-144-1" href="#__codelineno-144-1"></a><span class="k">def</span> <span class="nf">fabrica_de_decoradores</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<a id="__codelineno-144-2" name="__codelineno-144-2" href="#__codelineno-144-2"></a><span class="k">def</span> <span class="nf">fabrica_de_funcoes</span><span class="p">(</span><span class="n">func</span><span class="p">);</span>
+<a id="__codelineno-144-3" name="__codelineno-144-3" href="#__codelineno-144-3"></a>  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Decoradora 1&#39;</span><span class="p">)</span>
+<a id="__codelineno-144-4" name="__codelineno-144-4" href="#__codelineno-144-4"></a>
+<a id="__codelineno-144-5" name="__codelineno-144-5" href="#__codelineno-144-5"></a>  <span class="k">def</span> <span class="nf">aninhada</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<a id="__codelineno-144-6" name="__codelineno-144-6" href="#__codelineno-144-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Parâmetro do decorador, &#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<a id="__codelineno-144-7" name="__codelineno-144-7" href="#__codelineno-144-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Aninhada&#39;</span><span class="p">)</span>
+<a id="__codelineno-144-8" name="__codelineno-144-8" href="#__codelineno-144-8"></a>    <span class="n">res</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<a id="__codelineno-144-9" name="__codelineno-144-9" href="#__codelineno-144-9"></a>    <span class="k">return</span> <span class="n">res</span>
+<a id="__codelineno-144-10" name="__codelineno-144-10" href="#__codelineno-144-10"></a>  <span class="k">return</span> <span class="n">aninhada</span>
+<a id="__codelineno-144-11" name="__codelineno-144-11" href="#__codelineno-144-11"></a><span class="k">return</span> <span class="n">fabrica_de_funcoes</span>
+<a id="__codelineno-144-12" name="__codelineno-144-12" href="#__codelineno-144-12"></a>
+<a id="__codelineno-144-13" name="__codelineno-144-13" href="#__codelineno-144-13"></a>
+<a id="__codelineno-144-14" name="__codelineno-144-14" href="#__codelineno-144-14"></a><span class="nd">@fabrica_de_decoradores</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-144-15" name="__codelineno-144-15" href="#__codelineno-144-15"></a><span class="k">def</span> <span class="nf">soma</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<a id="__codelineno-144-16" name="__codelineno-144-16" href="#__codelineno-144-16"></a><span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
 <a id="__codelineno-144-17" name="__codelineno-144-17" href="#__codelineno-144-17"></a>
-<a id="__codelineno-144-18" name="__codelineno-144-18" href="#__codelineno-144-18"></a>
-<a id="__codelineno-144-19" name="__codelineno-144-19" href="#__codelineno-144-19"></a><span class="nd">@fabrica_de_decoradores</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<a id="__codelineno-144-20" name="__codelineno-144-20" href="#__codelineno-144-20"></a><span class="k">def</span> <span class="nf">soma</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-<a id="__codelineno-144-21" name="__codelineno-144-21" href="#__codelineno-144-21"></a><span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-<a id="__codelineno-144-22" name="__codelineno-144-22" href="#__codelineno-144-22"></a>
-<a id="__codelineno-144-23" name="__codelineno-144-23" href="#__codelineno-144-23"></a><span class="n">decoradora</span> <span class="o">=</span> <span class="n">fabrica_de_decoradores</span><span class="p">()</span>
-<a id="__codelineno-144-24" name="__codelineno-144-24" href="#__codelineno-144-24"></a><span class="n">multiplica</span> <span class="o">=</span> <span class="n">decoradora</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span>
-<a id="__codelineno-144-25" name="__codelineno-144-25" href="#__codelineno-144-25"></a>
-<a id="__codelineno-144-26" name="__codelineno-144-26" href="#__codelineno-144-26"></a><span class="n">dez_mais_cinco</span> <span class="o">=</span> <span class="n">soma</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<a id="__codelineno-144-27" name="__codelineno-144-27" href="#__codelineno-144-27"></a><span class="n">dez_vezes_cinco</span> <span class="o">=</span> <span class="n">multiplica</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<a id="__codelineno-144-28" name="__codelineno-144-28" href="#__codelineno-144-28"></a>
-<a id="__codelineno-144-29" name="__codelineno-144-29" href="#__codelineno-144-29"></a><span class="nb">print</span><span class="p">(</span><span class="n">dez_mais_cinco</span><span class="p">)</span>
-<a id="__codelineno-144-30" name="__codelineno-144-30" href="#__codelineno-144-30"></a><span class="nb">print</span><span class="p">(</span><span class="n">dez_vezes_cinco</span><span class="p">)</span>
+<a id="__codelineno-144-18" name="__codelineno-144-18" href="#__codelineno-144-18"></a><span class="n">decoradora</span> <span class="o">=</span> <span class="n">fabrica_de_decoradores</span><span class="p">()</span>
+<a id="__codelineno-144-19" name="__codelineno-144-19" href="#__codelineno-144-19"></a><span class="n">multiplica</span> <span class="o">=</span> <span class="n">decoradora</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-144-20" name="__codelineno-144-20" href="#__codelineno-144-20"></a>
+<a id="__codelineno-144-21" name="__codelineno-144-21" href="#__codelineno-144-21"></a><span class="n">dez_mais_cinco</span> <span class="o">=</span> <span class="n">soma</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-144-22" name="__codelineno-144-22" href="#__codelineno-144-22"></a><span class="n">dez_vezes_cinco</span> <span class="o">=</span> <span class="n">multiplica</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-144-23" name="__codelineno-144-23" href="#__codelineno-144-23"></a>
+<a id="__codelineno-144-24" name="__codelineno-144-24" href="#__codelineno-144-24"></a><span class="nb">print</span><span class="p">(</span><span class="n">dez_mais_cinco</span><span class="p">)</span>
+<a id="__codelineno-144-25" name="__codelineno-144-25" href="#__codelineno-144-25"></a><span class="nb">print</span><span class="p">(</span><span class="n">dez_vezes_cinco</span><span class="p">)</span>
 </code></pre></div>
 <p>❎ 168 - Ordem de aplicação dos decoradoras</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-145-1" name="__codelineno-145-1" href="#__codelineno-145-1"></a><span class="sd">&#39;&#39;&#39;</span>
-<a id="__codelineno-145-2" name="__codelineno-145-2" href="#__codelineno-145-2"></a><span class="sd">-&gt; Ordem dos decoradores</span>
-<a id="__codelineno-145-3" name="__codelineno-145-3" href="#__codelineno-145-3"></a><span class="sd">-------------------------</span>
-<a id="__codelineno-145-4" name="__codelineno-145-4" href="#__codelineno-145-4"></a><span class="sd">&#39;&#39;&#39;</span>
-<a id="__codelineno-145-5" name="__codelineno-145-5" href="#__codelineno-145-5"></a>
-<a id="__codelineno-145-6" name="__codelineno-145-6" href="#__codelineno-145-6"></a><span class="k">def</span> <span class="nf">parametros_decorador</span><span class="p">(</span><span class="n">nome</span><span class="p">):</span>
-<a id="__codelineno-145-7" name="__codelineno-145-7" href="#__codelineno-145-7"></a><span class="k">def</span> <span class="nf">decorador</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-<a id="__codelineno-145-8" name="__codelineno-145-8" href="#__codelineno-145-8"></a>  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Decorador:&#39;</span><span class="p">,</span> <span class="n">nome</span><span class="p">)</span>
-<a id="__codelineno-145-9" name="__codelineno-145-9" href="#__codelineno-145-9"></a>
-<a id="__codelineno-145-10" name="__codelineno-145-10" href="#__codelineno-145-10"></a>  <span class="k">def</span> <span class="nf">sua_nova_funcao</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<a id="__codelineno-145-11" name="__codelineno-145-11" href="#__codelineno-145-11"></a>    <span class="n">res</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<a id="__codelineno-145-12" name="__codelineno-145-12" href="#__codelineno-145-12"></a>    <span class="n">final</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">nome</span><span class="si">}</span><span class="s1">&#39;</span>
-<a id="__codelineno-145-13" name="__codelineno-145-13" href="#__codelineno-145-13"></a>    <span class="k">return</span> <span class="n">final</span>
-<a id="__codelineno-145-14" name="__codelineno-145-14" href="#__codelineno-145-14"></a>  <span class="k">return</span> <span class="n">sua_nova_funcao</span>
-<a id="__codelineno-145-15" name="__codelineno-145-15" href="#__codelineno-145-15"></a><span class="k">return</span> <span class="n">decorador</span>
-<a id="__codelineno-145-16" name="__codelineno-145-16" href="#__codelineno-145-16"></a>
-<a id="__codelineno-145-17" name="__codelineno-145-17" href="#__codelineno-145-17"></a>
-<a id="__codelineno-145-18" name="__codelineno-145-18" href="#__codelineno-145-18"></a><span class="nd">@parametros_decorador</span><span class="p">(</span><span class="n">nome</span><span class="o">=</span><span class="s1">&#39;5&#39;</span><span class="p">)</span>
-<a id="__codelineno-145-19" name="__codelineno-145-19" href="#__codelineno-145-19"></a><span class="nd">@parametros_decorador</span><span class="p">(</span><span class="n">nome</span><span class="o">=</span><span class="s1">&#39;4&#39;</span><span class="p">)</span>
-<a id="__codelineno-145-20" name="__codelineno-145-20" href="#__codelineno-145-20"></a><span class="nd">@parametros_decorador</span><span class="p">(</span><span class="n">nome</span><span class="o">=</span><span class="s1">&#39;3&#39;</span><span class="p">)</span>
-<a id="__codelineno-145-21" name="__codelineno-145-21" href="#__codelineno-145-21"></a><span class="nd">@parametros_decorador</span><span class="p">(</span><span class="n">nome</span><span class="o">=</span><span class="s1">&#39;2&#39;</span><span class="p">)</span>
-<a id="__codelineno-145-22" name="__codelineno-145-22" href="#__codelineno-145-22"></a><span class="nd">@parametros_decorador</span><span class="p">(</span><span class="n">nome</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="p">)</span>
-<a id="__codelineno-145-23" name="__codelineno-145-23" href="#__codelineno-145-23"></a><span class="k">def</span> <span class="nf">soma</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-<a id="__codelineno-145-24" name="__codelineno-145-24" href="#__codelineno-145-24"></a><span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-<a id="__codelineno-145-25" name="__codelineno-145-25" href="#__codelineno-145-25"></a>
-<a id="__codelineno-145-26" name="__codelineno-145-26" href="#__codelineno-145-26"></a><span class="n">dez_mais_cinco</span> <span class="o">=</span> <span class="n">soma</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<a id="__codelineno-145-27" name="__codelineno-145-27" href="#__codelineno-145-27"></a>
-<a id="__codelineno-145-28" name="__codelineno-145-28" href="#__codelineno-145-28"></a><span class="nb">print</span><span class="p">(</span><span class="n">dez_mais_cinco</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-145-1" name="__codelineno-145-1" href="#__codelineno-145-1"></a><span class="k">def</span> <span class="nf">parametros_decorador</span><span class="p">(</span><span class="n">nome</span><span class="p">):</span>
+<a id="__codelineno-145-2" name="__codelineno-145-2" href="#__codelineno-145-2"></a><span class="k">def</span> <span class="nf">decorador</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<a id="__codelineno-145-3" name="__codelineno-145-3" href="#__codelineno-145-3"></a>  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Decorador:&#39;</span><span class="p">,</span> <span class="n">nome</span><span class="p">)</span>
+<a id="__codelineno-145-4" name="__codelineno-145-4" href="#__codelineno-145-4"></a>
+<a id="__codelineno-145-5" name="__codelineno-145-5" href="#__codelineno-145-5"></a>  <span class="k">def</span> <span class="nf">sua_nova_funcao</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<a id="__codelineno-145-6" name="__codelineno-145-6" href="#__codelineno-145-6"></a>    <span class="n">res</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<a id="__codelineno-145-7" name="__codelineno-145-7" href="#__codelineno-145-7"></a>    <span class="n">final</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">nome</span><span class="si">}</span><span class="s1">&#39;</span>
+<a id="__codelineno-145-8" name="__codelineno-145-8" href="#__codelineno-145-8"></a>    <span class="k">return</span> <span class="n">final</span>
+<a id="__codelineno-145-9" name="__codelineno-145-9" href="#__codelineno-145-9"></a>  <span class="k">return</span> <span class="n">sua_nova_funcao</span>
+<a id="__codelineno-145-10" name="__codelineno-145-10" href="#__codelineno-145-10"></a><span class="k">return</span> <span class="n">decorador</span>
+<a id="__codelineno-145-11" name="__codelineno-145-11" href="#__codelineno-145-11"></a>
+<a id="__codelineno-145-12" name="__codelineno-145-12" href="#__codelineno-145-12"></a>
+<a id="__codelineno-145-13" name="__codelineno-145-13" href="#__codelineno-145-13"></a><span class="nd">@parametros_decorador</span><span class="p">(</span><span class="n">nome</span><span class="o">=</span><span class="s1">&#39;5&#39;</span><span class="p">)</span>
+<a id="__codelineno-145-14" name="__codelineno-145-14" href="#__codelineno-145-14"></a><span class="nd">@parametros_decorador</span><span class="p">(</span><span class="n">nome</span><span class="o">=</span><span class="s1">&#39;4&#39;</span><span class="p">)</span>
+<a id="__codelineno-145-15" name="__codelineno-145-15" href="#__codelineno-145-15"></a><span class="nd">@parametros_decorador</span><span class="p">(</span><span class="n">nome</span><span class="o">=</span><span class="s1">&#39;3&#39;</span><span class="p">)</span>
+<a id="__codelineno-145-16" name="__codelineno-145-16" href="#__codelineno-145-16"></a><span class="nd">@parametros_decorador</span><span class="p">(</span><span class="n">nome</span><span class="o">=</span><span class="s1">&#39;2&#39;</span><span class="p">)</span>
+<a id="__codelineno-145-17" name="__codelineno-145-17" href="#__codelineno-145-17"></a><span class="nd">@parametros_decorador</span><span class="p">(</span><span class="n">nome</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="p">)</span>
+<a id="__codelineno-145-18" name="__codelineno-145-18" href="#__codelineno-145-18"></a><span class="k">def</span> <span class="nf">soma</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<a id="__codelineno-145-19" name="__codelineno-145-19" href="#__codelineno-145-19"></a><span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<a id="__codelineno-145-20" name="__codelineno-145-20" href="#__codelineno-145-20"></a>
+<a id="__codelineno-145-21" name="__codelineno-145-21" href="#__codelineno-145-21"></a><span class="n">dez_mais_cinco</span> <span class="o">=</span> <span class="n">soma</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-145-22" name="__codelineno-145-22" href="#__codelineno-145-22"></a>
+<a id="__codelineno-145-23" name="__codelineno-145-23" href="#__codelineno-145-23"></a><span class="nb">print</span><span class="p">(</span><span class="n">dez_mais_cinco</span><span class="p">)</span>
 </code></pre></div>
 <p>❎ 169 - Exercício - Unir listas</p>
 <p>📍  Exercício</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-146-1" name="__codelineno-146-1" href="#__codelineno-146-1"></a><span class="sd">&#39;&#39;&#39;</span>
-<a id="__codelineno-146-2" name="__codelineno-146-2" href="#__codelineno-146-2"></a><span class="sd">-&gt;  Exercício - Unir lista</span>
-<a id="__codelineno-146-3" name="__codelineno-146-3" href="#__codelineno-146-3"></a><span class="sd">--------------------------</span>
-<a id="__codelineno-146-4" name="__codelineno-146-4" href="#__codelineno-146-4"></a><span class="sd">-&gt;  Crie uma função zipper (como o zíper de roupas)</span>
-<a id="__codelineno-146-5" name="__codelineno-146-5" href="#__codelineno-146-5"></a><span class="sd">-&gt;  O trabalho dessa função será unir duas listas na ordem.</span>
-<a id="__codelineno-146-6" name="__codelineno-146-6" href="#__codelineno-146-6"></a><span class="sd">-&gt;  Use todos os valores da menor lista.</span>
-<a id="__codelineno-146-7" name="__codelineno-146-7" href="#__codelineno-146-7"></a><span class="sd">    Exe.:</span>
-<a id="__codelineno-146-8" name="__codelineno-146-8" href="#__codelineno-146-8"></a>
-<a id="__codelineno-146-9" name="__codelineno-146-9" href="#__codelineno-146-9"></a><span class="sd">    [&#39;Salvador&#39;, &#39;Ubatuba&#39;, &#39;Belo Horizonte&#39;]</span>
-<a id="__codelineno-146-10" name="__codelineno-146-10" href="#__codelineno-146-10"></a><span class="sd">    [&#39;BA&#39;, &#39;SP&#39;, &#39;MG&#39;, &#39;RJ&#39;]</span>
+<a id="__codelineno-146-2" name="__codelineno-146-2" href="#__codelineno-146-2"></a><span class="sd">-&gt;  Crie uma função zipper (como o zíper de roupas)</span>
+<a id="__codelineno-146-3" name="__codelineno-146-3" href="#__codelineno-146-3"></a><span class="sd">-&gt;  O trabalho dessa função será unir duas listas na ordem.</span>
+<a id="__codelineno-146-4" name="__codelineno-146-4" href="#__codelineno-146-4"></a><span class="sd">-&gt;  Use todos os valores da menor lista.</span>
+<a id="__codelineno-146-5" name="__codelineno-146-5" href="#__codelineno-146-5"></a><span class="sd">    Exe.:</span>
+<a id="__codelineno-146-6" name="__codelineno-146-6" href="#__codelineno-146-6"></a>
+<a id="__codelineno-146-7" name="__codelineno-146-7" href="#__codelineno-146-7"></a><span class="sd">    [&#39;Salvador&#39;, &#39;Ubatuba&#39;, &#39;Belo Horizonte&#39;]</span>
+<a id="__codelineno-146-8" name="__codelineno-146-8" href="#__codelineno-146-8"></a><span class="sd">    [&#39;BA&#39;, &#39;SP&#39;, &#39;MG&#39;, &#39;RJ&#39;]</span>
+<a id="__codelineno-146-9" name="__codelineno-146-9" href="#__codelineno-146-9"></a>
+<a id="__codelineno-146-10" name="__codelineno-146-10" href="#__codelineno-146-10"></a><span class="sd">    Resultado.:</span>
 <a id="__codelineno-146-11" name="__codelineno-146-11" href="#__codelineno-146-11"></a>
-<a id="__codelineno-146-12" name="__codelineno-146-12" href="#__codelineno-146-12"></a><span class="sd">    Resultado.:</span>
-<a id="__codelineno-146-13" name="__codelineno-146-13" href="#__codelineno-146-13"></a>
-<a id="__codelineno-146-14" name="__codelineno-146-14" href="#__codelineno-146-14"></a><span class="sd">    [(&#39;Salvador&#39;, &#39;BA&#39;), (&#39;Ubatuba&#39;, &#39;SP&#39;), (&#39;Belo Horizonte&#39;, &#39;MG&#39;)]</span>
-<a id="__codelineno-146-15" name="__codelineno-146-15" href="#__codelineno-146-15"></a><span class="sd">&#39;&#39;&#39;</span>
+<a id="__codelineno-146-12" name="__codelineno-146-12" href="#__codelineno-146-12"></a><span class="sd">    [(&#39;Salvador&#39;, &#39;BA&#39;), (&#39;Ubatuba&#39;, &#39;SP&#39;), (&#39;Belo Horizonte&#39;, &#39;MG&#39;)]</span>
+<a id="__codelineno-146-13" name="__codelineno-146-13" href="#__codelineno-146-13"></a><span class="sd">&#39;&#39;&#39;</span>
 </code></pre></div>
 <p>❎ 170 - Solução dO Exercício + zip e zip_longest do intertools</p>
 <p>🎓 Resposta do professor</p>
@@ -9615,7 +9591,7 @@ minúsculas e separadas por um underline, como em:
 <p>🎀  Argumentos princpais de <code>subprocess.run()</code>:</p>
 <p>👉  <code>stdout</code>, <code>stdin</code> e <code>stderr</code> -&gt; Redirecionam saída, entrada e erros</p>
 <p>👉  <code>capture_output</code> -&gt; captura a saída e erro para uso prosterior</p>
-<p>👉  <code>text</code> -&gt; Se True, entradas e saída serão tratadas como text e
+<p>👉  <code>text</code> -&gt; Se True, entradas e saída serão tratadas como text e$$
           atomaticamente codifcadas ou decontificadas para o conjunto
           de caracteres padrão da  plataforma (geralmente UTF-8)</p>
 <p>👉  <code>shell</code> -&gt;  Se True, terá acesso ao shell do sistema. Ao usar
@@ -9670,8 +9646,16 @@ Linux/Mac: ping 127.0.0.1 -c 4</p>
 <p>🎀 continuação</p>
 <p>✅ 326 - (Parte 3) Threads - Executando processamentos em paralelo</p>
 <p>🎀 continuação</p>
-<p>🔲 327 - PyPDF2 para manipular arquivos PDF(instalação)</p>
-<p>🔲 328 - PyPDF2 para manipular arquivos PDF(PdfReader)</p>
+<p>✅ 327 - PyPDF2 para manipular arquivos PDF(instalação)</p>
+<p>🎀  PyPDF2 é uma biblioteca de manipulação de arquivos PDF feita em Python puro
+      gratuita e de código aberto. Ela é capaz de ler, manipular, escrever e unir
+      dados de arquivos PDF, assim como adicionar atotações, transformar páginas
+      extrair texto e imagens, manipular metadados, e mais.</p>
+<p>🎀  A documentação contém todas as informações necessárias para usar PyPDF2.</p>
+<p>🎀  link : <a href="https://pypdf2.readthedocs.io/en/3.0.0/">https://pypdf2.readthedocs.io/en/3.0.0/</a></p>
+<p>pip install pypdf2 ou poetry add pypdf2</p>
+<p>✅ 328 - PyPDF2 para manipular arquivos PDF(PdfReader)</p>
+<p><a href="https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6_aula_328_330" title="PyPDF2"><img alt="PDF editor python" src="../img/pdf_editor.png" /></a></p>
 <p>🔲 329 - PyPDF2 para manipular arquivos PDF(PdfWriter)</p>
 <p>🔲 330 - PyPDF2 para manipular arquivos PDF(PdfMerger)</p>
 <p>🔲 331 - Deque - Trabalhando com LIFO e FIFO</p>
