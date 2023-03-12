@@ -7119,22 +7119,21 @@ print(focus.nome, focus.fabricante.nome, focus.motor.nome)
 
 ❎ 219 - TEORIA - Herança, generalização e especialização
 
-```python
+->  Herança simples - Relações entre classes
 
-  '''
-    ->  Herança simples - Relações entre classes
-    ---------------------------------------------
-    ->  Associação - usa Agregação - tem
-    ->  Composição - É dono de, Herança É um
+---;
 
-    ->  Herança vs Composição
-    ----------------------------------------------
-    ->  Classe principal (Pessoa)
-          ->  super class, base class, parent class
-    ->  classes filhas (Cliente)
-          ->  sub class, child class, derived class
-  '''
-```
+->  Associação - usa Agregação - tem
+->  Composição - É dono de, Herança É um
+
+->  Herança vs Composição
+
+---;
+
+->  Classe principal (Pessoa)
+      ->  super class, base class, parent class
+->  classes filhas (Cliente)
+      ->  sub class, child class, derived class
 
 ❎ 220 - Herança Simples - Python Orientado a Objetos
 
@@ -7282,47 +7281,41 @@ print(focus.nome, focus.fabricante.nome, focus.motor.nome)
 
 ❎ 223 - Teoria - Herança múltipla - Python Orientado a Objetos
 
-```python
+->  Quer dizer que no Python, uma classe pode estender
+      várias ouras classes.
 
-  '''
-    ->  Herança Múltipla - Python Orientado a Objetos
-    -----------------------------------------------------
-    ->  Quer dizer que no Python, uma classe pode estender
-          várias ouras classes.
+->  Herança simples:
 
-    ->  Herança simples:
+->  Animal => Mamífero  =>  Humano => Pessoa  =>  Cliente
 
-    ->  Animal => Mamífero  =>  Humano => Pessoa  =>  Cliente
+->  Herança múltipla e mixins:
 
-    ->  Herança múltipla e mixins:
-
-    ->  Log =>  FileLog
-    ->  Animal => Mamífero  =>  Humano => Pessoa  =>  Cliente
-    ->  Cliente(Pessoa, FileLog)
+->  Log =>  FileLog
+->  Animal => Mamífero  =>  Humano => Pessoa  =>  Cliente
+->  Cliente(Pessoa, FileLog)
 
 
-    ->  A, B, C, D
-    ->  D(B, C)   - C(A)  - B(A) -  A
+->  A, B, C, D
+->  D(B, C)   - C(A)  - B(A) -  A
 
-    ->  Método => falar
+->  Método => falar
 
-                  A
-                /   \
-                B    C
-                \   /
-                  D
+              A
+            /   \
+            B    C
+            \   /
+              D
 
 
-    ->  Python 3 usa C3 superclass linearization
-          para gera o mro. (method resolution Order)
-    ->  Você não precisa estudar isso (é complexo)
-    ->  https://en.wikipedia.org/wiki/C3_linearization
+->  Python 3 usa C3 superclass linearization
+      para gera o mro. (method resolution Order)
+->  Você não precisa estudar isso (é complexo)
+->  <https://en.wikipedia.org/wiki/C3_linearization/>
 
-    ->  Para saber a ordem de chamada dos métodos
-    ->  Use o método de classe Classe.mro()
-    ->  Ou o atributo __mro__ (Dunder - Double Underscore)
-  '''
-```
+->  Para saber a ordem de chamada dos métodos
+->  Use o método de classe Classe.mro()
+->  Ou o atributo `__mro__` (Dunder - Double Underscore)
+
 
 ❎ 224 - Herança múltipla - Python Orientado a Objetos
 
@@ -7681,34 +7674,26 @@ print(foo.name)
 
 ❎ 231 - Teoria: polimorfismo, assinatura de métodos e Liskov Substitution Principle
 
-```python
+->  Polimorfismo é o princípio que permite que
+      classes deridavas de uma mesma superclasse
+      tenham métodos iguais (com mesma assinatura)
+      mas comportamentos diferentes.
+->  Assinatura de método = Mesmo nome e quantidade
+      de parâmetros (retorno não faz parte da  assinatura)
+->  Opinião + princípios que contam:
 
-  '''
-    ->  Polimorfismo em Python Orientado a Objeto
-    ---------------------------------------------------
-    ->  Polimorfismo é o princípio que permite que
-          classes deridavas de uma mesma superclasse
-          tenham métodos iguais (com mesma assinatura)
-          mas comportamentos diferentes.
-    ->  Assinatura de método = Mesmo nome e quantidade
-          de parâmetros (retorno não faz parte da  assinatura)
-    ->  Opinião + princípios que contam:
+-> Assinatura do método: nome, parâmetros e retorno iguais
+      SO"L"ID
 
-    -> Assinatura do método: nome, parâmetros e retorno iguais
-          SO"L"ID
+-> S  ->  Sigle Responsibility Principle
+-> O  ->  Open Close Principle
+-> L  ->  Liskov substitution Principle
+-> I  ->  Interface segregation principle
+-> D  ->  Dependency inversion principle
 
-    -> S  ->  Sigle Responsibility Principle
-    -> O  ->  Open Close Principle
-    -> L  ->  Liskov substitution Principle
-    -> I  ->  Interface segregation principle
-    -> D  ->  Dependency inversion principle
-
-    ->  Princípio da substituição de liskov
-    ->  Objetos de uma superclasse devem ser substituíveis
-          por objetos de uma subclasse sem quebrar a aplicação.
-  '''
-  ...
-```
+->  Princípio da substituição de liskov
+->  Objetos de uma superclasse devem ser substituíveis
+      por objetos de uma subclasse sem quebrar a aplicação.
 
 ❎ 232 - Na prática - polimorfismo, assinatura de métodos e Liskov Substitution Principle
 
@@ -7849,30 +7834,23 @@ except (MeuError, ZeroDivisionError) as error:
 
 ❎ 236 - Teoria - python Special Methods, Magic Methods ou Dunder Methods
 
-```python
+->  Dunder = Double Underscore - `__dunder__`
+->  Antigo e úteil <https://rszalski.github.io/magicmethods/>
+->  <https://docs.python.org/3/reference/datamodel.html#specialnames/>
 
-'''
-  ->  Teoria: python Special Methods, Magic Methods ou Dunder Methods
-  ---------------------------------------------------------------------
-  ->  Dunder = Double Underscore - __dunder__
-  ->  Antigo e úteil https://rszalski.github.io/magicmethods/
-  ->  https://docs.python.org/3/reference/datamodel.html#specialnames
-
-  ->  __lt__ (self, other) - self  <  other
-  ->  __le__ (self, other) - self  <= other
-  ->  __gt__ (self, other) - self   > other
-  ->  __ge__ (self, other) - self   >= other
-  ->  __eq__ (self, other) - self   == other
-  ->  __ne__ (self, other) - self   != other
-  ->  __add__ (self, other) - self  + other
-  ->  __sub__ (self, other) - self  - other
-  ->  __mul__ (self, other) - self  * other
-  ->  __truedic__ (self, other) - self / other
-  ->  __neg__(self) - -self
-  ->  __str__(self) - str
-  ->  __repr__(self) - str
-'''
-```
+->  `__lt__`(self, other) - self  <  other
+->  `__le__`(self, other) - self  <= other
+->  `__gt__`(self, other) - self   > other
+->  `__ge__`(self, other) - self   >= other
+->  `__eq__`(self, other) - self   == other
+->  `__ne__`(self, other) - self   != other
+->  `__add_` (self, other) - self  + other
+->  `__sub_` (self, other) - self  - other
+->  `__mul_` (self, other) - self  * other
+->  `__truedic__` (self, other) - self / other
+->  `__neg__`(self) - -self
+->  `__str__`(self) - str
+->  `__repr__`(self) - str
 
 ❎ 237 - Python Dunder Methods ``__repr__`` e ``__str__``
 
@@ -8281,8 +8259,6 @@ with my_open('aula_150.txt', 'w') as arquivo:
 ```python
 
     '''
-      ->  Metaclasses são tipo das classes
-      ----------------------------------------
       ->  EM PYTHON, TUDO É UM OBJETO (CLASSES TAMBÉM)
       ->  Então, qual é o tipo de c uma classe? (type)
       ->  Seu objeto é uma instância da sua classe
@@ -10336,7 +10312,41 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
 
 🎀 continuação
 
-🔲 320 - TEORIA: subprocess para executando programas e comandos externos
+✅ 320 - TEORIA: subprocess para executando programas e comandos externos
+
+🎀 Subprocessos é um módulo do Python para executar processo em comandos esternos no
+      seu programa.
+
+🎀 O método mais simples para atingir o objetivo é usando `subprocess.run()`
+
+🎀  Argumentos princpais de `subprocess.run()`:
+
+  👉  `stdout`, `stdin` e `stderr` -> Redirecionam saída, entrada e erros
+  
+  👉  `capture_output` -> captura a saída e erro para uso prosterior
+
+  👉  `text` -> Se True, entradas e saída serão tratadas como text e
+          atomaticamente codifcadas ou decontificadas para o conjunto
+          de caracteres padrão da  plataforma (geralmente UTF-8)
+
+  👉  `shell` ->  Se True, terá acesso ao shell do sistema. Ao usar
+        `shell` (True), recomendo enviar o comando e os argumentos juntos.
+
+  👉  `executeble` -> pode ser usado para especificar o caminho do excutável que
+        iniciará o subprocesso.
+  
+🎀  Retorno:
+
+  👉  `stdout`, `stderr`, `returncode` e `args`
+
+!!!danger "Importante:"
+      A codificação de caracteres do Windows poder diferente. Tente usar CP1252,
+      CP852, CP850 (outros). Linux e Mac, use utf_8
+
+!!!tip  "Dicas:"
+    Coamando de exemplo:
+    Windows: ping 127.0.0.1
+    Linux/Mac: ping 127.0.0.1 -c 4
 
 🔲 321 - subprocess para executando programas e comandos externos
 

@@ -1,8 +1,12 @@
 {
     "cSpell.words": [
+        "asdfasdfd",
         "Avancado",
         "Basico",
+        "chsh",
+        "codehilite",
         "configuracoes",
+        "conteudo",
         "fontawesome",
         "funcao",
         "getatter",
@@ -10,10 +14,13 @@
         "github",
         "hasattr",
         "hedless",
+        "inlinehilite",
         "isinstace",
         "isinstance",
+        "javascripts",
         "kwargs",
         "libmysql",
+        "linenums",
         "mult",
         "multip",
         "mutipil",
@@ -22,9 +29,13 @@
         "opoes",
         "popitem",
         "preco",
+        "pymdownx",
+        "repeticoes",
         "saudacao",
         "setdefault",
         "stdefault",
-        "usuario"
+        "superfences",
+        "usuario",
+        "variavel"
     ]
 }

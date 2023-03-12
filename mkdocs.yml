@@ -14,7 +14,8 @@ repo_url: https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado
 repo_name: Curso_de_Python_do_Basico_Ao_Avancado
 
 theme:
-
+  font:
+    text: JetBrains Mono
   language: pt-BR
   icon:
     repo: fontawesome/brands/github
@@ -35,6 +36,8 @@ theme:
   - navigation
   - toc
   - path
+
+
   palette:
     - scheme: default
       toggle:
@@ -61,7 +64,10 @@ plugins:
 
 
 markdown_extensions:
+  - toc:
+      permalink: ⚓︎
   - attr_list
+  - md_in_html
   - codehilite:
       linenums: true
   - pymdownx.highlight:

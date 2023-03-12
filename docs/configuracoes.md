@@ -19,15 +19,14 @@ ___
    python --version
     ```
 
-* ✔️ Resposta:
+!!!note  "✔️ Resposta:"
 
     ```bash
-    Python 3.11.0 # ou superior
+      Python 3.11.0 # ou superior
     ```
 
 * Instale o pacote a baixo:
 
   ```bash
     pip install -r requirements.txt
-    
   ```

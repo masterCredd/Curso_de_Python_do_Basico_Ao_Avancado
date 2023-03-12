@@ -1,4 +1,3 @@
-
 from pathlib import Path
 from time import sleep
 
@@ -23,11 +22,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 
 """
-    outra forma
-
+outra forma
     ROOT_FOLDER = Path(__file__).parent
     CHROMEDRIVER_EXEC= ROOT_FOLDER /'drivers'/'chromedriver.exe'
-    
     chrome_service = Service(executable_path=str(CHROMEDRIVER_EXEC))
 """
 
