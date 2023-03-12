@@ -9,21 +9,71 @@ class Pessoa:
 
     @property
     def nome(self) -> str:
+        """
+        The nome function returns the name of the person.
+        
+        :param self: Represent the instance of the class
+        :return: A string
+        :doc-author: Trelent
+        """
+        
         return self._nome
 
     @nome.setter
     def nome(self, nome: str) -> None:
+        """
+        The nome function sets the nome attribute of a Pessoa object.
+            Args:
+                nome (str): The name to be set for the Pessoa object.
+            Returns:
+                None
+        
+        :param self: Represent the instance of the class
+        :param nome: str: Define the type of data that will be passed to the 
+        function
+        :return: None
+        :doc-author: Trelent
+        """
         self._nome = nome
 
     @property
     def idade(self) -> int:
+        """
+        The idade function returns the age of a person.
+        
+        :param self: Represent the instance of the class
+        :return: The age of a person
+        :doc-author: Trelent
+        """
         return self._idade
 
     @idade.setter
     def idade(self, idade: int) -> None:
+        """
+        The idade function sets the idade attribute of a Pessoa object.
+            Args:
+                idade (int): The age of the person.
+        
+        
+        :param self: Represent the instance of the class
+        :param idade: int: Define the type of data that will be passed to the 
+        function
+        :return: None
+        :doc-author: Trelent
+        """
         self._idade = idade
 
     def __repr__(self) -> str:
+        """
+        The __repr__ function is used to compute the &quot;official&quot; 
+        string representation of an object.
+        This is how you would make an object of the class:
+            obj = MyClass(attr='value')
+        
+        :param self: Represent the instance of the class
+        :return: A string that is the representation of the object
+        :doc-author: Trelent
+        """
         class_name = type(self).__name__
         attr = f'({self.nome!r}, {self.idade!r})'
         return f'{class_name}{attr}'

@@ -32,6 +32,18 @@ outra forma
 
 # chrome_options.add_argument('--headless')
 def make_chrome_browser(*options: str) -> webdriver.Chrome:
+    """
+    The make_chrome_browser function is a wrapper for the webdriver.Chrome 
+        function, which returns an instance of the Chrome browser.
+    The make_chrome_browser function takes in any number of options as strings 
+    and passes them to the webdriver.ChromeOptions() class, which then passes 
+    them to ChromeDriverManager().install(), which installs chromedriver with 
+    those options.
+    
+    :param *options: str: Pass in any number of arguments to the function
+    :return: A chrome webdriver object
+    :doc-author: Trelent
+    """
     chrome_options = webdriver.ChromeOptions()
     chrome_service = Service(ChromeDriverManager().install())
     browser = webdriver.Chrome(
