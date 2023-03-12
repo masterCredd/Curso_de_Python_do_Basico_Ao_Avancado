@@ -9635,10 +9635,37 @@ minúsculas e separadas por um underline, como em:
 Windows: ping 127.0.0.1
 Linux/Mac: ping 127.0.0.1 -c 4</p>
 </div>
-<p>🔲 321 - subprocess para executando programas e comandos externos</p>
-<p>🔲 322 - Jupter NotebooK - Instalação e test  </p>
-<p>🔲 323 - Jupter NotebooK - Exemplos</p>
-<p>🔲 324 - (Parte 1) Threads - Executando processamentos em paralelo</p>
+<p>✅ 321 - subprocess para executando programas e comandos externos</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-273-1" name="__codelineno-273-1" href="#__codelineno-273-1"></a>    <span class="kn">import</span> <span class="nn">subprocess</span>
+<a id="__codelineno-273-2" name="__codelineno-273-2" href="#__codelineno-273-2"></a>    <span class="kn">import</span> <span class="nn">sys</span>
+<a id="__codelineno-273-3" name="__codelineno-273-3" href="#__codelineno-273-3"></a>
+<a id="__codelineno-273-4" name="__codelineno-273-4" href="#__codelineno-273-4"></a>    <span class="c1"># sys.platform - linux, linux2, darwin, win32</span>
+<a id="__codelineno-273-5" name="__codelineno-273-5" href="#__codelineno-273-5"></a>
+<a id="__codelineno-273-6" name="__codelineno-273-6" href="#__codelineno-273-6"></a>    <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ls -lah /&#39;</span><span class="p">]</span>
+<a id="__codelineno-273-7" name="__codelineno-273-7" href="#__codelineno-273-7"></a>    <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;ttf_8&#39;</span>
+<a id="__codelineno-273-8" name="__codelineno-273-8" href="#__codelineno-273-8"></a>    <span class="n">system</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span>
+<a id="__codelineno-273-9" name="__codelineno-273-9" href="#__codelineno-273-9"></a>
+<a id="__codelineno-273-10" name="__codelineno-273-10" href="#__codelineno-273-10"></a>    <span class="k">if</span> <span class="n">system</span> <span class="o">==</span> <span class="s1">&#39;win32&#39;</span><span class="p">:</span>
+<a id="__codelineno-273-11" name="__codelineno-273-11" href="#__codelineno-273-11"></a>      <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ping&#39;</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">]</span>
+<a id="__codelineno-273-12" name="__codelineno-273-12" href="#__codelineno-273-12"></a>      <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;cp850&#39;</span>
+<a id="__codelineno-273-13" name="__codelineno-273-13" href="#__codelineno-273-13"></a>
+<a id="__codelineno-273-14" name="__codelineno-273-14" href="#__codelineno-273-14"></a>    <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span>
+<a id="__codelineno-273-15" name="__codelineno-273-15" href="#__codelineno-273-15"></a>      <span class="n">cmd</span><span class="p">,</span><span class="n">capture_outoug</span>
+<a id="__codelineno-273-16" name="__codelineno-273-16" href="#__codelineno-273-16"></a>    <span class="p">)</span>
+<a id="__codelineno-273-17" name="__codelineno-273-17" href="#__codelineno-273-17"></a>
+<a id="__codelineno-273-18" name="__codelineno-273-18" href="#__codelineno-273-18"></a>    <span class="nb">print</span><span class="p">()</span>
+<a id="__codelineno-273-19" name="__codelineno-273-19" href="#__codelineno-273-19"></a>
+<a id="__codelineno-273-20" name="__codelineno-273-20" href="#__codelineno-273-20"></a>    <span class="c1"># print(proc.args)</span>
+<a id="__codelineno-273-21" name="__codelineno-273-21" href="#__codelineno-273-21"></a>    <span class="c1"># print(proc.stderr)</span>
+<a id="__codelineno-273-22" name="__codelineno-273-22" href="#__codelineno-273-22"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">proc</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>            
+<a id="__codelineno-273-23" name="__codelineno-273-23" href="#__codelineno-273-23"></a>    <span class="c1"># print(proc.returncode)</span>
+</code></pre></div>
+<p>✅ 322 - Jupter NotebooK - Instalação e test  </p>
+<p><a href="https://jupyter.org/" title="Jupyter Notebook"><img alt="notebook" src="../img/jupyter_notebook.png" /></a></p>
+<p>✅ 323 - Jupter NotebooK - Exemplos</p>
+<p><a href="https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6_aula_323" title="Jupter NotebooK Exemplos"><img alt="aula exemplo" src="../img/exemplo_aula.png" /></a></p>
+<p>✅ 324 - (Parte 1) Threads - Executando processamentos em paralelo</p>
+<p><a href="https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6_aula_324_326" title="Threads">![Threads](img\pngwing.png</a></p>
 <p>🔲 325 - (Parte 2) Threads - Executando processamentos em paralelo</p>
 <p>🔲 326 - (Parte 3) Threads - Executando processamentos em paralelo</p>
 <p>🔲 327 - PyPDF2 para manipular arquivos PDF(instalação)</p>
