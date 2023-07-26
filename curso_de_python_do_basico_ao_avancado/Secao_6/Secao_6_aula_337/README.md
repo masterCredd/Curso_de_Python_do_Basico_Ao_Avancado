@@ -1,0 +1,1 @@
+# Editar imagens com Python
