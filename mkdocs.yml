@@ -28,6 +28,7 @@ theme:
     - navigation.instant
     - navigation.top
     - toc.follow
+    - content.code.copy
     
 
 
@@ -72,6 +73,8 @@ markdown_extensions:
       linenums: true
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences

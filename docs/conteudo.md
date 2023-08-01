@@ -9921,11 +9921,11 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
 
 🎀  Doc: https://www.crummy.com/software/BeautifulSoup/bs4/doc.ptbr/
 
-✅ 313 - (Parte 2) Web Scraping com Python usando requests e bs4 BeautifilSuop
+❎ 313 - (Parte 2) Web Scraping com Python usando requests e bs4 BeautifilSuop
 
 🎀  continuação da aula anterior
 
-✅ 314 - Adicionando "encoding" no BeautifilSuop 4 para evitar problemas com caracteres
+❎ 314 - Adicionando "encoding" no BeautifilSuop 4 para evitar problemas com caracteres
 
 🎀  Uma coisa de ocorrer quando trabalhamos com bs4.BeautifilSuop. é problemas com 
       caracteres. Isso ocorre divido a uma falha na detecção do encoding.
@@ -9970,29 +9970,29 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
 
 ```
 
-✅ 315 - Escolhendo e baixando o chrome drive para o Selenium e Google Chrome
+❎ 315 - Escolhendo e baixando o chrome drive para o Selenium e Google Chrome
 
   [![Chromedriver](img/chromedriver.png)](https://chromedriver.chromium.org/home "Chromedriver para usar Selenium" )
 
 🎀 foi usado o web driver manager nos projetos
 
-✅ 316 - Selenium - Automatizando tarefas no navegador
+❎ 316 - Selenium - Automatizando tarefas no navegador
 
 [![Selenium](img/selenium.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6/Secao_6_aula_316_319  "Conteúdo" )
 
-✅ 317 - Selenium - Selecionando elementos com By, expected_conditions e WebDiverWait
+❎ 317 - Selenium - Selecionando elementos com By, expected_conditions e WebDiverWait
 
 🎀 continuação
 
-✅ 318 - Selenium - Enviando teclas com a classe keys
+❎ 318 - Selenium - Enviando teclas com a classe keys
 
 🎀 continuação
 
-✅ 319 - Selenium - find_element e find_elements By
+❎ 319 - Selenium - find_element e find_elements By
 
 🎀 continuação
 
-✅ 320 - TEORIA: subprocess para executando programas e comandos externos
+❎ 320 - TEORIA: subprocess para executando programas e comandos externos
 
 🎀 Subprocessos é um módulo do Python para executar processo em comandos esternos no
       seu programa.
@@ -10028,7 +10028,7 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
     Windows: ping 127.0.0.1
     Linux/Mac: ping 127.0.0.1 -c 4
 
-✅ 321 - subprocess para executando programas e comandos externos
+❎ 321 - subprocess para executando programas e comandos externos
 
 ```python
 
@@ -10057,27 +10057,27 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
     # print(proc.returncode)
 ```
 
-✅ 322 - Jupter NotebooK - Instalação e test  
+❎ 322 - Jupter NotebooK - Instalação e test  
 
 [![notebook](img/jupyter_notebook.png)]( https://jupyter.org/ "Jupyter Notebook" )
 
-✅ 323 - Jupter NotebooK - Exemplos
+❎ 323 - Jupter NotebooK - Exemplos
 
 [![aula exemplo](img/exemplo_aula.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6_aula_323https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6/Secao_6_aula_323 "Jupter NotebooK Exemplos")
 
-✅ 324 - (Parte 1) Threads - Executando processamentos em paralelo
+❎ 324 - (Parte 1) Threads - Executando processamentos em paralelo
 
 [![Threads](img/pngwing.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6/Secao_6_aula_324_326 "Threads")
 
-✅ 325 - (Parte 2) Threads - Executando processamentos em paralelo
+❎ 325 - (Parte 2) Threads - Executando processamentos em paralelo
 
 🎀 continuação
 
-✅ 326 - (Parte 3) Threads - Executando processamentos em paralelo
+❎ 326 - (Parte 3) Threads - Executando processamentos em paralelo
 
 🎀 continuação
 
-✅ 327 - PyPDF2 para manipular arquivos PDF(instalação)
+❎ 327 - PyPDF2 para manipular arquivos PDF(instalação)
 
 🎀  PyPDF2 é uma biblioteca de manipulação de arquivos PDF feita em Python puro
       gratuita e de código aberto. Ela é capaz de ler, manipular, escrever e unir
@@ -10090,19 +10090,19 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
 
   pip install pypdf2 ou poetry add pypdf2
 
-✅ 328 - PyPDF2 para manipular arquivos PDF(PdfReader)
+❎ 328 - PyPDF2 para manipular arquivos PDF(PdfReader)
 
 [![PDF editor python](img/pdf_editor.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6/Secao_6_aula_328_330  "PyPDF2")
 
-✅ 329 - PyPDF2 para manipular arquivos PDF(PdfWriter)
+❎ 329 - PyPDF2 para manipular arquivos PDF(PdfWriter)
 
 🎀 continuação
 
-✅ 330 - PyPDF2 para manipular arquivos PDF(PdfMerger)
+❎ 330 - PyPDF2 para manipular arquivos PDF(PdfMerger)
 
 🎀 continuação
 
-✅ 331 - Deque - Trabalhando com LIFO e FIFO
+❎ 331 - Deque - Trabalhando com LIFO e FIFO
 
 🎀  Lifo e e fifo
 
@@ -10205,7 +10205,7 @@ fila_correta..popleft() #0
 print(fila_correta) # deque([0, 1, 2, 3, 4])
 ```
 
-✅ 332 - Dica: remove regras de tipos Unkown do linter do VS Code
+❎ 332 - Dica: remove regras de tipos Unkown do linter do VS Code
 
 🎀  Se você vem tendo problemas com tipagem `Unknown` no _linter_ do
       VS Code, talvez desativar essas regras possa facilitar sua vida.
@@ -10215,7 +10215,7 @@ print(fila_correta) # deque([0, 1, 2, 3, 4])
 
 [...]
 
-✅ 333 - Openpyxl para arquivos Excel xlsx, xlsm, xltx e xltm
+❎ 333 - Openpyxl para arquivos Excel xlsx, xlsm, xltx e xltm
 
 🎀  Com essa biblioteca será possível ler e escrever dados em células
       específicas, formatar células, inserir gráficos, criar fómulas, adicionar
@@ -10229,19 +10229,19 @@ print(fila_correta) # deque([0, 1, 2, 3, 4])
 !!!tip  "Mais Informações da Biblioteca:"
     Documentação: <https://openpyxl.readthedocs.io/en/stable/>
 
-✅ 334 - Openpyxl - criando um planilha do Excel (Workbook e Worksheet)
+❎ 334 - Openpyxl - criando um planilha do Excel (Workbook e Worksheet)
 
 [![Excel + Python](img/excel_python.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6/Secao_6_aula_334_336 "Excel + Python")
 
-✅ 335 - Openpyxl - manipulando as planilhas do Workbook
+❎ 335 - Openpyxl - manipulando as planilhas do Workbook
 
 🎀 continuação
 
-✅ 336 - Openpyxl - ler e alterar dados de uma planilha
+❎ 336 - Openpyxl - ler e alterar dados de uma planilha
 
 🎀 continuação
 
-✅ 337 - Pillow: redimensionando imagens com Python
+❎ 337 - Pillow: redimensionando imagens com Python
 
 [![Editar imagens com python](img/edit_img_python.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6/Secao_6_aula_337 "Editar imagens com python")
 ___
@@ -10250,7 +10250,7 @@ ___
 
 ___
 
-✅ 338 - O que é PySide6 e o motivo da substituição de PyQT5
+❎ 338 - O que é PySide6 e o motivo da substituição de PyQT5
 
 🎀  Essa biblioteca (PySide e PyQT) usam a biblioteca **QT**.
 
@@ -10282,11 +10282,11 @@ ___
           antes de usar qualquer software de terceiros.
           <https://tldrlegal.com/license/gnu-lesser-general-public-license-v3-(lgpl-3)>
 
-✅ 339 - Download dos vídeos dessa seção antiga com PyQT5
+❎ 339 - Download dos vídeos dessa seção antiga com PyQT5
 
 [![Aula anterior](img/aula_old.png)](https://drive.google.com/drive/folders/18sAhJGlgNOlX5Cz1C2lVXt5ZedZ4i1v4?usp=share_link)
 
-✅ 340 - Instalando o PySide6 no ambiente virtual
+❎ 340 - Instalando o PySide6 no ambiente virtual
 
 👉 Teste a baixo a versão do PySide6.
 
@@ -10298,7 +10298,7 @@ ___
   print(PySide6.QtCore.__version__)
 ```
 
-✅ 341 - QApplication e QPushButton de PySide6.QtWidgets
+❎ 341 - QApplication e QPushButton de PySide6.QtWidgets
 
 🎀  QApplication -> O Widget principal da aplicação
 
@@ -10323,7 +10323,7 @@ ___
 
 ```
 
-✅ 342 - QtWidget e QLayout de PySide6.QtWidgets
+❎ 342 - QtWidget e QLayout de PySide6.QtWidgets
 
 🎀  QtWidget -> genérico
 🎀  QLayout ->  um widget de layout que recebe outros widgets
@@ -10363,7 +10363,7 @@ ___
   app.exec()
 ```
 
-✅ 343 - QMainWindw e centralWidget
+❎ 343 - QMainWindw e centralWidget
 
 | 🎀---> QApplication (app)|
 |--------------------------|
@@ -10448,7 +10448,7 @@ ___
 
 ```
 
-✅ 344 - O básico sobre Signal e slots(eventos e documentação)
+❎ 344 - O básico sobre Signal e slots(eventos e documentação)
 
 ```python
 
@@ -10478,7 +10478,7 @@ ___
 
   layout.addWidget(botao1, 1, 1, 1, 1)  
   layout.addWidget(botao2, 1, 2, 1, 1)
-  layout.addWidget(botao3, 3, 1, 1, 1)
+  layout.addWidget(botao3, 3, 1, 1, 2)
 
   @Sot()
   def slod_example(status_bar):
@@ -10512,12 +10512,80 @@ ___
 
   window.show()
   app.exec()
-
-
-
 ```
 
-🔲 345 - Integrando janelas do QT Designer com PyQT5
+❎ 345 - Trabalhando com classes e herança com o PySide6
+
+Exemplo de herança
+
+```python
+
+  import sys
+
+  from PySide6.QtCore import Slot
+  from PySide6.QtWidgets import (QApplication, QGridLayout, QMainWindow
+                                  QPushButton, QWidget)
+
+  class MyWindow(QMainWindow):
+    def __init__(self, parent=None):
+      super().__init__(parent)
+
+      self.contral_widget = QWidget()
+
+      self.setCentralWidget(self.central_widget)
+      self.setWindowTitle('Minha janela bonita')
+
+      self.botao_1 = self.make_button('Texto do botão')
+      self.botao_1.clicked.connect(self.segunda_acao_marcada) # type:ignore
+      
+      self.botao_2 = self.mke_button('Botão 2')
+
+      self.botao_3 = self.make_buntton('Terceiro')
+
+      self.grid_layout = QGridLayout()
+      self.central_widget.setLayout(set.grid_layout)
+
+      self.grid_layout.addWidget(self.botao_1, 1, 1, 1, 1)
+      self.grid_layout.addWidget(self.botao_2, 1, 2, 1, 1)
+      self.grid_layout.addWidget(self.botao_3, 3, 1, 1, 2)
+      
+      self.status_bar =self.statusBar()
+      self.status_bar.showMessage('Mostrar mensage na barra')
+
+      self.menu = self.menuBar()
+      self.primeiro_menu = self.menu.addMenu('Primeiro menu')
+      self.primeira_acao = self.primeiro_menu.addAction('Primeira ação')
+      self.primeira_acao.triggred.connect( # type:ignore
+        self.muda_mensagem_da_status_bar)
+
+      self.segunda_action = self.primeiro_menu.addAction('Segunda ação')
+      self.segunda_action.sefCheckable(True)
+      self.segunda_action.toggled.connect( # type:ignore
+        self.segunda_acao_marcada)
+      self.segunda_action.hovered.connect( # type:ignore
+        self.segunda_acao_marcada)
+
+      @Slot()
+      def muda_mensagem_da_stauts_bar(self):
+        self.stauts_bar.showMessage('O meu slot foi executado')
+
+      @Slot
+      def segunda_acao_marcada(self):
+        print('Está marcado?', self.segunda_action.isCheked())
+
+      def make_button(self, text):
+        btn = QPushButton(text)
+        btn.setStyleSheet('font-size: 80px;')
+        return btn
+
+  
+  if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = MyWindow()
+    window.show()
+    app.exec()
+```
+
 
 🔲 346 - Adicionando PyQT5 em código Python antigo
 ___
