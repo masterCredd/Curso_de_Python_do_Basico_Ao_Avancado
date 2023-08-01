@@ -9462,8 +9462,8 @@ Linux/Mac: ping 127.0.0.1 -c 4</p>
 <p>✅ 342 - QtWidget e QLayout de PySide6.QtWidgets</p>
 <p>🎀  QtWidget -&gt; genérico
 🎀  QLayout -&gt;  um widget de layout que recebe outros widgets
-🎀 QV(H)BoxLayout -&gt; widgets na horisontal e na veritical
-🎀 QGridLayout -&gt; coloca o widget em estilo de coodendas de uma tabela</p>
+🎀  QV(H)BoxLayout -&gt; widgets na horisontal e na veritical
+🎀  QGridLayout -&gt; coloca o widget em estilo de coodendas de uma tabela</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-277-1" name="__codelineno-277-1" href="#__codelineno-277-1"></a>  <span class="kn">import</span> <span class="nn">sys</span> 
 <a id="__codelineno-277-2" name="__codelineno-277-2" href="#__codelineno-277-2"></a>
 <a id="__codelineno-277-3" name="__codelineno-277-3" href="#__codelineno-277-3"></a>  <span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QGridLayout</span><span class="p">,</span> <span class="n">QPushButton</span><span class="p">,</span> <span class="n">QWidget</span>
@@ -9494,7 +9494,7 @@ Linux/Mac: ping 127.0.0.1 -c 4</p>
 <a id="__codelineno-277-28" name="__codelineno-277-28" href="#__codelineno-277-28"></a>
 <a id="__codelineno-277-29" name="__codelineno-277-29" href="#__codelineno-277-29"></a>  <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
 </code></pre></div>
-<p>🔲 343 - QMainWindw e centralWidget</p>
+<p>✅ 343 - QMainWindw e centralWidget</p>
 <table>
 <thead>
 <tr>
@@ -9603,7 +9603,120 @@ Linux/Mac: ping 127.0.0.1 -c 4</p>
 </tr>
 </tbody>
 </table>
-<p>🔲 344 - Instalando QT Designer no Linux</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-278-1" name="__codelineno-278-1" href="#__codelineno-278-1"></a>  <span class="kn">import</span> <span class="nn">sys</span> 
+<a id="__codelineno-278-2" name="__codelineno-278-2" href="#__codelineno-278-2"></a>
+<a id="__codelineno-278-3" name="__codelineno-278-3" href="#__codelineno-278-3"></a>  <span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span><span class="n">QApplication</span><span class="p">,</span> <span class="n">QGridLayout</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">QPushButton</span><span class="p">,</span> <span class="n">QWidget</span><span class="p">)</span>
+<a id="__codelineno-278-4" name="__codelineno-278-4" href="#__codelineno-278-4"></a>
+<a id="__codelineno-278-5" name="__codelineno-278-5" href="#__codelineno-278-5"></a>  <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+<a id="__codelineno-278-6" name="__codelineno-278-6" href="#__codelineno-278-6"></a>
+<a id="__codelineno-278-7" name="__codelineno-278-7" href="#__codelineno-278-7"></a>  <span class="n">window</span> <span class="o">=</span> <span class="n">QMainWindow</span><span class="p">()</span>
+<a id="__codelineno-278-8" name="__codelineno-278-8" href="#__codelineno-278-8"></a>
+<a id="__codelineno-278-9" name="__codelineno-278-9" href="#__codelineno-278-9"></a>  <span class="n">central_widget</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+<a id="__codelineno-278-10" name="__codelineno-278-10" href="#__codelineno-278-10"></a>
+<a id="__codelineno-278-11" name="__codelineno-278-11" href="#__codelineno-278-11"></a>  <span class="n">window</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="n">central_widget</span><span class="p">)</span>
+<a id="__codelineno-278-12" name="__codelineno-278-12" href="#__codelineno-278-12"></a>  <span class="n">window</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s1">&#39;Minha janela bonita&#39;</span><span class="p">)</span>
+<a id="__codelineno-278-13" name="__codelineno-278-13" href="#__codelineno-278-13"></a>
+<a id="__codelineno-278-14" name="__codelineno-278-14" href="#__codelineno-278-14"></a>  <span class="n">botao</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;Texto do botão&#39;</span><span class="p">)</span>
+<a id="__codelineno-278-15" name="__codelineno-278-15" href="#__codelineno-278-15"></a>  <span class="n">botao</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s1">&#39;font-size: 80px;&#39;</span><span class="p">)</span>
+<a id="__codelineno-278-16" name="__codelineno-278-16" href="#__codelineno-278-16"></a>
+<a id="__codelineno-278-17" name="__codelineno-278-17" href="#__codelineno-278-17"></a>
+<a id="__codelineno-278-18" name="__codelineno-278-18" href="#__codelineno-278-18"></a>  <span class="n">botao_2</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;botão 2&#39;</span><span class="p">)</span>
+<a id="__codelineno-278-19" name="__codelineno-278-19" href="#__codelineno-278-19"></a>  <span class="n">botao</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s1">&#39;font-size: 40px;&#39;</span><span class="p">)</span>
+<a id="__codelineno-278-20" name="__codelineno-278-20" href="#__codelineno-278-20"></a>
+<a id="__codelineno-278-21" name="__codelineno-278-21" href="#__codelineno-278-21"></a>  <span class="n">botao_3</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;botão 3&#39;</span><span class="p">)</span>
+<a id="__codelineno-278-22" name="__codelineno-278-22" href="#__codelineno-278-22"></a>  <span class="n">botao</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s1">&#39;font-size: 40px;&#39;</span><span class="p">)</span>
+<a id="__codelineno-278-23" name="__codelineno-278-23" href="#__codelineno-278-23"></a>
+<a id="__codelineno-278-24" name="__codelineno-278-24" href="#__codelineno-278-24"></a>  <span class="n">central_widget</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+<a id="__codelineno-278-25" name="__codelineno-278-25" href="#__codelineno-278-25"></a>
+<a id="__codelineno-278-26" name="__codelineno-278-26" href="#__codelineno-278-26"></a>  <span class="n">layout</span> <span class="o">=</span> <span class="n">QGridLayout</span><span class="p">()</span>
+<a id="__codelineno-278-27" name="__codelineno-278-27" href="#__codelineno-278-27"></a>
+<a id="__codelineno-278-28" name="__codelineno-278-28" href="#__codelineno-278-28"></a>  <span class="n">central_widget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+<a id="__codelineno-278-29" name="__codelineno-278-29" href="#__codelineno-278-29"></a>
+<a id="__codelineno-278-30" name="__codelineno-278-30" href="#__codelineno-278-30"></a>  <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">botao</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-278-31" name="__codelineno-278-31" href="#__codelineno-278-31"></a>  <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">botao_2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-278-32" name="__codelineno-278-32" href="#__codelineno-278-32"></a>  <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">botao_3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-278-33" name="__codelineno-278-33" href="#__codelineno-278-33"></a>
+<a id="__codelineno-278-34" name="__codelineno-278-34" href="#__codelineno-278-34"></a>  <span class="k">def</span> <span class="nf">slot_example</span><span class="p">(</span><span class="n">status_bar</span><span class="p">):</span>
+<a id="__codelineno-278-35" name="__codelineno-278-35" href="#__codelineno-278-35"></a>    <span class="n">status_bar</span><span class="o">.</span><span class="n">showMessage</span><span class="p">(</span><span class="s1">&#39;O meu slot foi executado&#39;</span><span class="p">)</span>
+<a id="__codelineno-278-36" name="__codelineno-278-36" href="#__codelineno-278-36"></a>
+<a id="__codelineno-278-37" name="__codelineno-278-37" href="#__codelineno-278-37"></a>  <span class="c1"># status bar</span>
+<a id="__codelineno-278-38" name="__codelineno-278-38" href="#__codelineno-278-38"></a>  <span class="n">status_bar</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">statusbar</span><span class="p">()</span>
+<a id="__codelineno-278-39" name="__codelineno-278-39" href="#__codelineno-278-39"></a>  <span class="n">status_bar</span><span class="o">.</span><span class="n">showMessage</span><span class="p">(</span><span class="s1">&#39;Mostar mensagem na barra&#39;</span><span class="p">)</span>
+<a id="__codelineno-278-40" name="__codelineno-278-40" href="#__codelineno-278-40"></a>
+<a id="__codelineno-278-41" name="__codelineno-278-41" href="#__codelineno-278-41"></a>  <span class="c1"># menu bar</span>
+<a id="__codelineno-278-42" name="__codelineno-278-42" href="#__codelineno-278-42"></a>  <span class="n">menu</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">menubar</span><span class="p">()</span>
+<a id="__codelineno-278-43" name="__codelineno-278-43" href="#__codelineno-278-43"></a>  <span class="n">primeiro_menu</span> <span class="o">=</span> <span class="n">menu</span><span class="o">.</span><span class="n">addMenu</span><span class="p">(</span><span class="s1">&#39;Primeiro menu&#39;</span><span class="p">)</span>
+<a id="__codelineno-278-44" name="__codelineno-278-44" href="#__codelineno-278-44"></a>  <span class="n">primeira_acao</span> <span class="o">=</span> <span class="n">primeiro_menu</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="s1">&#39;primeira ação&#39;</span><span class="p">)</span>
+<a id="__codelineno-278-45" name="__codelineno-278-45" href="#__codelineno-278-45"></a>  <span class="n">primeira_acao</span><span class="o">.</span><span class="n">triggered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span> <span class="c1"># type:ignore</span>
+<a id="__codelineno-278-46" name="__codelineno-278-46" href="#__codelineno-278-46"></a>    <span class="k">lambda</span><span class="p">:</span> <span class="n">slot</span><span class="o">.</span><span class="n">example</span><span class="p">(</span><span class="n">status_bar</span><span class="p">)</span>
+<a id="__codelineno-278-47" name="__codelineno-278-47" href="#__codelineno-278-47"></a>  <span class="p">)</span>
+<a id="__codelineno-278-48" name="__codelineno-278-48" href="#__codelineno-278-48"></a>
+<a id="__codelineno-278-49" name="__codelineno-278-49" href="#__codelineno-278-49"></a>  <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a id="__codelineno-278-50" name="__codelineno-278-50" href="#__codelineno-278-50"></a>
+<a id="__codelineno-278-51" name="__codelineno-278-51" href="#__codelineno-278-51"></a>  <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+</code></pre></div>
+<p>✅ 344 - O básico sobre Signal e slots(eventos e documentação)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-279-1" name="__codelineno-279-1" href="#__codelineno-279-1"></a>  <span class="kn">import</span> <span class="nn">sys</span>
+<a id="__codelineno-279-2" name="__codelineno-279-2" href="#__codelineno-279-2"></a>
+<a id="__codelineno-279-3" name="__codelineno-279-3" href="#__codelineno-279-3"></a>  <span class="kn">from</span> <span class="nn">PySide6.QCore</span> <span class="kn">import</span> <span class="n">Slot</span>
+<a id="__codelineno-279-4" name="__codelineno-279-4" href="#__codelineno-279-4"></a>  <span class="kn">from</span> <span class="nn">PySide6.QWidgets</span> <span class="kn">import</span> <span class="p">(</span><span class="n">QApplication</span><span class="p">,</span> <span class="n">QGridLayout</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span>
+<a id="__codelineno-279-5" name="__codelineno-279-5" href="#__codelineno-279-5"></a>                                <span class="n">QPushButton</span><span class="p">,</span> <span class="n">QUidget</span><span class="p">)</span>
+<a id="__codelineno-279-6" name="__codelineno-279-6" href="#__codelineno-279-6"></a>
+<a id="__codelineno-279-7" name="__codelineno-279-7" href="#__codelineno-279-7"></a>  <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+<a id="__codelineno-279-8" name="__codelineno-279-8" href="#__codelineno-279-8"></a>  <span class="n">window</span> <span class="o">=</span> <span class="n">QMainWindow</span><span class="p">()</span>
+<a id="__codelineno-279-9" name="__codelineno-279-9" href="#__codelineno-279-9"></a>  <span class="n">central_widget</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+<a id="__codelineno-279-10" name="__codelineno-279-10" href="#__codelineno-279-10"></a>  <span class="n">Window</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="n">central_widget</span><span class="p">)</span>
+<a id="__codelineno-279-11" name="__codelineno-279-11" href="#__codelineno-279-11"></a>  <span class="n">window</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s1">&#39;Minha janela bonita&#39;</span><span class="p">)</span>
+<a id="__codelineno-279-12" name="__codelineno-279-12" href="#__codelineno-279-12"></a>
+<a id="__codelineno-279-13" name="__codelineno-279-13" href="#__codelineno-279-13"></a>  <span class="n">botao_1</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;Texto do botão&#39;</span><span class="p">)</span>
+<a id="__codelineno-279-14" name="__codelineno-279-14" href="#__codelineno-279-14"></a>  <span class="n">botao_1</span><span class="o">-</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s1">&#39;font-size: 80px;&#39;</span><span class="p">)</span>
+<a id="__codelineno-279-15" name="__codelineno-279-15" href="#__codelineno-279-15"></a>
+<a id="__codelineno-279-16" name="__codelineno-279-16" href="#__codelineno-279-16"></a>  <span class="n">botao_2</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;botão 2&#39;</span><span class="p">)</span>
+<a id="__codelineno-279-17" name="__codelineno-279-17" href="#__codelineno-279-17"></a>  <span class="n">botao_2</span><span class="o">-</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s1">&#39;font-size: 40px;&#39;</span><span class="p">)</span>
+<a id="__codelineno-279-18" name="__codelineno-279-18" href="#__codelineno-279-18"></a>
+<a id="__codelineno-279-19" name="__codelineno-279-19" href="#__codelineno-279-19"></a>  <span class="n">botao_3</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s1">&#39;botão 3&#39;</span><span class="p">)</span>
+<a id="__codelineno-279-20" name="__codelineno-279-20" href="#__codelineno-279-20"></a>  <span class="n">botao_3</span><span class="o">-</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s1">&#39;font-size: 40px;&#39;</span><span class="p">)</span>
+<a id="__codelineno-279-21" name="__codelineno-279-21" href="#__codelineno-279-21"></a>
+<a id="__codelineno-279-22" name="__codelineno-279-22" href="#__codelineno-279-22"></a>  <span class="n">layout</span> <span class="o">=</span> <span class="n">QGridLayout</span><span class="p">()</span>
+<a id="__codelineno-279-23" name="__codelineno-279-23" href="#__codelineno-279-23"></a>  <span class="n">center_widget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+<a id="__codelineno-279-24" name="__codelineno-279-24" href="#__codelineno-279-24"></a>
+<a id="__codelineno-279-25" name="__codelineno-279-25" href="#__codelineno-279-25"></a>  <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">botao1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  
+<a id="__codelineno-279-26" name="__codelineno-279-26" href="#__codelineno-279-26"></a>  <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">botao2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-279-27" name="__codelineno-279-27" href="#__codelineno-279-27"></a>  <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">botao3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-279-28" name="__codelineno-279-28" href="#__codelineno-279-28"></a>
+<a id="__codelineno-279-29" name="__codelineno-279-29" href="#__codelineno-279-29"></a>  <span class="nd">@Sot</span><span class="p">()</span>
+<a id="__codelineno-279-30" name="__codelineno-279-30" href="#__codelineno-279-30"></a>  <span class="k">def</span> <span class="nf">slod_example</span><span class="p">(</span><span class="n">status_bar</span><span class="p">):</span>
+<a id="__codelineno-279-31" name="__codelineno-279-31" href="#__codelineno-279-31"></a>    <span class="k">def</span> <span class="nf">inner</span><span class="p">():</span>
+<a id="__codelineno-279-32" name="__codelineno-279-32" href="#__codelineno-279-32"></a>      <span class="n">status_bar</span><span class="o">.</span><span class="n">showMessage</span><span class="p">(</span><span class="s1">&#39;O meu slot fou executado&#39;</span><span class="p">)</span>
+<a id="__codelineno-279-33" name="__codelineno-279-33" href="#__codelineno-279-33"></a>    <span class="k">return</span> <span class="n">inner</span>
+<a id="__codelineno-279-34" name="__codelineno-279-34" href="#__codelineno-279-34"></a>
+<a id="__codelineno-279-35" name="__codelineno-279-35" href="#__codelineno-279-35"></a>  <span class="nd">@slot</span><span class="p">()</span>
+<a id="__codelineno-279-36" name="__codelineno-279-36" href="#__codelineno-279-36"></a>  <span class="k">def</span> <span class="nf">outro_slot</span><span class="p">(</span><span class="n">checked</span><span class="p">):</span>
+<a id="__codelineno-279-37" name="__codelineno-279-37" href="#__codelineno-279-37"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Está marcado?&#39;</span><span class="p">,</span> <span class="n">checked</span><span class="p">)</span>
+<a id="__codelineno-279-38" name="__codelineno-279-38" href="#__codelineno-279-38"></a>
+<a id="__codelineno-279-39" name="__codelineno-279-39" href="#__codelineno-279-39"></a>  <span class="nd">@Slot</span><span class="p">()</span>
+<a id="__codelineno-279-40" name="__codelineno-279-40" href="#__codelineno-279-40"></a>  <span class="k">def</span> <span class="nf">terceiro_slot</span><span class="p">(</span><span class="n">action</span><span class="p">):</span>
+<a id="__codelineno-279-41" name="__codelineno-279-41" href="#__codelineno-279-41"></a>    <span class="k">def</span> <span class="nf">inner</span><span class="p">():</span>
+<a id="__codelineno-279-42" name="__codelineno-279-42" href="#__codelineno-279-42"></a>      <span class="n">outro_slot</span><span class="p">(</span><span class="n">action</span><span class="o">.</span><span class="n">isCheckd</span><span class="p">())</span>
+<a id="__codelineno-279-43" name="__codelineno-279-43" href="#__codelineno-279-43"></a>    <span class="k">return</span> <span class="n">inner</span>
+<a id="__codelineno-279-44" name="__codelineno-279-44" href="#__codelineno-279-44"></a>
+<a id="__codelineno-279-45" name="__codelineno-279-45" href="#__codelineno-279-45"></a>
+<a id="__codelineno-279-46" name="__codelineno-279-46" href="#__codelineno-279-46"></a>  <span class="n">status_bar</span> <span class="o">=</span> <span class="n">window</span><span class="o">.</span><span class="n">statusBar</span><span class="p">()</span>
+<a id="__codelineno-279-47" name="__codelineno-279-47" href="#__codelineno-279-47"></a>  <span class="n">primeiro_menu</span> <span class="o">=</span> <span class="n">menu</span><span class="o">.</span><span class="n">addMenu</span><span class="p">(</span><span class="s1">&#39;Primeiro_menu&#39;</span><span class="p">)</span>
+<a id="__codelineno-279-48" name="__codelineno-279-48" href="#__codelineno-279-48"></a>  <span class="n">primeira_acao</span> <span class="o">=</span> <span class="n">primeiro_menu</span><span class="o">.</span><span class="n">addAtion</span><span class="p">(</span><span class="s1">&#39;Primeira ação&#39;</span><span class="p">)</span>
+<a id="__codelineno-279-49" name="__codelineno-279-49" href="#__codelineno-279-49"></a>  <span class="n">primeira_acao</span><span class="o">.</span><span class="n">triggred</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">slot_example</span><span class="p">(</span><span class="n">status_bar</span><span class="p">))</span> <span class="c1"># type:ignore</span>
+<a id="__codelineno-279-50" name="__codelineno-279-50" href="#__codelineno-279-50"></a>
+<a id="__codelineno-279-51" name="__codelineno-279-51" href="#__codelineno-279-51"></a>
+<a id="__codelineno-279-52" name="__codelineno-279-52" href="#__codelineno-279-52"></a>  <span class="n">segunda_action</span> <span class="o">=</span> <span class="n">primeiro_menu</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="s1">&#39;segunda ação&#39;</span><span class="p">)</span>
+<a id="__codelineno-279-53" name="__codelineno-279-53" href="#__codelineno-279-53"></a>  <span class="n">segunda_action</span><span class="o">.</span><span class="n">setCheckable</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-279-54" name="__codelineno-279-54" href="#__codelineno-279-54"></a>  <span class="n">segunda_action</span><span class="o">.</span><span class="n">toggled</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">outro_slod</span><span class="p">)</span> <span class="c1"># type:ignore</span>
+<a id="__codelineno-279-55" name="__codelineno-279-55" href="#__codelineno-279-55"></a>  <span class="n">segunda_action</span><span class="o">.</span><span class="n">havered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">terceiro_slot</span><span class="p">(</span><span class="n">segunda_action</span><span class="p">)</span> <span class="p">)</span> <span class="c1"># type:ignore</span>
+<a id="__codelineno-279-56" name="__codelineno-279-56" href="#__codelineno-279-56"></a>
+<a id="__codelineno-279-57" name="__codelineno-279-57" href="#__codelineno-279-57"></a>  <span class="n">botao_1</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">terceiro_slot</span><span class="p">(</span><span class="n">sgunda_action</span><span class="p">))</span> <span class="c1"># type:ignore</span>
+<a id="__codelineno-279-58" name="__codelineno-279-58" href="#__codelineno-279-58"></a>
+<a id="__codelineno-279-59" name="__codelineno-279-59" href="#__codelineno-279-59"></a>  <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a id="__codelineno-279-60" name="__codelineno-279-60" href="#__codelineno-279-60"></a>  <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+</code></pre></div>
 <p>🔲 345 - Integrando janelas do QT Designer com PyQT5</p>
 <p>🔲 346 - Adicionando PyQT5 em código Python antigo</p>
 <hr />
