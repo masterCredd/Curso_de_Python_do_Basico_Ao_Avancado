@@ -10586,9 +10586,14 @@ Exemplo de herança
     app.exec()
 ```
 
+🔲 346 - Calculadora com PySide6 - Introdução
 
-🔲 346 - Adicionando PyQT5 em código Python antigo
+[![calculadora](img/calculadora.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_7  "calculadora")
 ___
+
+
+
+
 
 ### 🔜 🔲 **Seção 8 Bases dados com Python - SQLite, MySQL e MariaDB**
 
