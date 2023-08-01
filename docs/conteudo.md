@@ -10327,8 +10327,8 @@ ___
 
 🎀  QtWidget -> genérico
 🎀  QLayout ->  um widget de layout que recebe outros widgets
-🎀 QV(H)BoxLayout -> widgets na horisontal e na veritical
-🎀 QGridLayout -> coloca o widget em estilo de coodendas de uma tabela
+🎀  QV(H)BoxLayout -> widgets na horisontal e na veritical
+🎀  QGridLayout -> coloca o widget em estilo de coodendas de uma tabela
 
 ```python
 
@@ -10363,8 +10363,7 @@ ___
   app.exec()
 ```
 
-🔲 343 - QMainWindw e centralWidget
-
+✅ 343 - QMainWindw e centralWidget
 
 | 🎀---> QApplication (app)|
 |--------------------------|
@@ -10393,7 +10392,130 @@ ___
 |🎀--> exec|
 |----------|
 
-🔲 344 - Instalando QT Designer no Linux
+```python
+
+  import sys 
+  
+  from PySide6.QtWidgets import (QApplication, QGridLayout, QMainWindow, QPushButton, QWidget)
+
+  app = QApplication(sys.argv)
+
+  window = QMainWindow()
+
+  central_widget = QWidget()
+
+  window.setCentralWidget(central_widget)
+  window.setWindowTitle('Minha janela bonita')
+
+  botao = QPushButton('Texto do botão')
+  botao.setStyleSheet('font-size: 80px;')
+  
+
+  botao_2 = QPushButton('botão 2')
+  botao.setStyleSheet('font-size: 40px;')
+
+  botao_3 = QPushButton('botão 3')
+  botao.setStyleSheet('font-size: 40px;')
+
+  central_widget = QWidget()
+
+  layout = QGridLayout()
+
+  central_widget.setLayout(layout)
+
+  layout.addWidget(botao, 1, 1, 1, 1)
+  layout.addWidget(botao_2, 1, 2, 1, 1)
+  layout.addWidget(botao_3, 3, 1, 1, 2)
+
+  def slot_example(status_bar):
+    status_bar.showMessage('O meu slot foi executado')
+
+  # status bar
+  status_bar = window.statusbar()
+  status_bar.showMessage('Mostar mensagem na barra')
+
+  # menu bar
+  menu = window.menubar()
+  primeiro_menu = menu.addMenu('Primeiro menu')
+  primeira_acao = primeiro_menu.addAction('primeira ação')
+  primeira_acao.triggered.connect( # type:ignore
+    lambda: slot.example(status_bar)
+  )
+
+  window.show()
+
+  app.exec()
+
+```
+
+✅ 344 - O básico sobre Signal e slots(eventos e documentação)
+
+```python
+
+  import sys
+
+  from PySide6.QCore import Slot
+  from PySide6.QWidgets import (QApplication, QGridLayout, QMainWindow,
+                                QPushButton, QUidget)
+ 
+  app = QApplication(sys.argv)
+  window = QMainWindow()
+  central_widget = QWidget()
+  Window.setCentralWidget(central_widget)
+  window.setWindowTitle('Minha janela bonita')
+
+  botao_1 = QPushButton('Texto do botão')
+  botao_1-setStyleSheet('font-size: 80px;')
+
+  botao_2 = QPushButton('botão 2')
+  botao_2-setStyleSheet('font-size: 40px;')
+  
+  botao_3 = QPushButton('botão 3')
+  botao_3-setStyleSheet('font-size: 40px;')
+
+  layout = QGridLayout()
+  center_widget.setLayout(layout)
+
+  layout.addWidget(botao1, 1, 1, 1, 1)  
+  layout.addWidget(botao2, 1, 2, 1, 1)
+  layout.addWidget(botao3, 3, 1, 1, 1)
+
+  @Sot()
+  def slod_example(status_bar):
+    def inner():
+      status_bar.showMessage('O meu slot fou executado')
+    return inner
+  
+  @slot()
+  def outro_slot(checked):
+    print('Está marcado?', checked)
+
+  @Slot()
+  def terceiro_slot(action):
+    def inner():
+      outro_slot(action.isCheckd())
+    return inner
+
+
+  status_bar = window.statusBar()
+  primeiro_menu = menu.addMenu('Primeiro_menu')
+  primeira_acao = primeiro_menu.addAtion('Primeira ação')
+  primeira_acao.triggred.connect(slot_example(status_bar)) # type:ignore
+
+
+  segunda_action = primeiro_menu.addAction('segunda ação')
+  segunda_action.setCheckable(True)
+  segunda_action.toggled.connect(outro_slod) # type:ignore
+  segunda_action.havered.connect(terceiro_slot(segunda_action) ) # type:ignore
+
+  botao_1.clicked.connect(terceiro_slot(sgunda_action)) # type:ignore
+
+  window.show()
+  app.exec()
+
+
+
+```
 
 🔲 345 - Integrando janelas do QT Designer com PyQT5
 
