@@ -10586,14 +10586,22 @@ Exemplo de herança
     app.exec()
 ```
 
-🔲 346 - Calculadora com PySide6 - Introdução
+❎ 346 - Calculadora com PySide6 - Introdução
 
 [![calculadora](img/calculadora.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_7  "calculadora")
+
+❎ 347 - Calaculadora: Criando a janela principal com QMainWindow, QWindget e QVBoxLayout
+
+🎀 o codigo está alocado na introdução
+
+❎ 348 - Calculadora: ajustes e boas práticas
+
+🎀 o codigo está alocado na introdução
+
+❎ 349 - Calculadora: PascalCse, camelCase ou snake_case: Qual usar no PySide6?
+
+🎀 o codigo está alocado na introdução
 ___
-
-
-
-
 
 ### 🔜 🔲 **Seção 8 Bases dados com Python - SQLite, MySQL e MariaDB**
 
