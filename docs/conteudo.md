@@ -10600,7 +10600,41 @@ Exemplo de herança
 
 ❎ 349 - Calculadora: PascalCse, camelCase ou snake_case: Qual usar no PySide6?
 
+👉 PascalCase
+    É outro estilo de nomenclatura de texto usado em programação. Ele também combina
+  várias palavras em uma única palavra, mas  primeira letra de cada palavra é em maiúscula. Por exemplo, se quisermos nomear uma classe que representa um carro, podemos chamá-la de "Carro" em __PascalCase__.
+
+👉  Camel case ou snake_case
+    É estilo de nomenclatura de texto usado em programação que combina várias palavras em um única palavra, em que a primeira letra de cada palavra é escrita em minúscula, exceto a primeira palavra. Por exemplo, se quisermos nomear uma variável que represente a idade de uma pessoa, podemos chamá-la de "idadeDaPessoa" em __CamelCase__.
+
 🎀 o codigo está alocado na introdução
+
+❎ 350 - Calculadora: QLineEdit e o display
+
+🎀 o codigo está alocado na introdução
+
+❎ 351 - Calculadora: criando um QLabel para mostrar informações
+
+🎀 o codigo está alocado na introdução
+
+❎ 352 - Calculadora: configurando o PyQt Dark Theme (qdarktheme) no PySide6
+
+🎀 o codigo está alocado na introdução
+
+❎ 353 - Calculadora: criando um botão com QPushButton no PySide6
+
+🎀 o codigo está alocado na introdução
+
+
+
+
+
+
+
+
+
+
+
 ___
 
 ### 🔜 🔲 **Seção 8 Bases dados com Python - SQLite, MySQL e MariaDB**

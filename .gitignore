@@ -190,7 +190,7 @@ poetry.toml
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
-echo "site/" >>.gitignore
+echo "site" >>.gitignore
 
 .DS_Store
 chromedriver
