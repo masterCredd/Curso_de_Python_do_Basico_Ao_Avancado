@@ -10625,6 +10625,21 @@ Exemplo de herança
 
 🎀 o codigo está alocado na introdução
 
+❎ 354 - Calculadora: grid de botões com QGridLayout no PySide6(parte 1)
+
+🎀 o codigo está alocado na introdução
+
+❎ 355 - Calculadora: preechendo a grid de botões
+
+🎀 o codigo está alocado na introdução
+
+❎ 356 - Calculadora: criando um Slod com dados para o Sigonal "Clicked" de cada botão
+
+🎀 o codigo está alocado na introdução
+
+
+
+
 
 
 
