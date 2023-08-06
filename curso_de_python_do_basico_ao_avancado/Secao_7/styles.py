@@ -10,23 +10,18 @@ from variables import (DARKER_PRIMARY_COLOR,
 
 
 qss = f"""
-    PushButton[cssClass="specialButton"] {{
     QPushButton[cssClass="specialButton"] {{
         color: #fff;
         background: {PRIMARY_COLOR};
     }}
-    PushButton[cssClass="specialButton"]:hover {{
     QPushButton[cssClass="specialButton"]:hover {{
         color: #fff;
         background: {DARKER_PRIMARY_COLOR};
     }}
-    PushButton[cssClass="specialButton"]:pressed {{
     QPushButton[cssClass="specialButton"]:pressed {{
         color: #fff;
         background: {DARKEST_PRIMARY_COLOR};
     }}
-    
-
 """
 
 
@@ -41,5 +36,5 @@ def setupTheme():
             "[light]": {"primary": f"{PRIMARY_COLOR}",
                         },
         },
-        additional_qss='qss'
+        additional_qss=qss
     )

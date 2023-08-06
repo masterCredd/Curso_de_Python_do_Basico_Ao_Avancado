@@ -30,8 +30,6 @@ if __name__ == '__main__':
     buttonGrid = ButtonGrid(display, info)
     window.vLayout.addLayout(buttonGrid)
 
-    buttonGrid.addWidget(Button('0'), 0, 0)
-
     window.adjustFixedSize()
     window.show()
     app.exec()
