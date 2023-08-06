@@ -10637,6 +10637,10 @@ Exemplo de herança
 
 🎀 o codigo está alocado na introdução
 
+❎ 356 - Calculadora: criando um Slod com dados para o Sigonal "Clicked" de cada botão
+
+🎀 o codigo está alocado na introdução
+
 
 
 

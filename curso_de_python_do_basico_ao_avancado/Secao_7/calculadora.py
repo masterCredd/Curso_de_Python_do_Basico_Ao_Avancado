@@ -21,13 +21,13 @@ if __name__ == '__main__':
     window.setWindowIcon(icon)
     app.setWindowIcon(icon)
 
-    info = Info("2.0^10.0=1024")
+    info = Info("sua conta")
     window.addWidgetToVLayout(info)
 
     display = Display()
     window.addWidgetToVLayout(display)
 
-    buttonGrid = ButtonGrid()
+    buttonGrid = ButtonGrid(display, info)
     window.vLayout.addLayout(buttonGrid)
 
     buttonGrid.addWidget(Button('0'), 0, 0)
