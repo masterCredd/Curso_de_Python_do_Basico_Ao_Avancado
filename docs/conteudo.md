@@ -7060,7 +7060,6 @@ print(focus.nome, focus.fabricante.nome, focus.motor.nome)
             \   /
               D
 
-
 ->  Python 3 usa C3 superclass linearization
       para gera o mro. (method resolution Order)
 ->  Você não precisa estudar isso (é complexo)
@@ -7069,7 +7068,6 @@ print(focus.nome, focus.fabricante.nome, focus.motor.nome)
 ->  Para saber a ordem de chamada dos métodos
 ->  Use o método de classe Classe.mro()
 ->  Ou o atributo `__mro__` (Dunder - Double Underscore)
-
 
 ❎ 224 - Herança múltipla - Python Orientado a Objetos
 
@@ -7607,7 +7605,6 @@ except (MeuError, ZeroDivisionError) as error:
 
 ->  `__mul_` (self, other) - self  * other
 
-
 ->  `__truedic__` (self, other) - self / other
 
 ->  `__neg__`(self) - self
@@ -8024,7 +8021,7 @@ with my_open('aula_150.txt', 'w') as arquivo:
 ->  "Metaclasses não magias mais profundas do que  99% dos usuários
       deveriam se preocupar. Se você saber se precisa delas,
       não precisa (as pessoas que realmente precisam delas sabem
-      com certeza que precisam delas e não precisam de uma explicação 
+      com certeza que precisam delas e não precisam de uma explicação
       sobre o porquê)."
 
 ->  Rim Peters (CPython Core Developer)
@@ -8121,7 +8118,6 @@ class Foo:
 ```
 
 ❎ 251 - DocString de várias linhas (Documentação)
-
 
 ->  Loren ipsum dolor sit amet. Et praesentium nisi non quam mollitia At saepe
       quisquam qui quae voluptatem. Eum laudantium impedit qui velit quia ea
@@ -9861,7 +9857,7 @@ VARIAVEL_DE_AMBIENTE_3=valor
 
 👉 código de status HTTP (200 success, 404 Not found, 301 Moved Parmanently)
 
-https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+<https://developer.mozilla.org/en-US/docs/Web/HTTP/Status>
 
 👉  Os cabeçalhos HTTP (Content-Type, Accept)
 
@@ -9919,7 +9915,7 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
       Já o bs4.BeautifilSuop é responsável por interpretar os dados HTML em forma de
       objetos Python para facilitar a vida do desenvolvedor.
 
-🎀  Doc: https://www.crummy.com/software/BeautifulSoup/bs4/doc.ptbr/
+🎀  Doc: <https://www.crummy.com/software/BeautifulSoup/bs4/doc.ptbr/>
 
 ❎ 313 - (Parte 2) Web Scraping com Python usando requests e bs4 BeautifilSuop
 
@@ -9927,18 +9923,18 @@ ports comuns 3333, 8080, 8000, 3000, 3001,443
 
 ❎ 314 - Adicionando "encoding" no BeautifilSuop 4 para evitar problemas com caracteres
 
-🎀  Uma coisa de ocorrer quando trabalhamos com bs4.BeautifilSuop. é problemas com 
+🎀  Uma coisa de ocorrer quando trabalhamos com bs4.BeautifilSuop. é problemas com
       caracteres. Isso ocorre divido a uma falha na detecção do encoding.
 
 🎀  Caso queria mudar a codificação de caracteres, envie os bytes diretamente para
-      o BeautifilSuop e passe o valor da codificação de caracteres no atributo 
+      o BeautifilSuop e passe o valor da codificação de caracteres no atributo
       "from_encoding". Exemplo (para utf-8):
 
 ```python
   BeautifilSuop(response.content, 'html.parser', from_encoding='utf-8')
 ```
 
-🎀 Perceba que troquei "response.text" para "response.content" para obter os bytes 
+🎀 Perceba que troquei "response.text" para "response.content" para obter os bytes
       ao invés da string.
 
 🎀  Neste caso, nosso código completo das aulas anteriores ficaria assim
@@ -10221,7 +10217,7 @@ print(fila_correta) # deque([0, 1, 2, 3, 4])
       específicas, formatar células, inserir gráficos, criar fómulas, adicionar
       imagens e outros elementos gráficos às suas planilhas. Ela é útil para
       automatizar tarefas envolvido planilhas do Excel, como criação de relatórios
-      e análise de dados e/ou facilitando a manipulação de grandes quantidade de 
+      e análise de dados e/ou facilitando a manipulação de grandes quantidade de
       informações.
 
   👉 Instalação necessária pip install openpyxl ou poetry add Openpyxl
@@ -10258,14 +10254,14 @@ ___
       escrita em C++.
 
 🎀  PySide e PyQt conseguem fazer a ponte (binding) entre o Python e a biblioteca
-      para acriação de interfaces gráficas sem ter que usar outra 
+      para acriação de interfaces gráficas sem ter que usar outra
       limguagem de programação.
 
 🎀  PySide6 é uma referencia á versão 6 do Qt (Qt 6)
 
 🎀  Qt é multiplataforma, ou seja, deve funcionar em Windows, Linux e Mac.
 
-🎀  PySide foi desenvolvido pela The Qt Company (da Nokia), como parte do 
+🎀  PySide foi desenvolvido pela The Qt Company (da Nokia), como parte do
       projeto Qt for Python project - <https://doc.qt.io/qtforpython/>
 
 🎀  Por usarem a mesma biblioteca (Qt), PySide e PyQt são extremamente
@@ -10602,10 +10598,10 @@ Exemplo de herança
 
 👉 PascalCase
     É outro estilo de nomenclatura de texto usado em programação. Ele também combina
-  várias palavras em uma única palavra, mas  primeira letra de cada palavra é em maiúscula. Por exemplo, se quisermos nomear uma classe que representa um carro, podemos chamá-la de "Carro" em __PascalCase__.
+  várias palavras em uma única palavra, mas  primeira letra de cada palavra é em maiúscula. Por exemplo, se quisermos nomear uma classe que representa um carro, podemos chamá-la de "Carro" em **PascalCase**.
 
 👉  Camel case ou snake_case
-    É estilo de nomenclatura de texto usado em programação que combina várias palavras em um única palavra, em que a primeira letra de cada palavra é escrita em minúscula, exceto a primeira palavra. Por exemplo, se quisermos nomear uma variável que represente a idade de uma pessoa, podemos chamá-la de "idadeDaPessoa" em __CamelCase__.
+    É estilo de nomenclatura de texto usado em programação que combina várias palavras em um única palavra, em que a primeira letra de cada palavra é escrita em minúscula, exceto a primeira palavra. Por exemplo, se quisermos nomear uma variável que represente a idade de uma pessoa, podemos chamá-la de "idadeDaPessoa" em **CamelCase**.
 
 🎀 o codigo está alocado na introdução
 
@@ -10637,21 +10633,49 @@ Exemplo de herança
 
 🎀 o codigo está alocado na introdução
 
-❎ 356 - Calculadora: criando um Slod com dados para o Sigonal "Clicked" de cada botão
+❎ 357 - Calculadora: permitindo apenas que números válidos no display ao pressionar botões
 
 🎀 o codigo está alocado na introdução
 
+❎ 358 - Calculadora: Info (QLoabel), TYPE_CHECKING, getter e setter e Cicular Import
 
+🎀 o codigo está alocado na introdução
 
+❎ 359 - Calculadora: iniciando a configuração dos botões especiais
 
+🎀 o codigo está alocado na introdução
 
+❎ 360 - Calculadora: botões especiais de operação, clear e equation
 
+🎀 o codigo está alocado na introdução
 
+❎ 361 - Calculadora: botões especiais de operação, clear e equation
 
+🎀 o codigo está alocado na introdução
 
+❎ 362 - Calculadora: configurando a potenciação com math.pow
 
+🎀 o codigo está alocado na introdução
 
+❎ 363 - Calculadora: configurando o __"bakspace"__ display no botão "◀️" (D)
 
+🎀 o codigo está alocado na introdução
+
+❎ 364 - Calculadora: diálogos com o usuário com  QMessageBox
+
+🎀 o codigo está alocado na introdução
+
+❎ 365 - Calculadora: modificando os botões e obtendo o resultado de QMessageBox
+
+🎀 o codigo está alocado na introdução
+
+❎ 366 - Calculadora: KeyPressEvent do QLineEdit e criando um Signal
+
+🎀 o codigo está alocado na introdução
+
+❎ 367 - Calculadora: capturando tecla __ENTER__, __Backspace__ e __ESC__
+
+🎀 o codigo está alocado na introdução
 
 
 ___
