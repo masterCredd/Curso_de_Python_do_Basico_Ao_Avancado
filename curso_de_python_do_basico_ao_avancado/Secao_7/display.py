@@ -1,5 +1,5 @@
 
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, Signal
 from PySide6.QtGui import QKeyEvent
 from PySide6.QtWidgets import QLineEdit
 from variables import BIG_FONT_SIZE, TEXT_MARGIN, MINIMUM_WIDTH
@@ -49,4 +49,11 @@ class Display(QLineEdit):
         self.setTextMargins(*margins)
 
     def keyPressEvent(self, event: QKeyEvent) -> None:
-        return super().keyPressEvent(event)
+        key = event.key()
+        KEYS = Qt.Key
+
+        isEnter = key in [KEYS.Key_Enter, KEYS.Key_Return]
+
+        if isEnter:
+            print('Pressionou Enter')
+            return event.ignore()
