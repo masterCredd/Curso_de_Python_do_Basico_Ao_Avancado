@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
-packages = [{include = "curso_de_python_do_basico_ao_avancado"}]
+packages = [{ include = "curso_de_python_do_basico_ao_avancado" }]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -61,3 +61,7 @@ lint = "blue --check --diff . && isort --check --diff ."
 docs = "mkdocs serve"
 pre_test = "task lint"
 post_test = "coverage html"
+
+[tool.pylint.'MESSAGES CONTROL']
+
+disable = ['no-name-in-module']

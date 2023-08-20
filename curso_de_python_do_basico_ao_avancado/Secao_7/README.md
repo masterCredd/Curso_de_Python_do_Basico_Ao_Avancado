@@ -1,4 +1,4 @@
-# Exemplo de uma calculadora feito em PySide6
+# Criando uma calculadora em python
 
 ---
 ---

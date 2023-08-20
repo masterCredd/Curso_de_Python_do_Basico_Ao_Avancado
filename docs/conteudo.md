@@ -10677,6 +10677,24 @@ Exemplo de herança
 
 🎀 o codigo está alocado na introdução
 
+❎ 368 - Calculadora: adicionando ações nas teclas __C__, __D__ e __sinal__ de 
+__igual__
+
+🎀 o codigo está alocado na introdução
+
+❎ 369 - Calculadora: emitindo os números digitados no display **+** dica sobre 
+**args** e **Kwargs**
+
+🎀 o codigo está alocado na introdução
+
+❎ 370 - Calculadora: emitindo os operadores e potenciação
+
+🎀 o codigo está alocado na introdução
+
+❎ 371 - Calculadora: os Signals de teclas digitadas aos **Slots** corretos
+
+🎀 o codigo está alocado na introdução
+
 
 ___
 
