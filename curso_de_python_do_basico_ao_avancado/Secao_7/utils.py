@@ -18,6 +18,26 @@ def isNumOrDot(string: str) -> bool:
     return bool(NUM_OR_DOT_REGEX.search(string))
 
 
+def converToNumber(string: str):
+    """
+    The converToNumber function takes a string as an argument and returns the 
+    number that is represented by the string.
+    If the number is an integer, it will return an int; otherwise, it will 
+    return a float.
+
+    :param string: str: Define the type of data that will be passed into the 
+    function
+    :return: A float or an integer
+    :doc-author: Trelent
+    """
+    number = float(string)
+
+    if number.is_integer():
+        number = int(number)
+
+    return number
+
+
 def isValidNumber(string: str) -> bool:
     """
     The isValidNumber function takes a string as an argument and returns True 

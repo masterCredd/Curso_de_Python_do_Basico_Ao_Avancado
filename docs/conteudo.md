@@ -10695,6 +10695,33 @@ __igual__
 
 🎀 o codigo está alocado na introdução
 
+❎ 372 - Calculadora: e os números negativos? Solução técnica!
+
+🎀 o codigo está alocado na introdução
+
+❎ 373 - Calculadora: corrigindo bugs introduzindos na aula anteior
+
+🎀 o codigo está alocado na introdução
+
+❎ 374 - Aula extra (opcional): empacotando a calculadora com Pyinstaller(Geral)
+
+🎀 o codigo está alocado na introdução
+
+❎ 375 - Aula extra (opcional): empacotando a calculadora com Pyinstaller(Windows)
+
+🎀 o codigo está alocado na introdução
+
+❎ 376 - Aula extra (opcional): aqui está a calculadora já empacotada para Mac 
+e Windows
+
+[![calculadora](img/calculadora.png)](https://drive.google.com/drive/folders/16q5iForpl3c2OSFCF7DgQEaUFz9IOhXq  "calculadora")
+
+
+
+❎ 377 - Execução ou instalação do Qt Disigner
+
+[![Qt Designer](img/Qt_Designer.png)](https://drive.google.com/drive/folders/16q5iForpl3c2OSFCF7DgQEaUFz9IOhXq  "instalação do Qt Designer")
+
 
 ___
 
