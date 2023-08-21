@@ -10584,7 +10584,7 @@ Exemplo de herança
 
 ❎ 346 - Calculadora com PySide6 - Introdução
 
-[![calculadora](img/calculadora.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_7  "calculadora")
+[![calculadora](img/calculadora.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_7/calculadora  "calculadora")
 
 ❎ 347 - Calaculadora: Criando a janela principal com QMainWindow, QWindget e QVBoxLayout
 
