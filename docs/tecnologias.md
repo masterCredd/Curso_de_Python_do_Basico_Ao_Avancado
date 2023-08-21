@@ -15,3 +15,5 @@
 [![diagramas](img/diagramas.png)](https://app.diagrams.net/ "Diagrems")
 
 [![gitignore](img/gitignore.png)](https://www.toptal.com/developers/gitignore/ "gitignore.io")
+
+[![Qt Designer](img/designer_qt.png)](https://build-system.fman.io/qt-designer-download  "instalação do Qt Designer")
