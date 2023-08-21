@@ -10718,14 +10718,29 @@ e Windows
 
 
 
-❎ 377 - Execução ou instalação do Qt Disigner
+❎ 377 - Execução ou instalação do Qt Designer
 
-[![Qt Designer](img/Qt_Designer.png)](https://drive.google.com/drive/folders/16q5iForpl3c2OSFCF7DgQEaUFz9IOhXq  "instalação do Qt Designer")
+[![Qt Designer](img/Qt_Designer.png)](https://build-system.fman.io/qt-designer-download  "instalação do Qt Designer")
 
+❎ 378 - Criandoe compilando um arquivo UI com o Qt Designer
+
+❎ 379 - Usando um arquivo UI do Qt Designer com seu código Python
+
+❎ 380 - Usando eventFiler e installEventFilter com UI do Qt Designer
+
+❎ 381 - QObject e QThread: criando a janela inicial com UI do Qt Designer
+
+❎ 382 - QObject e QThread: o problema!
+
+❎ 383 - QObject e QThread: criando o "Worker"
+
+❎ 384 - QObject e QThread: movendo "Workers" para threads separadas
+
+❎ 385 - QObject e QThread: código comentando
 
 ___
 
-### 🔜 🔲 **Seção 8 Bases dados com Python - SQLite, MySQL e MariaDB**
+### 🔜 🔲 **Seção 8: Base de dados com Python -SQLite(sqlie3) e MySQL(pymysql)**
 
 ___
 
