@@ -10707,6 +10707,12 @@ __igual__
 
 🎀 o codigo está alocado na introdução
 
+👉  Para a grande maioria dos programas, isso pode ser feito com um comando curto
+
+```bash
+  pyinstaller <main.py>
+```
+
 ❎ 375 - Aula extra (opcional): empacotando a calculadora com Pyinstaller(Windows)
 
 🎀 o codigo está alocado na introdução
@@ -10723,6 +10729,14 @@ e Windows
 [![Qt Designer](img/Qt_Designer.png)](https://build-system.fman.io/qt-designer-download  "instalação do Qt Designer")
 
 ❎ 378 - Criandoe compilando um arquivo UI com o Qt Designer
+
+🎀 Depois de criar a janela no Qt Designer salve e digite o comando do terminal abaixo para gerar o código em python
+
+```bash
+  pyside6-uic <nome do arquivo salvo pelo qt_designer.ui>
+```
+
+[![Qt Designer](img/exemplo_qt.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_7/qt_desiner  "exemplo de interface Qt Designer")
 
 ❎ 379 - Usando um arquivo UI do Qt Designer com seu código Python
 
