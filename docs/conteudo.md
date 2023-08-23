@@ -10746,7 +10746,7 @@ e Windows
 
 ❎ 381 - QObject e QThread: criando a janela inicial com UI do Qt Designer
 
-[![Qt Designer](img/QObject_QThread.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_7/qt_desiner  "exemplo de QObject e QThread")
+[![Qt Designer](img/QObject_QThread.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_7/QObject%20e%20QThread  "exemplo de QObject e QThread")
 
 ❎ 382 - QObject e QThread: o problema!
 
