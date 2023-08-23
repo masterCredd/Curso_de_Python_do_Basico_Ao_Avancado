@@ -9869,7 +9869,25 @@ e Windows</p>
 <h2 id="secao-8-base-de-dados-com-python-sqlitesqlie3-e-mysqlpymysql">🔜 🔲 <strong>Seção 8: Base de dados com Python -SQLite(sqlie3) e MySQL(pymysql)</strong><a class="headerlink" href="#secao-8-base-de-dados-com-python-sqlitesqlie3-e-mysqlpymysql" title="Permanent link">⚓︎</a></h2>
 <hr />
 <p>❎ 386 - Base de dados com Python - SQLite(sqlite3) e MySQL(pymysql)</p>
-<p>🔲 348 - DB Brower do for SQLite - Windows</p>
+<p>🎀  Fazendo a introdução do modulo 8 para começarmos a trabalhar com recursos de 
+      SQLite(sqlite3) e MySQL(pymysql) no python </p>
+<p>❎ 387 - Criando meu primeiro arquivo do SQLite(sqlite3)</p>
+<p><a href="https://www.sqlite.org/doclist.html" title="Documentação  do SQLite"><img alt="SQLite" src="../img/SQLite.png" /></a></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-283-1"><a id="__codelineno-283-1" name="__codelineno-283-1" href="#__codelineno-283-1"></a><span class="kn">import</span> <span class="nn">sqlite3</span>
+</span><span id="__span-283-2"><a id="__codelineno-283-2" name="__codelineno-283-2" href="#__codelineno-283-2"></a><span class="kn">from</span> <span class="nn">pathlid</span> <span class="kn">import</span> <span class="n">Path</span>
+</span><span id="__span-283-3"><a id="__codelineno-283-3" name="__codelineno-283-3" href="#__codelineno-283-3"></a>
+</span><span id="__span-283-4"><a id="__codelineno-283-4" name="__codelineno-283-4" href="#__codelineno-283-4"></a><span class="n">ROOT_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span>
+</span><span id="__span-283-5"><a id="__codelineno-283-5" name="__codelineno-283-5" href="#__codelineno-283-5"></a><span class="n">DB_NAME</span> <span class="o">=</span> <span class="s1">&#39;db.sqlite3&#39;</span>
+</span><span id="__span-283-6"><a id="__codelineno-283-6" name="__codelineno-283-6" href="#__codelineno-283-6"></a><span class="n">DB_FILE</span> <span class="o">=</span> <span class="n">ROOT_DIR</span> <span class="o">/</span> <span class="n">BD_NAME</span>
+</span><span id="__span-283-7"><a id="__codelineno-283-7" name="__codelineno-283-7" href="#__codelineno-283-7"></a>
+</span><span id="__span-283-8"><a id="__codelineno-283-8" name="__codelineno-283-8" href="#__codelineno-283-8"></a><span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">DB_FILE</span><span class="p">)</span>
+</span><span id="__span-283-9"><a id="__codelineno-283-9" name="__codelineno-283-9" href="#__codelineno-283-9"></a><span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+</span><span id="__span-283-10"><a id="__codelineno-283-10" name="__codelineno-283-10" href="#__codelineno-283-10"></a>
+</span><span id="__span-283-11"><a id="__codelineno-283-11" name="__codelineno-283-11" href="#__codelineno-283-11"></a>  <span class="c1">#SQL</span>
+</span><span id="__span-283-12"><a id="__codelineno-283-12" name="__codelineno-283-12" href="#__codelineno-283-12"></a>
+</span><span id="__span-283-13"><a id="__codelineno-283-13" name="__codelineno-283-13" href="#__codelineno-283-13"></a><span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span id="__span-283-14"><a id="__codelineno-283-14" name="__codelineno-283-14" href="#__codelineno-283-14"></a><span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></code></pre></div>
 <p>🔲 349 - DB Brower do for SQLite - Linux</p>
 <p>🔲 350 - Python sqlite3 + DB Brower for SQLite</p>
 <p>🔲 351 - Windows - Xampp + MySQL Workbench</p>
