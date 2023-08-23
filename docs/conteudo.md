@@ -10770,7 +10770,32 @@ ___
 
 ❎ 386 - Base de dados com Python - SQLite(sqlite3) e MySQL(pymysql)
 
-🔲 348 - DB Brower do for SQLite - Windows
+🎀  Fazendo a introdução do modulo 8 para começarmos a trabalhar com recursos de 
+      SQLite(sqlite3) e MySQL(pymysql) no python 
+
+❎ 387 - Criando meu primeiro arquivo do SQLite(sqlite3)
+
+[![SQLite](img/SQLite.png)](https://www.sqlite.org/doclist.html  "Documentação  do SQLite")
+
+```python
+
+import sqlite3
+from pathlid import Path
+
+ROOT_DIR = Path(__file__).parent
+DB_NAME = 'db.sqlite3'
+DB_FILE = ROOT_DIR / BD_NAME
+
+connection = sqlite3.connect(DB_FILE)
+cursor = connection.cursor()
+
+  #SQL
+
+cursor.close()
+connection.close()
+```
+
+
 
 🔲 349 - DB Brower do for SQLite - Linux
 

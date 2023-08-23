@@ -17,3 +17,5 @@
 [![gitignore](img/gitignore.png)](https://www.toptal.com/developers/gitignore/ "gitignore.io")
 
 [![Qt Designer](img/designer_qt.png)](https://build-system.fman.io/qt-designer-download  "instalação do Qt Designer")
+
+[![SQLite](img/SQLite.png)](https://www.sqlite.org/download.html  "instalação do SQLite")
