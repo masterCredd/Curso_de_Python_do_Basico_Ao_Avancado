@@ -1,6 +1,10 @@
+from PySide6.QtCore import QEvent, QObject
+import sys
+
+from PySide6.QtGui import QKeyEvent
 from PySide6.QtWidgets import QMainWindow, QApplication
 from ndt_test import Ui_MainWindow
-import sys
+from typing import cast
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -17,13 +21,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         super().__init__(parent)
         self.setupUi(self)
 
-        self.buttonSend.clicked.connect(self.changeLabelResult)
+        self.buttonSend.clicked.connect(self.changeLabelResult)  # type: ignore
+        # self.labelName.setStyleSheet('background: red;')
+
+        self.lineName.installEventFilter(self)
 
     def changeLabelResult(self):
         """
         The changeLabelResult function is called when the user clicks on the 
         button.
-        It takes whatever text was entered in the lineName widget and sets it as 
+        It takes whatever text was entered in the lineName widget and sets it 
+        as 
         the labelResult widget's text.
 
         :param self: Represent the instance of the class
@@ -32,6 +40,29 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         """
         text = self.lineName.text()
         self.labelResult.setText(text)
+
+    def eventFilter(self, watched: QObject, event: QEvent) -> bool:
+        """
+        The eventFilter function is a reimplementation of the 
+        QObject.eventFilter() function.
+        It receives all events that are sent to watched objects and can process 
+        them before they are delivered to the watched object.
+        The eventFilter function returns True if it wants to stop further 
+        processing of an event; otherwise, it returns False.
+
+        :param self: Refer to the current object
+        :param watched: QObject: Identify the object that is being watched
+        :param event: QEvent: Get the type of event that has occurred
+        :return: A boolean value
+        :doc-author: Trelent
+        """
+
+        if event.type() == QEvent.Type.KeyPress:
+            event = cast(QKeyEvent, event)
+            text = self.lineName.text()
+            self.labelResult.setText(text + event.text())
+
+        return super().eventFilter(watched, event)
 
 
 if __name__ == '__main__':

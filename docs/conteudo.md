@@ -10588,11 +10588,11 @@ Exemplo de herança
 
 ❎ 347 - Calaculadora: Criando a janela principal com QMainWindow, QWindget e QVBoxLayout
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 348 - Calculadora: ajustes e boas práticas
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 349 - Calculadora: PascalCse, camelCase ou snake_case: Qual usar no PySide6?
 
@@ -10603,109 +10603,109 @@ Exemplo de herança
 👉  Camel case ou snake_case
     É estilo de nomenclatura de texto usado em programação que combina várias palavras em um única palavra, em que a primeira letra de cada palavra é escrita em minúscula, exceto a primeira palavra. Por exemplo, se quisermos nomear uma variável que represente a idade de uma pessoa, podemos chamá-la de "idadeDaPessoa" em **CamelCase**.
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 350 - Calculadora: QLineEdit e o display
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 351 - Calculadora: criando um QLabel para mostrar informações
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 352 - Calculadora: configurando o PyQt Dark Theme (qdarktheme) no PySide6
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 353 - Calculadora: criando um botão com QPushButton no PySide6
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 354 - Calculadora: grid de botões com QGridLayout no PySide6(parte 1)
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 355 - Calculadora: preechendo a grid de botões
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 356 - Calculadora: criando um Slod com dados para o Sigonal "Clicked" de cada botão
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 357 - Calculadora: permitindo apenas que números válidos no display ao pressionar botões
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 358 - Calculadora: Info (QLoabel), TYPE_CHECKING, getter e setter e Cicular Import
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 359 - Calculadora: iniciando a configuração dos botões especiais
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 360 - Calculadora: botões especiais de operação, clear e equation
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 361 - Calculadora: botões especiais de operação, clear e equation
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 362 - Calculadora: configurando a potenciação com math.pow
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 363 - Calculadora: configurando o __"bakspace"__ display no botão "◀️" (D)
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 364 - Calculadora: diálogos com o usuário com  QMessageBox
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 365 - Calculadora: modificando os botões e obtendo o resultado de QMessageBox
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 366 - Calculadora: KeyPressEvent do QLineEdit e criando um Signal
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 367 - Calculadora: capturando tecla __ENTER__, __Backspace__ e __ESC__
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 368 - Calculadora: adicionando ações nas teclas __C__, __D__ e __sinal__ de 
 __igual__
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 369 - Calculadora: emitindo os números digitados no display **+** dica sobre 
 **args** e **Kwargs**
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 370 - Calculadora: emitindo os operadores e potenciação
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 371 - Calculadora: os Signals de teclas digitadas aos **Slots** corretos
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 372 - Calculadora: e os números negativos? Solução técnica!
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 373 - Calculadora: corrigindo bugs introduzindos na aula anteior
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 374 - Aula extra (opcional): empacotando a calculadora com Pyinstaller(Geral)
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 👉  Para a grande maioria dos programas, isso pode ser feito com um comando curto
 
@@ -10715,14 +10715,12 @@ __igual__
 
 ❎ 375 - Aula extra (opcional): empacotando a calculadora com Pyinstaller(Windows)
 
-🎀 o codigo está alocado na introdução
+🎀 o codigo está alocado na introdução ☝️
 
 ❎ 376 - Aula extra (opcional): aqui está a calculadora já empacotada para Mac 
 e Windows
 
 [![calculadora](img/calculadora.png)](https://drive.google.com/drive/folders/16q5iForpl3c2OSFCF7DgQEaUFz9IOhXq  "calculadora")
-
-
 
 ❎ 377 - Execução ou instalação do Qt Designer
 
@@ -10740,9 +10738,15 @@ e Windows
 
 ❎ 379 - Usando um arquivo UI do Qt Designer com seu código Python
 
+🎀 o codigo está alocado no link anterior ☝️
+
 ❎ 380 - Usando eventFiler e installEventFilter com UI do Qt Designer
 
+🎀 o codigo está alocado no link anterior ☝️
+
 ❎ 381 - QObject e QThread: criando a janela inicial com UI do Qt Designer
+
+[![Qt Designer](img/QObject_QThread.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_7/qt_desiner  "exemplo de QObject e QThread")
 
 ❎ 382 - QObject e QThread: o problema!
 
@@ -10754,7 +10758,7 @@ e Windows
 
 ___
 
-### 🔜 🔲 **Seção 8: Base de dados com Python -SQLite(sqlie3) e MySQL(pymysql)**
+## 🔜 🔲 **Seção 8: Base de dados com Python -SQLite(sqlie3) e MySQL(pymysql)**
 
 ___
 
