@@ -10242,7 +10242,7 @@ print(fila_correta) # deque([0, 1, 2, 3, 4])
 [![Editar imagens com python](img/edit_img_python.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_6/Secao_6_aula_337 "Editar imagens com python")
 ___
 
-## 🔜 🔲 **Seção 7: PySide6 - Interface gráfica com QT 6 no Python - GUI para Desktop**
+## 🔜 ❎ **Seção 7: PySide6 - Interface gráfica com QT 6 no Python - GUI para Desktop**
 
 ___
 
@@ -10731,7 +10731,7 @@ e Windows
 🎀 Depois de criar a janela no Qt Designer salve e digite o comando do terminal abaixo para gerar o código em python
 
 ```bash
-  pyside6-uic <nome do arquivo salvo pelo qt_designer.ui>
+  pyside6-uic <nome do arquivo salvo pelo qt_designer.ui> -o <endereço de destino >
 ```
 
 [![Qt Designer](img/exemplo_qt.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_7/qt_desiner  "exemplo de interface Qt Designer")
@@ -10750,9 +10750,15 @@ e Windows
 
 ❎ 382 - QObject e QThread: o problema!
 
+🎀 o codigo está alocado no link anterior ☝️
+
 ❎ 383 - QObject e QThread: criando o "Worker"
 
+🎀 o codigo está alocado no link anterior ☝️
+
 ❎ 384 - QObject e QThread: movendo "Workers" para threads separadas
+
+🎀 o codigo está alocado no link anterior ☝️
 
 ❎ 385 - QObject e QThread: código comentando
 
@@ -10762,7 +10768,7 @@ ___
 
 ___
 
-🔲 347 - SQLite - usando o módulo sqlite3
+❎ 386 - Base de dados com Python - SQLite(sqlite3) e MySQL(pymysql)
 
 🔲 348 - DB Brower do for SQLite - Windows
 
