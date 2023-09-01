@@ -10797,6 +10797,14 @@ connection.close()
 
 ❎ 388 - Criando minha primeira tabela no SQLite3 (DBeaver)
 
+
+|   id   | INTEGER |
+|--------|---------|
+|  NAME  | TEXT    |
+|--------|---------|
+| WEOGHT | REAL    |
+
+
 ```python
 [...]
 TABLE_NAME = 'costomers'
