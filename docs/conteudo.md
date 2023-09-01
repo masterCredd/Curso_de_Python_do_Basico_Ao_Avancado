@@ -10795,17 +10795,56 @@ cursor.close()
 connection.close()
 ```
 
+❎ 388 - Criando minha primeira tabela no SQLite3 (DBeaver)
+
+```python
+[...]
+TABLE_NAME = 'costomers'
 
 
-🔲 349 - DB Brower do for SQLite - Linux
+connection = sqlite3.connect(DB_FILE)
+cursor = connection.cursor()
 
-🔲 350 - Python sqlite3 + DB Brower for SQLite
+cursor.execute(
+  f'CREATE TABLE IF NOT EXIESTS {TABLE_NAME}'
+  '('
+    'id INTEGER PRIMARY KEY AUTOINCREMENT,'
+    'name TEXT,'
+    'weight REAL '
+  ')'
+)
+connection.commit()
 
-🔲 351 - Windows - Xampp + MySQL Workbench
+  #SQL
 
-🔲 352 - Linux - MariaDB Server + MySQL Workbench
+cursor.close()
+connection.close()
 
-🔲 353 - CRUD com Pymysql no MySQL e Mariadb Server
+```
+
+❎ 389 - Inserindo valores (INSET INTO), DELETE sem WHERE e zerando a sqlite_sequence
+
+❎ 390 - Usando placeholders para maior segurança (bindings) no SQLite
+
+❎ 391 - excutemany - Inserindo vários valores com placeholders no SQLite
+
+❎ 392 - execute e excutemany com dicionários e lista de dicionários no SQLite
+
+❎ 393 - SELECT DO SQL com fetch no SQLite3 do Python
+
+❎ 394 - O que é CRUD + DELETE  com e sem WHERE no SQLite3 do Python
+
+❎ 395 - DELETE no SQLite do Python
+
+❎ 396 - UPDATE no SQLite do Python
+
+❎ 397 - Vamos falar sobre Docker, Containers, MySQL, WSL2 em Windows, macOS e Linux
+
+❎ 398 - (Não requecendo) Instale o servidor MySQL direto no Windows
+
+❎ 399 - Subindo um servidor MySQL com Docker e docker-composer
+
+❎ 400 - Criando nossa base de dados padrão para próximas aulas(base_de_dados)
 ___
 
 ## 🔜 🔲 **Seção 9 Django no Python - Básico**

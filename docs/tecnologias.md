@@ -19,3 +19,4 @@
 [![Qt Designer](img/designer_qt.png)](https://build-system.fman.io/qt-designer-download  "instalação do Qt Designer")
 
 [![SQLite](img/SQLite.png)](https://www.sqlite.org/download.html  "instalação do SQLite")
+[![Dbeaver](img/dbeaver.png)](https://dbeaver.io/download/  "instalação do dbeaver")
