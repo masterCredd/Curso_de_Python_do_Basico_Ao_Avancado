@@ -9888,11 +9888,41 @@ e Windows</p>
 </span><span id="__span-283-13"><a id="__codelineno-283-13" name="__codelineno-283-13" href="#__codelineno-283-13"></a><span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span><span id="__span-283-14"><a id="__codelineno-283-14" name="__codelineno-283-14" href="#__codelineno-283-14"></a><span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></code></pre></div>
-<p>🔲 349 - DB Brower do for SQLite - Linux</p>
-<p>🔲 350 - Python sqlite3 + DB Brower for SQLite</p>
-<p>🔲 351 - Windows - Xampp + MySQL Workbench</p>
-<p>🔲 352 - Linux - MariaDB Server + MySQL Workbench</p>
-<p>🔲 353 - CRUD com Pymysql no MySQL e Mariadb Server</p>
+<p>❎ 388 - Criando minha primeira tabela no SQLite3 (DBeaver)</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-284-1"><a id="__codelineno-284-1" name="__codelineno-284-1" href="#__codelineno-284-1"></a><span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</span><span id="__span-284-2"><a id="__codelineno-284-2" name="__codelineno-284-2" href="#__codelineno-284-2"></a><span class="n">TABLE_NAME</span> <span class="o">=</span> <span class="s1">&#39;costomers&#39;</span>
+</span><span id="__span-284-3"><a id="__codelineno-284-3" name="__codelineno-284-3" href="#__codelineno-284-3"></a>
+</span><span id="__span-284-4"><a id="__codelineno-284-4" name="__codelineno-284-4" href="#__codelineno-284-4"></a>
+</span><span id="__span-284-5"><a id="__codelineno-284-5" name="__codelineno-284-5" href="#__codelineno-284-5"></a><span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">DB_FILE</span><span class="p">)</span>
+</span><span id="__span-284-6"><a id="__codelineno-284-6" name="__codelineno-284-6" href="#__codelineno-284-6"></a><span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+</span><span id="__span-284-7"><a id="__codelineno-284-7" name="__codelineno-284-7" href="#__codelineno-284-7"></a>
+</span><span id="__span-284-8"><a id="__codelineno-284-8" name="__codelineno-284-8" href="#__codelineno-284-8"></a><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+</span><span id="__span-284-9"><a id="__codelineno-284-9" name="__codelineno-284-9" href="#__codelineno-284-9"></a>  <span class="sa">f</span><span class="s1">&#39;CREATE TABLE IF NOT EXIESTS </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="si">}</span><span class="s1">&#39;</span>
+</span><span id="__span-284-10"><a id="__codelineno-284-10" name="__codelineno-284-10" href="#__codelineno-284-10"></a>  <span class="s1">&#39;(&#39;</span>
+</span><span id="__span-284-11"><a id="__codelineno-284-11" name="__codelineno-284-11" href="#__codelineno-284-11"></a>    <span class="s1">&#39;id INTEGER PRIMARY KEY AUTOINCREMENT,&#39;</span>
+</span><span id="__span-284-12"><a id="__codelineno-284-12" name="__codelineno-284-12" href="#__codelineno-284-12"></a>    <span class="s1">&#39;name TEXT,&#39;</span>
+</span><span id="__span-284-13"><a id="__codelineno-284-13" name="__codelineno-284-13" href="#__codelineno-284-13"></a>    <span class="s1">&#39;weight REAL &#39;</span>
+</span><span id="__span-284-14"><a id="__codelineno-284-14" name="__codelineno-284-14" href="#__codelineno-284-14"></a>  <span class="s1">&#39;)&#39;</span>
+</span><span id="__span-284-15"><a id="__codelineno-284-15" name="__codelineno-284-15" href="#__codelineno-284-15"></a><span class="p">)</span>
+</span><span id="__span-284-16"><a id="__codelineno-284-16" name="__codelineno-284-16" href="#__codelineno-284-16"></a><span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span><span id="__span-284-17"><a id="__codelineno-284-17" name="__codelineno-284-17" href="#__codelineno-284-17"></a>
+</span><span id="__span-284-18"><a id="__codelineno-284-18" name="__codelineno-284-18" href="#__codelineno-284-18"></a>  <span class="c1">#SQL</span>
+</span><span id="__span-284-19"><a id="__codelineno-284-19" name="__codelineno-284-19" href="#__codelineno-284-19"></a>
+</span><span id="__span-284-20"><a id="__codelineno-284-20" name="__codelineno-284-20" href="#__codelineno-284-20"></a><span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span id="__span-284-21"><a id="__codelineno-284-21" name="__codelineno-284-21" href="#__codelineno-284-21"></a><span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></code></pre></div>
+<p>❎ 389 - Inserindo valores (INSET INTO), DELETE sem WHERE e zerando a sqlite_sequence</p>
+<p>❎ 390 - Usando placeholders para maior segurança (bindings) no SQLite</p>
+<p>❎ 391 - excutemany - Inserindo vários valores com placeholders no SQLite</p>
+<p>❎ 392 - execute e excutemany com dicionários e lista de dicionários no SQLite</p>
+<p>❎ 393 - SELECT DO SQL com fetch no SQLite3 do Python</p>
+<p>❎ 394 - O que é CRUD + DELETE  com e sem WHERE no SQLite3 do Python</p>
+<p>❎ 395 - DELETE no SQLite do Python</p>
+<p>❎ 396 - UPDATE no SQLite do Python</p>
+<p>❎ 397 - Vamos falar sobre Docker, Containers, MySQL, WSL2 em Windows, macOS e Linux</p>
+<p>❎ 398 - (Não requecendo) Instale o servidor MySQL direto no Windows</p>
+<p>❎ 399 - Subindo um servidor MySQL com Docker e docker-composer</p>
+<p>❎ 400 - Criando nossa base de dados padrão para próximas aulas(base_de_dados)</p>
 <hr />
 <h2 id="secao-9-django-no-python-basico">🔜 🔲 <strong>Seção 9 Django no Python - Básico</strong><a class="headerlink" href="#secao-9-django-no-python-basico" title="Permanent link">⚓︎</a></h2>
 <hr />
