@@ -10797,16 +10797,16 @@ connection.close()
 
 ❎ 388 - Criando minha primeira tabela no SQLite3 (DBeaver)
 
+🪟🪟🪟 costomers
+⬇️⬇️
 
 |   id   | INTEGER |
 |--------|---------|
 |  NAME  | TEXT    |
-|--------|---------|
 | WEOGHT | REAL    |
 
-
 ```python
-[...]
+# [...]
 TABLE_NAME = 'costomers'
 
 
@@ -10831,6 +10831,46 @@ connection.close()
 ```
 
 ❎ 389 - Inserindo valores (INSET INTO), DELETE sem WHERE e zerando a sqlite_sequence
+
+```python
+# [...]
+# 🛑 fazendo delete sem where
+# 🛑 SQL injection
+
+cursor.execute('
+  f' DELETE FROM {TABLE_NAME}'
+  'DELETE FROM sqllite_squence WEHERE name= "{TABLE_NAME}"'
+  )
+connection.commit()
+
+#  cria a tabela
+cursor.execute(
+  f'CREATE TABLE IF NOT EXIESTS {TABLE_NAME}'
+  '('
+    'id INTEGER PRIMARY KEY AUTOINCREMENT,'
+    'name TEXT,'
+    'weight REAL '
+  ')'
+)
+connection.commit()
+
+  #Registrar valores nas colunas das tabela
+
+
+
+cursor.execute(
+  f'INSERT INTO {TABLE_NAME } (id, name, weight)'
+  'VALUES (NULL,"Luiz Otaávio", 9.9 )'
+  )
+connection.commit()
+
+cursor.close()
+connection.close()
+
+```
+
+
+
 
 ❎ 390 - Usando placeholders para maior segurança (bindings) no SQLite
 
