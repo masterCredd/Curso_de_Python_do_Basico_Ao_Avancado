@@ -9889,8 +9889,8 @@ e Windows</p>
 </span><span id="__span-283-14"><a id="__codelineno-283-14" name="__codelineno-283-14" href="#__codelineno-283-14"></a><span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></code></pre></div>
 <p>❎ 388 - Criando minha primeira tabela no SQLite3 (DBeaver)</p>
-<p>🪟🪟🪟 costomers
-⬇️⬇️</p>
+<p>🪟🪟🪟 costomers</p>
+<p>⬇️⬇️</p>
 <table>
 <thead>
 <tr>
@@ -9967,9 +9967,73 @@ e Windows</p>
 </span><span id="__span-285-33"><a id="__codelineno-285-33" name="__codelineno-285-33" href="#__codelineno-285-33"></a><span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></code></pre></div>
 <p>❎ 390 - Usando placeholders para maior segurança (bindings) no SQLite</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-286-1"><a id="__codelineno-286-1" name="__codelineno-286-1" href="#__codelineno-286-1"></a><span class="c1"># [...]</span>
+</span><span id="__span-286-2"><a id="__codelineno-286-2" name="__codelineno-286-2" href="#__codelineno-286-2"></a>
+</span><span id="__span-286-3"><a id="__codelineno-286-3" name="__codelineno-286-3" href="#__codelineno-286-3"></a><span class="n">sql</span><span class="o">=</span><span class="p">(</span>
+</span><span id="__span-286-4"><a id="__codelineno-286-4" name="__codelineno-286-4" href="#__codelineno-286-4"></a>  <span class="sa">f</span><span class="s1">&#39;INSERT INTO </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="w"> </span><span class="si">}</span><span class="s1"> ( name, weight)&#39;</span>
+</span><span id="__span-286-5"><a id="__codelineno-286-5" name="__codelineno-286-5" href="#__codelineno-286-5"></a>  <span class="s1">&#39;VALUES (?, ?)&#39;</span>
+</span><span id="__span-286-6"><a id="__codelineno-286-6" name="__codelineno-286-6" href="#__codelineno-286-6"></a><span class="p">)</span>
+</span><span id="__span-286-7"><a id="__codelineno-286-7" name="__codelineno-286-7" href="#__codelineno-286-7"></a><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,[</span><span class="s1">&#39;Joana&#39;</span><span class="p">,</span> <span class="mi">4</span> <span class="p">])</span>
+</span><span id="__span-286-8"><a id="__codelineno-286-8" name="__codelineno-286-8" href="#__codelineno-286-8"></a><span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span><span id="__span-286-9"><a id="__codelineno-286-9" name="__codelineno-286-9" href="#__codelineno-286-9"></a>
+</span><span id="__span-286-10"><a id="__codelineno-286-10" name="__codelineno-286-10" href="#__codelineno-286-10"></a><span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span id="__span-286-11"><a id="__codelineno-286-11" name="__codelineno-286-11" href="#__codelineno-286-11"></a><span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></code></pre></div>
 <p>❎ 391 - excutemany - Inserindo vários valores com placeholders no SQLite</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-287-1"><a id="__codelineno-287-1" name="__codelineno-287-1" href="#__codelineno-287-1"></a><span class="c1"># [...]</span>
+</span><span id="__span-287-2"><a id="__codelineno-287-2" name="__codelineno-287-2" href="#__codelineno-287-2"></a>
+</span><span id="__span-287-3"><a id="__codelineno-287-3" name="__codelineno-287-3" href="#__codelineno-287-3"></a><span class="n">sql</span><span class="o">=</span><span class="p">(</span>
+</span><span id="__span-287-4"><a id="__codelineno-287-4" name="__codelineno-287-4" href="#__codelineno-287-4"></a>  <span class="sa">f</span><span class="s1">&#39;INSERT INTO </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="w"> </span><span class="si">}</span><span class="s1"> ( name, weight)&#39;</span>
+</span><span id="__span-287-5"><a id="__codelineno-287-5" name="__codelineno-287-5" href="#__codelineno-287-5"></a>  <span class="s1">&#39;VALUES (?, ?)&#39;</span>
+</span><span id="__span-287-6"><a id="__codelineno-287-6" name="__codelineno-287-6" href="#__codelineno-287-6"></a><span class="p">)</span>
+</span><span id="__span-287-7"><a id="__codelineno-287-7" name="__codelineno-287-7" href="#__codelineno-287-7"></a><span class="c1"># cursor.execute (sql,[&#39;Joana&#39;, 4 ])</span>
+</span><span id="__span-287-8"><a id="__codelineno-287-8" name="__codelineno-287-8" href="#__codelineno-287-8"></a><span class="n">cursor</span><span class="o">.</span><span class="n">executemany</span> <span class="p">(</span><span class="n">sql</span><span class="p">,</span>
+</span><span id="__span-287-9"><a id="__codelineno-287-9" name="__codelineno-287-9" href="#__codelineno-287-9"></a>    <span class="p">[</span>
+</span><span id="__span-287-10"><a id="__codelineno-287-10" name="__codelineno-287-10" href="#__codelineno-287-10"></a>      <span class="p">[</span><span class="s1">&#39;Joana&#39;</span><span class="p">,</span> <span class="mi">4</span> <span class="p">],</span>
+</span><span id="__span-287-11"><a id="__codelineno-287-11" name="__codelineno-287-11" href="#__codelineno-287-11"></a>      <span class="p">[</span><span class="s1">&#39;Luiz&#39;</span><span class="p">,</span> <span class="mi">5</span> <span class="p">],</span>
+</span><span id="__span-287-12"><a id="__codelineno-287-12" name="__codelineno-287-12" href="#__codelineno-287-12"></a>    <span class="p">]</span>
+</span><span id="__span-287-13"><a id="__codelineno-287-13" name="__codelineno-287-13" href="#__codelineno-287-13"></a>  <span class="p">)</span>
+</span><span id="__span-287-14"><a id="__codelineno-287-14" name="__codelineno-287-14" href="#__codelineno-287-14"></a><span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span><span id="__span-287-15"><a id="__codelineno-287-15" name="__codelineno-287-15" href="#__codelineno-287-15"></a>
+</span><span id="__span-287-16"><a id="__codelineno-287-16" name="__codelineno-287-16" href="#__codelineno-287-16"></a><span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span id="__span-287-17"><a id="__codelineno-287-17" name="__codelineno-287-17" href="#__codelineno-287-17"></a><span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></code></pre></div>
 <p>❎ 392 - execute e excutemany com dicionários e lista de dicionários no SQLite</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-288-1"><a id="__codelineno-288-1" name="__codelineno-288-1" href="#__codelineno-288-1"></a><span class="c1"># [...]</span>
+</span><span id="__span-288-2"><a id="__codelineno-288-2" name="__codelineno-288-2" href="#__codelineno-288-2"></a>
+</span><span id="__span-288-3"><a id="__codelineno-288-3" name="__codelineno-288-3" href="#__codelineno-288-3"></a><span class="n">sql</span><span class="o">=</span><span class="p">(</span>
+</span><span id="__span-288-4"><a id="__codelineno-288-4" name="__codelineno-288-4" href="#__codelineno-288-4"></a>  <span class="sa">f</span><span class="s1">&#39;INSERT INTO </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="w"> </span><span class="si">}</span><span class="s1"> ( name, weight)&#39;</span>
+</span><span id="__span-288-5"><a id="__codelineno-288-5" name="__codelineno-288-5" href="#__codelineno-288-5"></a>  <span class="s1">&#39;VALUES (:nome, :weight)&#39;</span>
+</span><span id="__span-288-6"><a id="__codelineno-288-6" name="__codelineno-288-6" href="#__codelineno-288-6"></a><span class="p">)</span>
+</span><span id="__span-288-7"><a id="__codelineno-288-7" name="__codelineno-288-7" href="#__codelineno-288-7"></a><span class="c1"># cursor.execute (sql,[&#39;Joana&#39;, 4 ])</span>
+</span><span id="__span-288-8"><a id="__codelineno-288-8" name="__codelineno-288-8" href="#__codelineno-288-8"></a><span class="n">cursor</span><span class="o">.</span><span class="n">executemany</span> <span class="p">(</span><span class="n">sql</span><span class="p">,</span>
+</span><span id="__span-288-9"><a id="__codelineno-288-9" name="__codelineno-288-9" href="#__codelineno-288-9"></a>    <span class="p">{</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;Joana&#39;</span><span class="p">,</span><span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span>
+</span><span id="__span-288-10"><a id="__codelineno-288-10" name="__codelineno-288-10" href="#__codelineno-288-10"></a>    <span class="p">{</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;sem nome&#39;</span><span class="p">,</span><span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="mi">8</span><span class="p">}</span>
+</span><span id="__span-288-11"><a id="__codelineno-288-11" name="__codelineno-288-11" href="#__codelineno-288-11"></a>  <span class="p">)</span>
+</span><span id="__span-288-12"><a id="__codelineno-288-12" name="__codelineno-288-12" href="#__codelineno-288-12"></a><span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span><span id="__span-288-13"><a id="__codelineno-288-13" name="__codelineno-288-13" href="#__codelineno-288-13"></a>
+</span><span id="__span-288-14"><a id="__codelineno-288-14" name="__codelineno-288-14" href="#__codelineno-288-14"></a><span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span id="__span-288-15"><a id="__codelineno-288-15" name="__codelineno-288-15" href="#__codelineno-288-15"></a><span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></code></pre></div>
 <p>❎ 393 - SELECT DO SQL com fetch no SQLite3 do Python</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-289-1"><a id="__codelineno-289-1" name="__codelineno-289-1" href="#__codelineno-289-1"></a>  <span class="kn">import</span> <span class="nn">sqlite3</span>
+</span><span id="__span-289-2"><a id="__codelineno-289-2" name="__codelineno-289-2" href="#__codelineno-289-2"></a>  <span class="kn">from</span> <span class="nn">main</span> <span class="kn">import</span> <span class="n">DB_FILE</span><span class="p">,</span> <span class="n">TABLE_NAME</span>
+</span><span id="__span-289-3"><a id="__codelineno-289-3" name="__codelineno-289-3" href="#__codelineno-289-3"></a>
+</span><span id="__span-289-4"><a id="__codelineno-289-4" name="__codelineno-289-4" href="#__codelineno-289-4"></a>  <span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">BD_FILE</span><span class="p">)</span>
+</span><span id="__span-289-5"><a id="__codelineno-289-5" name="__codelineno-289-5" href="#__codelineno-289-5"></a>  <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+</span><span id="__span-289-6"><a id="__codelineno-289-6" name="__codelineno-289-6" href="#__codelineno-289-6"></a>
+</span><span id="__span-289-7"><a id="__codelineno-289-7" name="__codelineno-289-7" href="#__codelineno-289-7"></a>  <span class="n">cursor</span><span class="o">.</span><span class="n">excute</span><span class="p">(</span>
+</span><span id="__span-289-8"><a id="__codelineno-289-8" name="__codelineno-289-8" href="#__codelineno-289-8"></a>    <span class="sa">f</span><span class="s1">&#39;SELECT * FROM </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="si">}</span><span class="s1">&#39;</span>
+</span><span id="__span-289-9"><a id="__codelineno-289-9" name="__codelineno-289-9" href="#__codelineno-289-9"></a>  <span class="p">)</span>
+</span><span id="__span-289-10"><a id="__codelineno-289-10" name="__codelineno-289-10" href="#__codelineno-289-10"></a>  <span class="c1"># row = cursor.fetchone</span>
+</span><span id="__span-289-11"><a id="__codelineno-289-11" name="__codelineno-289-11" href="#__codelineno-289-11"></a>  <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">corsur</span><span class="o">.</span><span class="n">fechall</span><span class="p">():</span>
+</span><span id="__span-289-12"><a id="__codelineno-289-12" name="__codelineno-289-12" href="#__codelineno-289-12"></a>    <span class="n">_id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">row</span>
+</span><span id="__span-289-13"><a id="__codelineno-289-13" name="__codelineno-289-13" href="#__codelineno-289-13"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">_id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span>
+</span><span id="__span-289-14"><a id="__codelineno-289-14" name="__codelineno-289-14" href="#__codelineno-289-14"></a>
+</span><span id="__span-289-15"><a id="__codelineno-289-15" name="__codelineno-289-15" href="#__codelineno-289-15"></a>
+</span><span id="__span-289-16"><a id="__codelineno-289-16" name="__codelineno-289-16" href="#__codelineno-289-16"></a>  <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span id="__span-289-17"><a id="__codelineno-289-17" name="__codelineno-289-17" href="#__codelineno-289-17"></a>  <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></code></pre></div>
 <p>❎ 394 - O que é CRUD + DELETE  com e sem WHERE no SQLite3 do Python</p>
 <p>❎ 395 - DELETE no SQLite do Python</p>
 <p>❎ 396 - UPDATE no SQLite do Python</p>
