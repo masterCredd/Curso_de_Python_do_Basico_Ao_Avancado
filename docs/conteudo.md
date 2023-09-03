@@ -10798,6 +10798,7 @@ connection.close()
 ❎ 388 - Criando minha primeira tabela no SQLite3 (DBeaver)
 
 🪟🪟🪟 costomers
+
 ⬇️⬇️
 
 |   id   | INTEGER |
@@ -10869,16 +10870,89 @@ connection.close()
 
 ```
 
-
-
-
 ❎ 390 - Usando placeholders para maior segurança (bindings) no SQLite
+
+```python
+# [...]
+
+sql=(
+  f'INSERT INTO {TABLE_NAME } ( name, weight)'
+  'VALUES (?, ?)'
+)
+cursor.execute(sql,['Joana', 4 ])
+connection.commit()
+
+cursor.close()
+connection.close()
+ 
+```
 
 ❎ 391 - excutemany - Inserindo vários valores com placeholders no SQLite
 
+```python
+# [...]
+
+sql=(
+  f'INSERT INTO {TABLE_NAME } ( name, weight)'
+  'VALUES (?, ?)'
+)
+# cursor.execute (sql,['Joana', 4 ])
+cursor.executemany (sql,
+    [
+      ['Joana', 4 ],
+      ['Luiz', 5 ],
+    ]
+  )
+connection.commit()
+
+cursor.close()
+connection.close()
+ 
+```
+
 ❎ 392 - execute e excutemany com dicionários e lista de dicionários no SQLite
 
+```python
+# [...]
+
+sql=(
+  f'INSERT INTO {TABLE_NAME } ( name, weight)'
+  'VALUES (:nome, :weight)'
+)
+# cursor.execute (sql,['Joana', 4 ])
+cursor.executemany (sql,
+    { 'name':'Joana','weight':5}
+    { 'name':'sem nome','weight':8}
+  )
+connection.commit()
+
+cursor.close()
+connection.close()
+ 
+```
+
 ❎ 393 - SELECT DO SQL com fetch no SQLite3 do Python
+
+```python
+  import sqlite3
+  from main import DB_FILE, TABLE_NAME
+
+  connection = sqlite3.connect(BD_FILE)
+  cursor = connection.cursor()
+
+  cursor.excute(
+    f'SELECT * FROM {TABLE_NAME}'
+  )
+  # row = cursor.fetchone
+  for row in corsur.fechall():
+    _id, name, weight = row
+    print(_id, name, weight)
+
+
+  cursor.close()
+  connection.close()
+
+```
 
 ❎ 394 - O que é CRUD + DELETE  com e sem WHERE no SQLite3 do Python
 
