@@ -10943,6 +10943,7 @@ connection.close()
   cursor.excute(
     f'SELECT * FROM {TABLE_NAME}'
   )
+  connection.commit()
   # row = cursor.fetchone
   for row in corsur.fechall():
     _id, name, weight = row
@@ -10956,17 +10957,53 @@ connection.close()
 
 ❎ 394 - O que é CRUD + DELETE  com e sem WHERE no SQLite3 do Python
 
+```python
+# [...]
+cursor.execute('
+  f' DELETE FROM {TABLE_NAME}'
+  'DELETE FROM sqllite_squence WEHERE name= "{TABLE_NAME}"'
+  )
+```
+
 ❎ 395 - DELETE no SQLite do Python
+
+```python
+# [...]
+
+  cursor.excute(
+    f'DELETE FROM {TABLE_NAME} WHERE id = "3"'
+  )
+
+  connection.commit()
+```
 
 ❎ 396 - UPDATE no SQLite do Python
 
+```python
+# [...]
+
+  cursor.excute(
+    f'UPDATE  {TABLE_NAME} '
+    'SET name="QUALQUER" , weihght=67.87 '
+    'WHERE id = 2'
+  )
+
+  connection.commit()
+```
+
 ❎ 397 - Vamos falar sobre Docker, Containers, MySQL, WSL2 em Windows, macOS e Linux
 
+[![Docker](img/docker.png)](https://docs.docker.com/desktop/  "Documentação do Docker")
+
 ❎ 398 - (Não requecendo) Instale o servidor MySQL direto no Windows
+
+[![Mysql](img/mysql.png)](https://dev.mysql.com/downloads/  "instalação do mysql")
 
 ❎ 399 - Subindo um servidor MySQL com Docker e docker-composer
 
 ❎ 400 - Criando nossa base de dados padrão para próximas aulas(base_de_dados)
+
+❎ 401 - Criando um .env para evitar enviar senhas e dados sensíveis para o Github
 ___
 
 ## 🔜 🔲 **Seção 9 Django no Python - Básico**
