@@ -10025,22 +10025,50 @@ e Windows</p>
 </span><span id="__span-289-7"><a id="__codelineno-289-7" name="__codelineno-289-7" href="#__codelineno-289-7"></a>  <span class="n">cursor</span><span class="o">.</span><span class="n">excute</span><span class="p">(</span>
 </span><span id="__span-289-8"><a id="__codelineno-289-8" name="__codelineno-289-8" href="#__codelineno-289-8"></a>    <span class="sa">f</span><span class="s1">&#39;SELECT * FROM </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="si">}</span><span class="s1">&#39;</span>
 </span><span id="__span-289-9"><a id="__codelineno-289-9" name="__codelineno-289-9" href="#__codelineno-289-9"></a>  <span class="p">)</span>
-</span><span id="__span-289-10"><a id="__codelineno-289-10" name="__codelineno-289-10" href="#__codelineno-289-10"></a>  <span class="c1"># row = cursor.fetchone</span>
-</span><span id="__span-289-11"><a id="__codelineno-289-11" name="__codelineno-289-11" href="#__codelineno-289-11"></a>  <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">corsur</span><span class="o">.</span><span class="n">fechall</span><span class="p">():</span>
-</span><span id="__span-289-12"><a id="__codelineno-289-12" name="__codelineno-289-12" href="#__codelineno-289-12"></a>    <span class="n">_id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">row</span>
-</span><span id="__span-289-13"><a id="__codelineno-289-13" name="__codelineno-289-13" href="#__codelineno-289-13"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">_id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span>
-</span><span id="__span-289-14"><a id="__codelineno-289-14" name="__codelineno-289-14" href="#__codelineno-289-14"></a>
+</span><span id="__span-289-10"><a id="__codelineno-289-10" name="__codelineno-289-10" href="#__codelineno-289-10"></a>  <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span><span id="__span-289-11"><a id="__codelineno-289-11" name="__codelineno-289-11" href="#__codelineno-289-11"></a>  <span class="c1"># row = cursor.fetchone</span>
+</span><span id="__span-289-12"><a id="__codelineno-289-12" name="__codelineno-289-12" href="#__codelineno-289-12"></a>  <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">corsur</span><span class="o">.</span><span class="n">fechall</span><span class="p">():</span>
+</span><span id="__span-289-13"><a id="__codelineno-289-13" name="__codelineno-289-13" href="#__codelineno-289-13"></a>    <span class="n">_id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">row</span>
+</span><span id="__span-289-14"><a id="__codelineno-289-14" name="__codelineno-289-14" href="#__codelineno-289-14"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">_id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span>
 </span><span id="__span-289-15"><a id="__codelineno-289-15" name="__codelineno-289-15" href="#__codelineno-289-15"></a>
-</span><span id="__span-289-16"><a id="__codelineno-289-16" name="__codelineno-289-16" href="#__codelineno-289-16"></a>  <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</span><span id="__span-289-17"><a id="__codelineno-289-17" name="__codelineno-289-17" href="#__codelineno-289-17"></a>  <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span id="__span-289-16"><a id="__codelineno-289-16" name="__codelineno-289-16" href="#__codelineno-289-16"></a>
+</span><span id="__span-289-17"><a id="__codelineno-289-17" name="__codelineno-289-17" href="#__codelineno-289-17"></a>  <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span id="__span-289-18"><a id="__codelineno-289-18" name="__codelineno-289-18" href="#__codelineno-289-18"></a>  <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></code></pre></div>
 <p>❎ 394 - O que é CRUD + DELETE  com e sem WHERE no SQLite3 do Python</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-290-1"><a id="__codelineno-290-1" name="__codelineno-290-1" href="#__codelineno-290-1"></a><span class="c1"># [...]</span>
+</span><span id="__span-290-2"><a id="__codelineno-290-2" name="__codelineno-290-2" href="#__codelineno-290-2"></a><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;</span>
+</span><span id="__span-290-3"><a id="__codelineno-290-3" name="__codelineno-290-3" href="#__codelineno-290-3"></a>  <span class="sa">f</span><span class="s1">&#39; DELETE FROM </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="si">}</span><span class="s1">&#39;</span>
+</span><span id="__span-290-4"><a id="__codelineno-290-4" name="__codelineno-290-4" href="#__codelineno-290-4"></a>  <span class="s1">&#39;DELETE FROM sqllite_squence WEHERE name= &quot;</span><span class="si">{TABLE_NAME}</span><span class="s1">&quot;&#39;</span>
+</span><span id="__span-290-5"><a id="__codelineno-290-5" name="__codelineno-290-5" href="#__codelineno-290-5"></a>  <span class="p">)</span>
+</span></code></pre></div>
 <p>❎ 395 - DELETE no SQLite do Python</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-291-1"><a id="__codelineno-291-1" name="__codelineno-291-1" href="#__codelineno-291-1"></a><span class="c1"># [...]</span>
+</span><span id="__span-291-2"><a id="__codelineno-291-2" name="__codelineno-291-2" href="#__codelineno-291-2"></a>
+</span><span id="__span-291-3"><a id="__codelineno-291-3" name="__codelineno-291-3" href="#__codelineno-291-3"></a>  <span class="n">cursor</span><span class="o">.</span><span class="n">excute</span><span class="p">(</span>
+</span><span id="__span-291-4"><a id="__codelineno-291-4" name="__codelineno-291-4" href="#__codelineno-291-4"></a>    <span class="sa">f</span><span class="s1">&#39;DELETE FROM </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="si">}</span><span class="s1"> WHERE id = &quot;3&quot;&#39;</span>
+</span><span id="__span-291-5"><a id="__codelineno-291-5" name="__codelineno-291-5" href="#__codelineno-291-5"></a>  <span class="p">)</span>
+</span><span id="__span-291-6"><a id="__codelineno-291-6" name="__codelineno-291-6" href="#__codelineno-291-6"></a>
+</span><span id="__span-291-7"><a id="__codelineno-291-7" name="__codelineno-291-7" href="#__codelineno-291-7"></a>  <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span></code></pre></div>
 <p>❎ 396 - UPDATE no SQLite do Python</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-292-1"><a id="__codelineno-292-1" name="__codelineno-292-1" href="#__codelineno-292-1"></a><span class="c1"># [...]</span>
+</span><span id="__span-292-2"><a id="__codelineno-292-2" name="__codelineno-292-2" href="#__codelineno-292-2"></a>
+</span><span id="__span-292-3"><a id="__codelineno-292-3" name="__codelineno-292-3" href="#__codelineno-292-3"></a>  <span class="n">cursor</span><span class="o">.</span><span class="n">excute</span><span class="p">(</span>
+</span><span id="__span-292-4"><a id="__codelineno-292-4" name="__codelineno-292-4" href="#__codelineno-292-4"></a>    <span class="sa">f</span><span class="s1">&#39;UPDATE  </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="si">}</span><span class="s1"> &#39;</span>
+</span><span id="__span-292-5"><a id="__codelineno-292-5" name="__codelineno-292-5" href="#__codelineno-292-5"></a>    <span class="s1">&#39;SET name=&quot;QUALQUER&quot; , weihght=67.87 &#39;</span>
+</span><span id="__span-292-6"><a id="__codelineno-292-6" name="__codelineno-292-6" href="#__codelineno-292-6"></a>    <span class="s1">&#39;WHERE id = 2&#39;</span>
+</span><span id="__span-292-7"><a id="__codelineno-292-7" name="__codelineno-292-7" href="#__codelineno-292-7"></a>  <span class="p">)</span>
+</span><span id="__span-292-8"><a id="__codelineno-292-8" name="__codelineno-292-8" href="#__codelineno-292-8"></a>
+</span><span id="__span-292-9"><a id="__codelineno-292-9" name="__codelineno-292-9" href="#__codelineno-292-9"></a>  <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span></code></pre></div>
 <p>❎ 397 - Vamos falar sobre Docker, Containers, MySQL, WSL2 em Windows, macOS e Linux</p>
+<p><a href="https://docs.docker.com/desktop/" title="Documentação do Docker"><img alt="Docker" src="../img/docker.png" /></a></p>
 <p>❎ 398 - (Não requecendo) Instale o servidor MySQL direto no Windows</p>
+<p><a href="https://dev.mysql.com/downloads/" title="instalação do mysql"><img alt="Mysql" src="../img/mysql.png" /></a></p>
 <p>❎ 399 - Subindo um servidor MySQL com Docker e docker-composer</p>
 <p>❎ 400 - Criando nossa base de dados padrão para próximas aulas(base_de_dados)</p>
+<p>❎ 401 - Criando um .env para evitar enviar senhas e dados sensíveis para o Github</p>
 <hr />
 <h2 id="secao-9-django-no-python-basico">🔜 🔲 <strong>Seção 9 Django no Python - Básico</strong><a class="headerlink" href="#secao-9-django-no-python-basico" title="Permanent link">⚓︎</a></h2>
 <hr />
