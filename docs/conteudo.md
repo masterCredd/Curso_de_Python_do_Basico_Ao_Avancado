@@ -11033,7 +11033,18 @@ MYSQL_PASSWORD= 'CHANGE-ME'
 
 ❎ 404 - Usando python-dotenv e .env com pymysql.connect
 
-❎ 404 - Usando python-dotenv e .env com pymysql.connect
+❎ 405 - CREATE TABLE para criar tabela com PRIMARY KEY no PyMysql
+
+❎ 406 - TRUNCATE e INSERT p/ limpar e criar valores na tabela com um ou mais cursores
+
+❎ 407 - Evite SQL Injection ao usar placeholders para enviar valores para consulta SQL
+
+❎ 408 - Inserindo valores usando dicionários ao invés de iteráveis
+
+❎ 409 - Inserindo vários valores com uma consulta só usando interáveis ou dicionários
+
+❎ 410 - Lendo valores com SELECT, cursor.execute e cursor.fetchall no PyMySQL
+
 ___
 
 ## 🔜 🔲 **Seção 9 Django no Python - Básico**
