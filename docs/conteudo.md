@@ -11004,6 +11004,14 @@ cursor.execute('
 ❎ 400 - Criando nossa base de dados padrão para próximas aulas(base_de_dados)
 
 ❎ 401 - Criando um .env para evitar enviar senhas e dados sensíveis para o Github
+
+❎ 402 - PyMySQL - um cliente MySQL em Python Puro
+
+❎ 403 - Conectando no seu servidor de base de dados Mysql com PyMySQL
+
+❎ 404 - Usando python-dotenv e .env com pymysql.connect
+
+❎ 404 - Usando python-dotenv e .env com pymysql.connect
 ___
 
 ## 🔜 🔲 **Seção 9 Django no Python - Básico**
