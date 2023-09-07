@@ -195,3 +195,4 @@ echo "site" >>.gitignore
 .DS_Store
 chromedriver
 __localcode
+mysql_206

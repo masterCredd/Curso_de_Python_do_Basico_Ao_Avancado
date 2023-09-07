@@ -11001,9 +11001,31 @@ cursor.execute('
 
 ❎ 399 - Subindo um servidor MySQL com Docker e docker-composer
 
+[![docker + Mysql](img/config.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_8  "configurações do mysql no docker")
+
+siga as confugurações abaixo para criar a instância do mysql no docker.
+
+```docker
+
+  docker-compose up
+
+
+```
+
 ❎ 400 - Criando nossa base de dados padrão para próximas aulas(base_de_dados)
 
+  detalhando as configurações feitas na aula anterior
+
 ❎ 401 - Criando um .env para evitar enviar senhas e dados sensíveis para o Github
+
+  criar em arquivo de exemplo das configuração de abaixo em um .env-example
+
+```env-example
+MYSQL_ROOT_PASSWORD= 'CHANGE-ME'
+MYSQL_DATABASE= 'CHANGE-ME'
+MYSQL_USER= 'CHANGE-ME'
+MYSQL_PASSWORD= 'CHANGE-ME'
+```
 
 ❎ 402 - PyMySQL - um cliente MySQL em Python Puro
 
