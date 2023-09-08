@@ -572,20 +572,20 @@ print('FORA DO IF')
 """
 
 
-|  ->  OP  |  Significado      |  Exemplo (True)    |
-|  -----------------------------------------------  |
-|  ->  >   |   Maior           |     2 > 1          |
-|  -----------------------------------------------  |
-|  -> >=   |   maior ou igual  |     2 >= 2         |
-|  -----------------------------------------------  |
-|  ->  <   |   menor ou igual  |     1 < 2          |
-|  -----------------------------------------------  |
-|  ->  <=  |   menor ou igual  |     2 <= 2         |
-|  -----------------------------------------------  |
-|  ->  ==  |   igual           |     'a' == 'a'     |
-|  ----------------------------------------------   |
-|  ->  !=  | diferente         |     'a' != 'b'     |
-|  -----------------------------------------------  |
+| ->  OP                                          | Significado    | Exemplo (True) |
+| ----------------------------------------------- |
+| ->  >                                           | Maior          | 2 > 1          |
+| ----------------------------------------------- |
+| -> >=                                           | maior ou igual | 2 >= 2         |
+| ----------------------------------------------- |
+| ->  <                                           | menor ou igual | 1 < 2          |
+| ----------------------------------------------- |
+| ->  <=                                          | menor ou igual | 2 <= 2         |
+| ----------------------------------------------- |
+| ->  ==                                          | igual          | 'a' == 'a'     |
+| ----------------------------------------------  |
+| ->  !=                                          | diferente      | 'a' != 'b'     |
+| ----------------------------------------------- |
 
 """
 
@@ -9203,7 +9203,7 @@ ___
 🎀  Ao converter Python para JSON:
 
 | Python | JSON   |
-|--------|--------|
+| ------ | ------ |
 | dict   | object |
 | list   | array  |
 | tuple  | array  |
@@ -10361,32 +10361,32 @@ ___
 
 ❎ 343 - QMainWindw e centralWidget
 
-| 🎀---> QApplication (app)|
-|--------------------------|
+| 🎀---> QApplication (app) |
+| ------------------------ |
 
-| 🎀-----> QMainWindow (window->setCentralWidget)|
-|------------------------------------------------|
+| 🎀-----> QMainWindow (window->setCentralWidget) |
+| ---------------------------------------------- |
 
-|🎀-------> CentralWidget (central_widget)|
-|-----------------------------------------|
+| 🎀-------> CentralWidget (central_widget) |
+| ---------------------------------------- |
 
-|🎀---------> Layout (layout)|
-|----------------------------|
+| 🎀---------> Layout (layout) |
+| --------------------------- |
 
-|🎀-----------> Widget 1 (botao_1)|
-|---------------------------------|
+| 🎀-----------> Widget 1 (botao_1) |
+| -------------------------------- |
 
-|🎀-----------> Widget 2 (botao_2)|
-|---------------------------------|
+| 🎀-----------> Widget 2 (botao_2) |
+| -------------------------------- |
 
-|🎀-----------> Widget 3 (botao_3)|
-|---------------------------------|
+| 🎀-----------> Widget 3 (botao_3) |
+| -------------------------------- |
 
-|🎀-----> show|
-|-------------|
+| 🎀-----> show |
+| ------------ |
 
-|🎀--> exec|
-|----------|
+| 🎀--> exec |
+| --------- |
 
 ```python
 
@@ -10801,9 +10801,9 @@ connection.close()
 
 ⬇️⬇️
 
-|   id   | INTEGER |
-|--------|---------|
-|  NAME  | TEXT    |
+| id     | INTEGER |
+| ------ | ------- |
+| NAME   | TEXT    |
 | WEOGHT | REAL    |
 
 ```python
@@ -11025,25 +11025,228 @@ MYSQL_ROOT_PASSWORD= 'CHANGE-ME'
 MYSQL_DATABASE= 'CHANGE-ME'
 MYSQL_USER= 'CHANGE-ME'
 MYSQL_PASSWORD= 'CHANGE-ME'
+MYSQL_HOST='CHANGE-ME'
 ```
 
 ❎ 402 - PyMySQL - um cliente MySQL em Python Puro
 
+instalação cliente PyMysql e a descrição da sua documentação
+
+```bash
+    pip install pymsql
+```
+
+[![pymysql](img/pymsql.png)](https://pymysql.readthedocs.io/en/latest/#  "documentação do pymysql")
+
 ❎ 403 - Conectando no seu servidor de base de dados Mysql com PyMySQL
+
+```python
+
+  import pymysql
+
+  connection = pymysql.connect(
+    host='localhost',
+    user='usuario',
+    password='senha',
+    database='base_de_dados'
+  )
+
+  with connection:
+    with connection.cursor() as cursor:
+
+```
+
+!!!tip  "Dicas:"
+    Os gerenciadores de contexto permitem alocar e liberar recursos precisamente
+      quado você deseja. O exemplo mais aplamente utilizado de gerenciamento de
+      contexto é a `with` declaração. Suponha que você tenha duas operações
+      relacionadas que gostaria de executar em pares, com um blocode código entre
+      elas. Os gerencimento de contexto permitem que você faça isso especicamente.
 
 ❎ 404 - Usando python-dotenv e .env com pymysql.connect
 
+```python
+
+  import pymysql
+  import dotenv
+  import os
+
+  dotenv.load_dotenv()
+
+  connection = pymysql.connect(
+    host= os.environ['MYSQL_HOST'],
+    user= os.environ['MYSQL_USER'],
+    password= os.environ['MYSQL_PASSWORD'],
+    database= os.environ['MYSQL_DATABASE']
+  )
+
+  with connection:
+    with connection.cursor() as cursor:
+
+```
+
 ❎ 405 - CREATE TABLE para criar tabela com PRIMARY KEY no PyMysql
+
+| customers |
+| --------- |
+| nome      | varchar |
+| idade     | int     |
+
+
+```python
+# [...]
+TABLE_NAME='customers'
+
+ with connection:
+    with connection.cursor() as cursor:
+      curor.execute(
+        f'CREATE TABLE IF NOT EXISTE {TABLE_NAME} ('
+        'id INT NOT NULL AUTO_INCREMENT,'
+        'nome VARCHAR(50) NOT NULL,'
+        'idade INT NOT NULL'
+        'PRIMARY KEY (id)'
+        ')'
+      )
+      connection.commit()
+
+```
 
 ❎ 406 - TRUNCATE e INSERT p/ limpar e criar valores na tabela com um ou mais cursores
 
+| nome | idade |
+| ---- | ----- |
+| Luiz | 25    |
+
+```python
+# [...]
+
+ with connection:
+    with connection.cursor() as cursor:
+       # Limpa a tabela, mas não apaga seus dados!
+      curor.execute(f' TRUNCATE TABLE {TABLE_NAME}')
+      curor.execute(
+        f'INSET INTO {TABLE_NAME} (nome, idade) VALUES '
+        '("Luiz", 25 ) '
+      )
+      connection.commit()
+
+```
+
 ❎ 407 - Evite SQL Injection ao usar placeholders para enviar valores para consulta SQL
+
+```python
+# [...]
+
+ with connection:
+    with connection.cursor() as cursor:
+      sql = f'INSET INTO {TABLE_NAME} (nome, idade) '
+        ' VALUES (%s, %s) '
+      data = ('luiz', 18)
+      
+      curor.execute(sql,data)
+      connection.commit()
+
+```
 
 ❎ 408 - Inserindo valores usando dicionários ao invés de iteráveis
 
+```python
+# [...]
+
+ with connection:
+    with connection.cursor() as cursor:
+       sql = f'INSET INTO {TABLE_NAME} (nome, idade) '
+        ' VALUES (%(name)s, %(age)s) '
+      data = {
+        "name": "Le",
+        "age": 37,
+      }
+      
+      curor.execute(sql,data)
+      connection.commit()
+
+```
+
 ❎ 409 - Inserindo vários valores com uma consulta só usando interáveis ou dicionários
 
+```python
+# [...]
+  # insersão de valores com dicionario
+ with connection:
+    with connection.cursor() as cursor:
+       sql = f'INSET INTO {TABLE_NAME} (nome, idade) '
+        ' VALUES (%(name)s, %(age)s) '
+      data = (
+        {"name": "Le","age": 37,},
+        {"name": "Julia","age": 74,},
+        {"name": "Rose","age": 53,},
+        )
+      
+      curor.executemany (sql,data)
+      connection.commit()
+  # insersão de valores com iterável 
+ with connection:
+    with connection.cursor() as cursor:
+       sql = f'INSET INTO {TABLE_NAME} (nome, idade) '
+        ' VALUES (%s, %s) '
+      data = (
+          ( "Siri", 22,),
+          ( "Helena", 15,),
+        )
+      
+      curor.executemany (sql,data)
+      connection.commit()
+
+```
+
 ❎ 410 - Lendo valores com SELECT, cursor.execute e cursor.fetchall no PyMySQL
+
+```python
+# [...]
+ with connection:
+    with connection.cursor() as cursor:
+       sql = f'SELECT * FROM {TABLE_NAME}'
+      
+      curor.execute (sql)
+
+      # dateh = cursor.fetone()
+      dateh = cursor.fetchall()
+
+      for row in dateh:
+        print(row)
+```
+
+❎ 411 - Lendo valores com WHERE (mais uma vez explico cuidados com SQL Injection)
+
+```python
+# [...]
+ with connection:
+    with connection.cursor() as cursor:
+      id_menor = int(input('Digite o menor id:'))
+      id_maior = int (input('Digite o maior id:'))
+      
+       sql = f'SELECT * FROM {TABLE_NAME} WHERE id BETWEEN %s AND  %s'
+      
+      curor.execute (sql, (id_menor, id_maior))
+      
+      print(curor.mogrify(sql, (id_menor, id_maior)))
+
+      # dateh = cursor.fetone()
+      dateh = cursor.fetchall()
+
+      for row in dateh:
+        print(row)
+```
+
+❎ 412 - Apagando valores com DELETE, WHERE e placeholder no PyMySQL
+
+❎ 413 - Editando com UPDATE, WHERE e placeholder no PyMySQL
+
+❎ 414 - Trocando o cursor para retornar dicionários pymysql.cusor.DictCursor
+
+❎ 415 - SSCurosr, SSDisctCursor e scroll para conjuntos de dados muito grandes no PyMysql
+
+❎ 416 - rowcount, rownumber e lastrowid para detalhes de consultas executadas
 
 ___
 
