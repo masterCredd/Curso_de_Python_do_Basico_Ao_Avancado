@@ -10764,7 +10764,7 @@ e Windows
 
 ___
 
-## 🔜 🔲 **Seção 8: Base de dados com Python -SQLite(sqlie3) e MySQL(pymysql)**
+## 🔜 ❎ **Seção 8: Base de dados com Python -SQLite(sqlie3) e MySQL(pymysql)**
 
 ___
 
@@ -11238,15 +11238,161 @@ TABLE_NAME='customers'
         print(row)
 ```
 
+!!!danger "Cuidados com SQL injection"
+    A injeção de SQL é uma vulnerabilidade de sgurança da web que permite que um      invasor interfira nas consultas que um aplicativo faz ao seu banco de dados.
+    Geramente. permite que um invasor visualize dados normalmente ele não é capaz recuperar. isso pode incluir pertencentes a outros usuários ou quaisquer outros dados que o próprio aplicativo é capaz de acessar. Em muitos casos, um invasor pode modificar ou excluir esses dados causando alterações peristentes no conteúdo ou comportamento do aplicativo.
+
 ❎ 412 - Apagando valores com DELETE, WHERE e placeholder no PyMySQL
+
+```python
+# [...]
+ with connection:
+    with connection.cursor() as cursor:
+      
+       sql = f'DELETE FROM {TABLE_NAME} WHERE id = %s'
+      
+      curor.execute (sql,(4))
+      connection.commit()
+      curor.execute (f'SELECT * FROM {TABLE_NAME} ')
+
+      for row in  cursor.fetchall():
+        print(row)
+```
 
 ❎ 413 - Editando com UPDATE, WHERE e placeholder no PyMySQL
 
+```python
+# [...]
+ with connection:
+    with connection.cursor() as cursor:
+      
+       sql = f'UPDATE FROM {TABLE_NAME} SET nome=%s, idade=%s  WHERE id = %s'
+      
+      curor.execute (sql,('Eleonor', 102, 4))
+      connection.commit()
+      curor.execute (f'SELECT * FROM {TABLE_NAME} ')
+
+      for row in  cursor.fetchall():
+        print(row)
+```
+
 ❎ 414 - Trocando o cursor para retornar dicionários pymysql.cusor.DictCursor
+
+```python
+# [...]
+  import pymysql
+  import pymysql.curors
+  import dotenv
+  import os
+
+  dotenv.load_dotenv()
+
+  connection = pymysql.connect(
+    host= os.environ['MYSQL_HOST'],
+    user= os.environ['MYSQL_USER'],
+    password= os.environ['MYSQL_PASSWORD'],
+    database= os.environ['MYSQL_DATABASE'],
+    cursorclass=pymysql.cursors.DictCursor,
+  )
+ with connection:
+    with connection.cursor() as cursor:
+      
+       sql = f'UPDATE FROM {TABLE_NAME} SET nome=%s, idade=%s  WHERE id = %s'
+      
+      curor.execute (sql,('Eleonor', 102, 4))
+      connection.commit()
+      curor.execute (f'SELECT * FROM {TABLE_NAME} ')
+
+      for row in  cursor.fetchall():
+        print(row)
+```
 
 ❎ 415 - SSCurosr, SSDisctCursor e scroll para conjuntos de dados muito grandes no PyMysql
 
+```python
+  import pymysql
+  import pymysql.curors
+  import dotenv
+  import os
+
+  dotenv.load_dotenv()
+
+  connection = pymysql.connect(
+    host= os.environ['MYSQL_HOST'],
+    user= os.environ['MYSQL_USER'],
+    password= os.environ['MYSQL_PASSWORD'],
+    database= os.environ['MYSQL_DATABASE'],
+    cursorclass=pymysql.cursors.DictCursor,
+    # cursorclass=pymysql.cursors.SSDictCursor,
+  )
+ with connection:
+    with connection.cursor() as cursor:
+      
+       sql = f'UPDATE FROM {TABLE_NAME} SET nome=%s, idade=%s  WHERE id = %s'
+      
+      curor.execute (sql,('Eleonor', 102, 4))
+      connection.commit()
+      curor.execute (f'SELECT * FROM {TABLE_NAME} ')
+
+      
+      # for row in  cursor.fetchall_unbuffered():
+      for row in  cursor.fetchall():
+        print(row)
+
+
+      # cursor.scroll(-2)
+      
+      cursor.scroll(1, 'absolute')
+
+      for row in  cursor.fetchall(): 
+        print(row)
+```
+
+!!!tip  "Dicas:"
+    Cursor sem buffer(SSCurosr), útil principalmente para consultas que retornam muitos dados,
+     ou para conexões com servidores remotos em uma rede lenta.
+     Em vez de copiar cada linha de dados em um buffer, isso irá buscar
+     linhas conforme necessário. A vantagem disso é que o cliente usa muito menos memória,
+     e as linhas são retornadas muito mais rapidamente ao viajar em uma rede lenta
+     ou se o conjunto de resultados for muito grande.
+     Existem limitações, no entanto. O protocolo MySQL não suporta
+     retornando o número total de linhas, então a única maneira de saber quantas linhas
+     existe é iterar sobre cada linha retornada. Além disso, atualmente não é
+     possível rolar para trás, pois apenas a linha atual é mantida na memória.
+
 ❎ 416 - rowcount, rownumber e lastrowid para detalhes de consultas executadas
+
+```python
+  import pymysql
+  import pymysql.curors
+  import dotenv
+  import os
+
+  dotenv.load_dotenv()
+
+  connection = pymysql.connect(
+    host= os.environ['MYSQL_HOST'],
+    user= os.environ['MYSQL_USER'],
+    password= os.environ['MYSQL_PASSWORD'],
+    database= os.environ['MYSQL_DATABASE'],
+    cursorclass=pymysql.cursors.DictCursor,
+   
+  )
+ with connection:
+    with connection.cursor() as cursor:
+    
+      curor.execute (f'SELECT * FROM {TABLE_NAME} ')
+
+      # curor.execute (f'SELECT id FROM {TABLE_NAME} ORDER BY id DESC LIMIT 1 ')
+
+      data = cursor.fetchall()
+      for row in  data:
+        print(row)
+        print(len(data))
+        print(cursor.rowcount)
+        # print(cursor.lastrowid)
+        # print(cursor.rownumber)
+```
 
 ___
 
@@ -11362,6 +11508,7 @@ ___
 🔲 383 - Projeto Blog - Deploy
 
 🔲 384 - Criando seus próprios filtros
+
 
 🔲 385 - Select_related - Otimizando as  consultas relacionais
 
