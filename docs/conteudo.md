@@ -11088,7 +11088,7 @@ instalação cliente PyMysql e a descrição da sua documentação
 ❎ 405 - CREATE TABLE para criar tabela com PRIMARY KEY no PyMysql
 
 | customers |
-| --------- |
+| --------- | ------- |
 | nome      | varchar |
 | idade     | int     |
 
@@ -11406,7 +11406,20 @@ ___
 
 ❎ 418 - Iniciando um projeto com Django com django-admin startproject
 
+Para fazer ativação do django criando um prjeto siga o comando a seguir
+
+```bash
+  django-admin startproject <project>.
+
+  python manage.py runserver  # iniciar o servidor 
+
+
+```
+
+
 ❎ 419 - Projeto movido para a pasta de repositório do curso
+
+[![pymysql](img/django.png)](https://pymysql.readthedocs.io/en/latest/#  "documentação do pymysql")
 
 ❎ 420 - O que é o Django? (de modo muito superficial)
 
