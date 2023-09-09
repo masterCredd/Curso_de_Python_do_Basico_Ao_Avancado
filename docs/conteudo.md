@@ -11400,19 +11400,32 @@ ___
 
 ___
 
-🔲 354 - Django: Olá mundo!
+❎ 417 - Resumo de projetos anteriores
 
-🔲 355 - Atualização 07/2021 avisos
+[![Aula anterior](img/aula_old.png)](https://drive.google.com/drive/folders/16z-4pnR65eFNKi1flytbalVJ9p43hKxT)
 
-🔲 356 - Usando um template HTML em Comum
+❎ 418 - Iniciando um projeto com Django com django-admin startproject
 
-🔲 357 - Página inicial
+❎ 419 - Projeto movido para a pasta de repositório do curso
 
-🔲 358 - Arquivos estáticos (CSS, JS, IMG...)
+❎ 420 - O que é o Django? (de modo muito superficial)
 
-🔲 359 - Carregando URLs dinamicamente
+❎ 421 - Conheça os arquivos do Django, django-admin e manage.py
 
-🔲 360 - Incluindo arquivos parciais
+❎ 422 - Primeira URL e function based view + HttpRequest e HttpResponse + Status Code
+
+❎ 423 - Entenda os motivos de uma View recever uma Request e retornar uma Response
+
+❎ 424 - Criando apps com manage.py startapp do Django
+
+❎ 425 - Movendo as function based views para o arquivo views.py dos novs apps do Django
+
+❎ 426 - Aninhando URLs com path, include e urls.py dos apps do Django
+
+❎ 427 - Renderizando HTML, render, templates INSTALLED_APPS e TamplateDoesNotExist
+
+❎ 428p - Renderizando HTML, render, templates INSTALLED_APPS e TamplateDoesNotExist
+
 ___
 
 ## 🔜 🔲 **Seção 10 Django no Python Projeto Agenda**
