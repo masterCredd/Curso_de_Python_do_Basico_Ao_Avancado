@@ -380,7 +380,7 @@
       
         <li class="md-nav__item">
   <a href="#secao-8-base-de-dados-com-python-sqlitesqlie3-e-mysqlpymysql" class="md-nav__link">
-    🔜 🔲 Seção 8: Base de dados com Python -SQLite(sqlie3) e MySQL(pymysql)
+    🔜 ❎ Seção 8: Base de dados com Python -SQLite(sqlie3) e MySQL(pymysql)
   </a>
   
 </li>
@@ -513,7 +513,7 @@
       
         <li class="md-nav__item">
   <a href="#secao-8-base-de-dados-com-python-sqlitesqlie3-e-mysqlpymysql" class="md-nav__link">
-    🔜 🔲 Seção 8: Base de dados com Python -SQLite(sqlie3) e MySQL(pymysql)
+    🔜 ❎ Seção 8: Base de dados com Python -SQLite(sqlie3) e MySQL(pymysql)
   </a>
   
 </li>
@@ -9866,7 +9866,7 @@ e Windows</p>
 <p>🎀 o codigo está alocado no link anterior ☝️</p>
 <p>❎ 385 - QObject e QThread: código comentando</p>
 <hr />
-<h2 id="secao-8-base-de-dados-com-python-sqlitesqlie3-e-mysqlpymysql">🔜 🔲 <strong>Seção 8: Base de dados com Python -SQLite(sqlie3) e MySQL(pymysql)</strong><a class="headerlink" href="#secao-8-base-de-dados-com-python-sqlitesqlie3-e-mysqlpymysql" title="Permanent link">⚓︎</a></h2>
+<h2 id="secao-8-base-de-dados-com-python-sqlitesqlie3-e-mysqlpymysql">🔜 ❎ <strong>Seção 8: Base de dados com Python -SQLite(sqlie3) e MySQL(pymysql)</strong><a class="headerlink" href="#secao-8-base-de-dados-com-python-sqlitesqlie3-e-mysqlpymysql" title="Permanent link">⚓︎</a></h2>
 <hr />
 <p>❎ 386 - Base de dados com Python - SQLite(sqlite3) e MySQL(pymysql)</p>
 <p>🎀  Fazendo a introdução do modulo 8 para começarmos a trabalhar com recursos de 
@@ -10270,11 +10270,149 @@ e Windows</p>
 </span><span id="__span-304-16"><a id="__codelineno-304-16" name="__codelineno-304-16" href="#__codelineno-304-16"></a>      <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">dateh</span><span class="p">:</span>
 </span><span id="__span-304-17"><a id="__codelineno-304-17" name="__codelineno-304-17" href="#__codelineno-304-17"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
 </span></code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Cuidados com SQL injection</p>
+<p>A injeção de SQL é uma vulnerabilidade de sgurança da web que permite que um      invasor interfira nas consultas que um aplicativo faz ao seu banco de dados.
+Geramente. permite que um invasor visualize dados normalmente ele não é capaz recuperar. isso pode incluir pertencentes a outros usuários ou quaisquer outros dados que o próprio aplicativo é capaz de acessar. Em muitos casos, um invasor pode modificar ou excluir esses dados causando alterações peristentes no conteúdo ou comportamento do aplicativo.</p>
+</div>
 <p>❎ 412 - Apagando valores com DELETE, WHERE e placeholder no PyMySQL</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-305-1"><a id="__codelineno-305-1" name="__codelineno-305-1" href="#__codelineno-305-1"></a><span class="c1"># [...]</span>
+</span><span id="__span-305-2"><a id="__codelineno-305-2" name="__codelineno-305-2" href="#__codelineno-305-2"></a> <span class="k">with</span> <span class="n">connection</span><span class="p">:</span>
+</span><span id="__span-305-3"><a id="__codelineno-305-3" name="__codelineno-305-3" href="#__codelineno-305-3"></a>    <span class="k">with</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span> <span class="k">as</span> <span class="n">cursor</span><span class="p">:</span>
+</span><span id="__span-305-4"><a id="__codelineno-305-4" name="__codelineno-305-4" href="#__codelineno-305-4"></a>
+</span><span id="__span-305-5"><a id="__codelineno-305-5" name="__codelineno-305-5" href="#__codelineno-305-5"></a>       <span class="n">sql</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;DELETE FROM </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="si">}</span><span class="s1"> WHERE id = %s&#39;</span>
+</span><span id="__span-305-6"><a id="__codelineno-305-6" name="__codelineno-305-6" href="#__codelineno-305-6"></a>
+</span><span id="__span-305-7"><a id="__codelineno-305-7" name="__codelineno-305-7" href="#__codelineno-305-7"></a>      <span class="n">curor</span><span class="o">.</span><span class="n">execute</span> <span class="p">(</span><span class="n">sql</span><span class="p">,(</span><span class="mi">4</span><span class="p">))</span>
+</span><span id="__span-305-8"><a id="__codelineno-305-8" name="__codelineno-305-8" href="#__codelineno-305-8"></a>      <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span><span id="__span-305-9"><a id="__codelineno-305-9" name="__codelineno-305-9" href="#__codelineno-305-9"></a>      <span class="n">curor</span><span class="o">.</span><span class="n">execute</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;SELECT * FROM </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="si">}</span><span class="s1"> &#39;</span><span class="p">)</span>
+</span><span id="__span-305-10"><a id="__codelineno-305-10" name="__codelineno-305-10" href="#__codelineno-305-10"></a>
+</span><span id="__span-305-11"><a id="__codelineno-305-11" name="__codelineno-305-11" href="#__codelineno-305-11"></a>      <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span>  <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">():</span>
+</span><span id="__span-305-12"><a id="__codelineno-305-12" name="__codelineno-305-12" href="#__codelineno-305-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</span></code></pre></div>
 <p>❎ 413 - Editando com UPDATE, WHERE e placeholder no PyMySQL</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-306-1"><a id="__codelineno-306-1" name="__codelineno-306-1" href="#__codelineno-306-1"></a><span class="c1"># [...]</span>
+</span><span id="__span-306-2"><a id="__codelineno-306-2" name="__codelineno-306-2" href="#__codelineno-306-2"></a> <span class="k">with</span> <span class="n">connection</span><span class="p">:</span>
+</span><span id="__span-306-3"><a id="__codelineno-306-3" name="__codelineno-306-3" href="#__codelineno-306-3"></a>    <span class="k">with</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span> <span class="k">as</span> <span class="n">cursor</span><span class="p">:</span>
+</span><span id="__span-306-4"><a id="__codelineno-306-4" name="__codelineno-306-4" href="#__codelineno-306-4"></a>
+</span><span id="__span-306-5"><a id="__codelineno-306-5" name="__codelineno-306-5" href="#__codelineno-306-5"></a>       <span class="n">sql</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;UPDATE FROM </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="si">}</span><span class="s1"> SET nome=%s, idade=%s  WHERE id = %s&#39;</span>
+</span><span id="__span-306-6"><a id="__codelineno-306-6" name="__codelineno-306-6" href="#__codelineno-306-6"></a>
+</span><span id="__span-306-7"><a id="__codelineno-306-7" name="__codelineno-306-7" href="#__codelineno-306-7"></a>      <span class="n">curor</span><span class="o">.</span><span class="n">execute</span> <span class="p">(</span><span class="n">sql</span><span class="p">,(</span><span class="s1">&#39;Eleonor&#39;</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</span><span id="__span-306-8"><a id="__codelineno-306-8" name="__codelineno-306-8" href="#__codelineno-306-8"></a>      <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span><span id="__span-306-9"><a id="__codelineno-306-9" name="__codelineno-306-9" href="#__codelineno-306-9"></a>      <span class="n">curor</span><span class="o">.</span><span class="n">execute</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;SELECT * FROM </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="si">}</span><span class="s1"> &#39;</span><span class="p">)</span>
+</span><span id="__span-306-10"><a id="__codelineno-306-10" name="__codelineno-306-10" href="#__codelineno-306-10"></a>
+</span><span id="__span-306-11"><a id="__codelineno-306-11" name="__codelineno-306-11" href="#__codelineno-306-11"></a>      <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span>  <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">():</span>
+</span><span id="__span-306-12"><a id="__codelineno-306-12" name="__codelineno-306-12" href="#__codelineno-306-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</span></code></pre></div>
 <p>❎ 414 - Trocando o cursor para retornar dicionários pymysql.cusor.DictCursor</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-307-1"><a id="__codelineno-307-1" name="__codelineno-307-1" href="#__codelineno-307-1"></a><span class="c1"># [...]</span>
+</span><span id="__span-307-2"><a id="__codelineno-307-2" name="__codelineno-307-2" href="#__codelineno-307-2"></a>  <span class="kn">import</span> <span class="nn">pymysql</span>
+</span><span id="__span-307-3"><a id="__codelineno-307-3" name="__codelineno-307-3" href="#__codelineno-307-3"></a>  <span class="kn">import</span> <span class="nn">pymysql.curors</span>
+</span><span id="__span-307-4"><a id="__codelineno-307-4" name="__codelineno-307-4" href="#__codelineno-307-4"></a>  <span class="kn">import</span> <span class="nn">dotenv</span>
+</span><span id="__span-307-5"><a id="__codelineno-307-5" name="__codelineno-307-5" href="#__codelineno-307-5"></a>  <span class="kn">import</span> <span class="nn">os</span>
+</span><span id="__span-307-6"><a id="__codelineno-307-6" name="__codelineno-307-6" href="#__codelineno-307-6"></a>
+</span><span id="__span-307-7"><a id="__codelineno-307-7" name="__codelineno-307-7" href="#__codelineno-307-7"></a>  <span class="n">dotenv</span><span class="o">.</span><span class="n">load_dotenv</span><span class="p">()</span>
+</span><span id="__span-307-8"><a id="__codelineno-307-8" name="__codelineno-307-8" href="#__codelineno-307-8"></a>
+</span><span id="__span-307-9"><a id="__codelineno-307-9" name="__codelineno-307-9" href="#__codelineno-307-9"></a>  <span class="n">connection</span> <span class="o">=</span> <span class="n">pymysql</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+</span><span id="__span-307-10"><a id="__codelineno-307-10" name="__codelineno-307-10" href="#__codelineno-307-10"></a>    <span class="n">host</span><span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;MYSQL_HOST&#39;</span><span class="p">],</span>
+</span><span id="__span-307-11"><a id="__codelineno-307-11" name="__codelineno-307-11" href="#__codelineno-307-11"></a>    <span class="n">user</span><span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;MYSQL_USER&#39;</span><span class="p">],</span>
+</span><span id="__span-307-12"><a id="__codelineno-307-12" name="__codelineno-307-12" href="#__codelineno-307-12"></a>    <span class="n">password</span><span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;MYSQL_PASSWORD&#39;</span><span class="p">],</span>
+</span><span id="__span-307-13"><a id="__codelineno-307-13" name="__codelineno-307-13" href="#__codelineno-307-13"></a>    <span class="n">database</span><span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;MYSQL_DATABASE&#39;</span><span class="p">],</span>
+</span><span id="__span-307-14"><a id="__codelineno-307-14" name="__codelineno-307-14" href="#__codelineno-307-14"></a>    <span class="n">cursorclass</span><span class="o">=</span><span class="n">pymysql</span><span class="o">.</span><span class="n">cursors</span><span class="o">.</span><span class="n">DictCursor</span><span class="p">,</span>
+</span><span id="__span-307-15"><a id="__codelineno-307-15" name="__codelineno-307-15" href="#__codelineno-307-15"></a>  <span class="p">)</span>
+</span><span id="__span-307-16"><a id="__codelineno-307-16" name="__codelineno-307-16" href="#__codelineno-307-16"></a> <span class="k">with</span> <span class="n">connection</span><span class="p">:</span>
+</span><span id="__span-307-17"><a id="__codelineno-307-17" name="__codelineno-307-17" href="#__codelineno-307-17"></a>    <span class="k">with</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span> <span class="k">as</span> <span class="n">cursor</span><span class="p">:</span>
+</span><span id="__span-307-18"><a id="__codelineno-307-18" name="__codelineno-307-18" href="#__codelineno-307-18"></a>
+</span><span id="__span-307-19"><a id="__codelineno-307-19" name="__codelineno-307-19" href="#__codelineno-307-19"></a>       <span class="n">sql</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;UPDATE FROM </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="si">}</span><span class="s1"> SET nome=%s, idade=%s  WHERE id = %s&#39;</span>
+</span><span id="__span-307-20"><a id="__codelineno-307-20" name="__codelineno-307-20" href="#__codelineno-307-20"></a>
+</span><span id="__span-307-21"><a id="__codelineno-307-21" name="__codelineno-307-21" href="#__codelineno-307-21"></a>      <span class="n">curor</span><span class="o">.</span><span class="n">execute</span> <span class="p">(</span><span class="n">sql</span><span class="p">,(</span><span class="s1">&#39;Eleonor&#39;</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</span><span id="__span-307-22"><a id="__codelineno-307-22" name="__codelineno-307-22" href="#__codelineno-307-22"></a>      <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span><span id="__span-307-23"><a id="__codelineno-307-23" name="__codelineno-307-23" href="#__codelineno-307-23"></a>      <span class="n">curor</span><span class="o">.</span><span class="n">execute</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;SELECT * FROM </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="si">}</span><span class="s1"> &#39;</span><span class="p">)</span>
+</span><span id="__span-307-24"><a id="__codelineno-307-24" name="__codelineno-307-24" href="#__codelineno-307-24"></a>
+</span><span id="__span-307-25"><a id="__codelineno-307-25" name="__codelineno-307-25" href="#__codelineno-307-25"></a>      <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span>  <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">():</span>
+</span><span id="__span-307-26"><a id="__codelineno-307-26" name="__codelineno-307-26" href="#__codelineno-307-26"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</span></code></pre></div>
 <p>❎ 415 - SSCurosr, SSDisctCursor e scroll para conjuntos de dados muito grandes no PyMysql</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-308-1"><a id="__codelineno-308-1" name="__codelineno-308-1" href="#__codelineno-308-1"></a>  <span class="kn">import</span> <span class="nn">pymysql</span>
+</span><span id="__span-308-2"><a id="__codelineno-308-2" name="__codelineno-308-2" href="#__codelineno-308-2"></a>  <span class="kn">import</span> <span class="nn">pymysql.curors</span>
+</span><span id="__span-308-3"><a id="__codelineno-308-3" name="__codelineno-308-3" href="#__codelineno-308-3"></a>  <span class="kn">import</span> <span class="nn">dotenv</span>
+</span><span id="__span-308-4"><a id="__codelineno-308-4" name="__codelineno-308-4" href="#__codelineno-308-4"></a>  <span class="kn">import</span> <span class="nn">os</span>
+</span><span id="__span-308-5"><a id="__codelineno-308-5" name="__codelineno-308-5" href="#__codelineno-308-5"></a>
+</span><span id="__span-308-6"><a id="__codelineno-308-6" name="__codelineno-308-6" href="#__codelineno-308-6"></a>  <span class="n">dotenv</span><span class="o">.</span><span class="n">load_dotenv</span><span class="p">()</span>
+</span><span id="__span-308-7"><a id="__codelineno-308-7" name="__codelineno-308-7" href="#__codelineno-308-7"></a>
+</span><span id="__span-308-8"><a id="__codelineno-308-8" name="__codelineno-308-8" href="#__codelineno-308-8"></a>  <span class="n">connection</span> <span class="o">=</span> <span class="n">pymysql</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+</span><span id="__span-308-9"><a id="__codelineno-308-9" name="__codelineno-308-9" href="#__codelineno-308-9"></a>    <span class="n">host</span><span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;MYSQL_HOST&#39;</span><span class="p">],</span>
+</span><span id="__span-308-10"><a id="__codelineno-308-10" name="__codelineno-308-10" href="#__codelineno-308-10"></a>    <span class="n">user</span><span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;MYSQL_USER&#39;</span><span class="p">],</span>
+</span><span id="__span-308-11"><a id="__codelineno-308-11" name="__codelineno-308-11" href="#__codelineno-308-11"></a>    <span class="n">password</span><span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;MYSQL_PASSWORD&#39;</span><span class="p">],</span>
+</span><span id="__span-308-12"><a id="__codelineno-308-12" name="__codelineno-308-12" href="#__codelineno-308-12"></a>    <span class="n">database</span><span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;MYSQL_DATABASE&#39;</span><span class="p">],</span>
+</span><span id="__span-308-13"><a id="__codelineno-308-13" name="__codelineno-308-13" href="#__codelineno-308-13"></a>    <span class="n">cursorclass</span><span class="o">=</span><span class="n">pymysql</span><span class="o">.</span><span class="n">cursors</span><span class="o">.</span><span class="n">DictCursor</span><span class="p">,</span>
+</span><span id="__span-308-14"><a id="__codelineno-308-14" name="__codelineno-308-14" href="#__codelineno-308-14"></a>    <span class="c1"># cursorclass=pymysql.cursors.SSDictCursor,</span>
+</span><span id="__span-308-15"><a id="__codelineno-308-15" name="__codelineno-308-15" href="#__codelineno-308-15"></a>  <span class="p">)</span>
+</span><span id="__span-308-16"><a id="__codelineno-308-16" name="__codelineno-308-16" href="#__codelineno-308-16"></a> <span class="k">with</span> <span class="n">connection</span><span class="p">:</span>
+</span><span id="__span-308-17"><a id="__codelineno-308-17" name="__codelineno-308-17" href="#__codelineno-308-17"></a>    <span class="k">with</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span> <span class="k">as</span> <span class="n">cursor</span><span class="p">:</span>
+</span><span id="__span-308-18"><a id="__codelineno-308-18" name="__codelineno-308-18" href="#__codelineno-308-18"></a>
+</span><span id="__span-308-19"><a id="__codelineno-308-19" name="__codelineno-308-19" href="#__codelineno-308-19"></a>       <span class="n">sql</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;UPDATE FROM </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="si">}</span><span class="s1"> SET nome=%s, idade=%s  WHERE id = %s&#39;</span>
+</span><span id="__span-308-20"><a id="__codelineno-308-20" name="__codelineno-308-20" href="#__codelineno-308-20"></a>
+</span><span id="__span-308-21"><a id="__codelineno-308-21" name="__codelineno-308-21" href="#__codelineno-308-21"></a>      <span class="n">curor</span><span class="o">.</span><span class="n">execute</span> <span class="p">(</span><span class="n">sql</span><span class="p">,(</span><span class="s1">&#39;Eleonor&#39;</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</span><span id="__span-308-22"><a id="__codelineno-308-22" name="__codelineno-308-22" href="#__codelineno-308-22"></a>      <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span><span id="__span-308-23"><a id="__codelineno-308-23" name="__codelineno-308-23" href="#__codelineno-308-23"></a>      <span class="n">curor</span><span class="o">.</span><span class="n">execute</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;SELECT * FROM </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="si">}</span><span class="s1"> &#39;</span><span class="p">)</span>
+</span><span id="__span-308-24"><a id="__codelineno-308-24" name="__codelineno-308-24" href="#__codelineno-308-24"></a>
+</span><span id="__span-308-25"><a id="__codelineno-308-25" name="__codelineno-308-25" href="#__codelineno-308-25"></a>
+</span><span id="__span-308-26"><a id="__codelineno-308-26" name="__codelineno-308-26" href="#__codelineno-308-26"></a>      <span class="c1"># for row in  cursor.fetchall_unbuffered():</span>
+</span><span id="__span-308-27"><a id="__codelineno-308-27" name="__codelineno-308-27" href="#__codelineno-308-27"></a>      <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span>  <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">():</span>
+</span><span id="__span-308-28"><a id="__codelineno-308-28" name="__codelineno-308-28" href="#__codelineno-308-28"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</span><span id="__span-308-29"><a id="__codelineno-308-29" name="__codelineno-308-29" href="#__codelineno-308-29"></a>
+</span><span id="__span-308-30"><a id="__codelineno-308-30" name="__codelineno-308-30" href="#__codelineno-308-30"></a>
+</span><span id="__span-308-31"><a id="__codelineno-308-31" name="__codelineno-308-31" href="#__codelineno-308-31"></a>      <span class="c1"># cursor.scroll(-2)</span>
+</span><span id="__span-308-32"><a id="__codelineno-308-32" name="__codelineno-308-32" href="#__codelineno-308-32"></a>
+</span><span id="__span-308-33"><a id="__codelineno-308-33" name="__codelineno-308-33" href="#__codelineno-308-33"></a>      <span class="n">cursor</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;absolute&#39;</span><span class="p">)</span>
+</span><span id="__span-308-34"><a id="__codelineno-308-34" name="__codelineno-308-34" href="#__codelineno-308-34"></a>
+</span><span id="__span-308-35"><a id="__codelineno-308-35" name="__codelineno-308-35" href="#__codelineno-308-35"></a>      <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span>  <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">():</span> 
+</span><span id="__span-308-36"><a id="__codelineno-308-36" name="__codelineno-308-36" href="#__codelineno-308-36"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Dicas:</p>
+<p>Cursor sem buffer(SSCurosr), útil principalmente para consultas que retornam muitos dados,
+ ou para conexões com servidores remotos em uma rede lenta.
+ Em vez de copiar cada linha de dados em um buffer, isso irá buscar
+ linhas conforme necessário. A vantagem disso é que o cliente usa muito menos memória,
+ e as linhas são retornadas muito mais rapidamente ao viajar em uma rede lenta
+ ou se o conjunto de resultados for muito grande.
+ Existem limitações, no entanto. O protocolo MySQL não suporta
+ retornando o número total de linhas, então a única maneira de saber quantas linhas
+ existe é iterar sobre cada linha retornada. Além disso, atualmente não é
+ possível rolar para trás, pois apenas a linha atual é mantida na memória.</p>
+</div>
 <p>❎ 416 - rowcount, rownumber e lastrowid para detalhes de consultas executadas</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-309-1"><a id="__codelineno-309-1" name="__codelineno-309-1" href="#__codelineno-309-1"></a>  <span class="kn">import</span> <span class="nn">pymysql</span>
+</span><span id="__span-309-2"><a id="__codelineno-309-2" name="__codelineno-309-2" href="#__codelineno-309-2"></a>  <span class="kn">import</span> <span class="nn">pymysql.curors</span>
+</span><span id="__span-309-3"><a id="__codelineno-309-3" name="__codelineno-309-3" href="#__codelineno-309-3"></a>  <span class="kn">import</span> <span class="nn">dotenv</span>
+</span><span id="__span-309-4"><a id="__codelineno-309-4" name="__codelineno-309-4" href="#__codelineno-309-4"></a>  <span class="kn">import</span> <span class="nn">os</span>
+</span><span id="__span-309-5"><a id="__codelineno-309-5" name="__codelineno-309-5" href="#__codelineno-309-5"></a>
+</span><span id="__span-309-6"><a id="__codelineno-309-6" name="__codelineno-309-6" href="#__codelineno-309-6"></a>  <span class="n">dotenv</span><span class="o">.</span><span class="n">load_dotenv</span><span class="p">()</span>
+</span><span id="__span-309-7"><a id="__codelineno-309-7" name="__codelineno-309-7" href="#__codelineno-309-7"></a>
+</span><span id="__span-309-8"><a id="__codelineno-309-8" name="__codelineno-309-8" href="#__codelineno-309-8"></a>  <span class="n">connection</span> <span class="o">=</span> <span class="n">pymysql</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+</span><span id="__span-309-9"><a id="__codelineno-309-9" name="__codelineno-309-9" href="#__codelineno-309-9"></a>    <span class="n">host</span><span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;MYSQL_HOST&#39;</span><span class="p">],</span>
+</span><span id="__span-309-10"><a id="__codelineno-309-10" name="__codelineno-309-10" href="#__codelineno-309-10"></a>    <span class="n">user</span><span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;MYSQL_USER&#39;</span><span class="p">],</span>
+</span><span id="__span-309-11"><a id="__codelineno-309-11" name="__codelineno-309-11" href="#__codelineno-309-11"></a>    <span class="n">password</span><span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;MYSQL_PASSWORD&#39;</span><span class="p">],</span>
+</span><span id="__span-309-12"><a id="__codelineno-309-12" name="__codelineno-309-12" href="#__codelineno-309-12"></a>    <span class="n">database</span><span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;MYSQL_DATABASE&#39;</span><span class="p">],</span>
+</span><span id="__span-309-13"><a id="__codelineno-309-13" name="__codelineno-309-13" href="#__codelineno-309-13"></a>    <span class="n">cursorclass</span><span class="o">=</span><span class="n">pymysql</span><span class="o">.</span><span class="n">cursors</span><span class="o">.</span><span class="n">DictCursor</span><span class="p">,</span>
+</span><span id="__span-309-14"><a id="__codelineno-309-14" name="__codelineno-309-14" href="#__codelineno-309-14"></a>
+</span><span id="__span-309-15"><a id="__codelineno-309-15" name="__codelineno-309-15" href="#__codelineno-309-15"></a>  <span class="p">)</span>
+</span><span id="__span-309-16"><a id="__codelineno-309-16" name="__codelineno-309-16" href="#__codelineno-309-16"></a> <span class="k">with</span> <span class="n">connection</span><span class="p">:</span>
+</span><span id="__span-309-17"><a id="__codelineno-309-17" name="__codelineno-309-17" href="#__codelineno-309-17"></a>    <span class="k">with</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span> <span class="k">as</span> <span class="n">cursor</span><span class="p">:</span>
+</span><span id="__span-309-18"><a id="__codelineno-309-18" name="__codelineno-309-18" href="#__codelineno-309-18"></a>
+</span><span id="__span-309-19"><a id="__codelineno-309-19" name="__codelineno-309-19" href="#__codelineno-309-19"></a>      <span class="n">curor</span><span class="o">.</span><span class="n">execute</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;SELECT * FROM </span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="si">}</span><span class="s1"> &#39;</span><span class="p">)</span>
+</span><span id="__span-309-20"><a id="__codelineno-309-20" name="__codelineno-309-20" href="#__codelineno-309-20"></a>
+</span><span id="__span-309-21"><a id="__codelineno-309-21" name="__codelineno-309-21" href="#__codelineno-309-21"></a>      <span class="c1"># curor.execute (f&#39;SELECT id FROM {TABLE_NAME} ORDER BY id DESC LIMIT 1 &#39;)</span>
+</span><span id="__span-309-22"><a id="__codelineno-309-22" name="__codelineno-309-22" href="#__codelineno-309-22"></a>
+</span><span id="__span-309-23"><a id="__codelineno-309-23" name="__codelineno-309-23" href="#__codelineno-309-23"></a>      <span class="n">data</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</span><span id="__span-309-24"><a id="__codelineno-309-24" name="__codelineno-309-24" href="#__codelineno-309-24"></a>      <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span>  <span class="n">data</span><span class="p">:</span>
+</span><span id="__span-309-25"><a id="__codelineno-309-25" name="__codelineno-309-25" href="#__codelineno-309-25"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</span><span id="__span-309-26"><a id="__codelineno-309-26" name="__codelineno-309-26" href="#__codelineno-309-26"></a>        <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+</span><span id="__span-309-27"><a id="__codelineno-309-27" name="__codelineno-309-27" href="#__codelineno-309-27"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span><span class="p">)</span>
+</span><span id="__span-309-28"><a id="__codelineno-309-28" name="__codelineno-309-28" href="#__codelineno-309-28"></a>        <span class="c1"># print(cursor.lastrowid)</span>
+</span><span id="__span-309-29"><a id="__codelineno-309-29" name="__codelineno-309-29" href="#__codelineno-309-29"></a>        <span class="c1"># print(cursor.rownumber)</span>
+</span></code></pre></div>
 <hr />
 <h2 id="secao-9-django-no-python-basico">🔜 🔲 <strong>Seção 9 Django no Python - Básico</strong><a class="headerlink" href="#secao-9-django-no-python-basico" title="Permanent link">⚓︎</a></h2>
 <hr />
