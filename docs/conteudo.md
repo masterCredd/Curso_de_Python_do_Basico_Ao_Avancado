@@ -11416,15 +11416,23 @@ Para fazer ativação do django criando um prjeto siga o comando a seguir
 
 ```
 
-
 ❎ 419 - Projeto movido para a pasta de repositório do curso
 
-[![pymysql](img/django.png)](https://pymysql.readthedocs.io/en/latest/#  "documentação do pymysql")
+[![django](img/django.png)](https://github.com/masterCredd/Curso_de_Python_do_Basico_Ao_Avancado/tree/main/curso_de_python_do_basico_ao_avancado/Secao_9 "projeto do django")
 
 ❎ 420 - O que é o Django? (de modo muito superficial)
 
+[![django](img/_django.png)](https://www.djangoproject.com/ "O que é o django?")
+
 ❎ 421 - Conheça os arquivos do Django, django-admin e manage.py
 
+  O `django-admin.py` é utilitário de linha de comando do Django para tarefas admininstrativas. Este documento descreve tudo que fazer.
+  Além disso, `manage.py` é criado automaticamente em cada projeto Django. O `manage,py` é um wrapper simples em volta de `django-admin.py` que se procura com duas coisas por você antes de deletar tarefas ao `django-admin.py`:
+
+  ➡️ Ele coloca o pacote de seu projeto no `sys.path`.
+  ➡️ Ele define a variável de ambiente ´DJANGO_SETTINGS_MOULE´ que então aponta
+      para o  arquivo `settings.py` do seu projeto.
+  
 ❎ 422 - Primeira URL e function based view + HttpRequest e HttpResponse + Status Code
 
 ❎ 423 - Entenda os motivos de uma View recever uma Request e retornar uma Response
@@ -11437,7 +11445,13 @@ Para fazer ativação do django criando um prjeto siga o comando a seguir
 
 ❎ 427 - Renderizando HTML, render, templates INSTALLED_APPS e TamplateDoesNotExist
 
-❎ 428p - Renderizando HTML, render, templates INSTALLED_APPS e TamplateDoesNotExist
+❎ 428 - Configurando templates globais com DIRS + extends para herança de templantes
+
+❎ 429 - Arquivos parciais e include para separar trechos dos templates (partials)
+
+❎ 430 - Arquivos estáticos (staticfiles) STATIC_URL, STATICFILES_DIRS  e load static
+
+❎ 431 - Usando o context para enviar dados para dentro dos templates do Django
 
 ___
 
